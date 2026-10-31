@@ -1,0 +1,16 @@
+{
+  "seeds": [317, 419, 523],
+  "probe_stages": ["mel", "stem", "block1", "block2", "final", "final_mean", "final_pca", "multiscale"],
+  "conditioning": ["final", "stem", "block2", "multiscale", "final31"],
+  "epochs": 16,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "probe": "identical 256->64->10 GELU heads, native channels retained and zero-padded to 64",
+  "train_conditions": "paired clean and corrupted views of training recordings; no test-derived adaptation",
+  "adapters": "train-corrupted-only channel PCA; final uses exact preserved projection; 32 channels everywhere",
+  "ncm_targets": "same frozen final-feature 1/2/4 acoustic tokenizer for every conditioning variant",
+  "candidate_policy": "frozen conventional-reference gate; no analytic missing-band override in information diagnostics",
+  "temperature": "validation fitting half only, paired clean/corrupted views",
+  "threads": 1,
+  "selection": "fixed final epoch, no test tuning"
+}

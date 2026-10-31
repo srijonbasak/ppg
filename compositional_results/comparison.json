@@ -1,0 +1,404 @@
+{
+  "config": {
+    "seed": 211,
+    "probe_steps": 600,
+    "probe_learning_rate": 0.01,
+    "neighbor_examples_per_position": 5000,
+    "structured_tokenizer_epochs": 30,
+    "structured_tokenizer_learning_rate": 0.001,
+    "tokenizer_gate": 0.99,
+    "generator_epochs": 16,
+    "generator_learning_rate": 0.0003,
+    "batch_size": 32,
+    "generator_initialization": "identical fresh predictor, existing frozen CNN encoder",
+    "generator_training": "teacher forcing, no prefix corruption",
+    "selection": "fixed final generator epoch; tokenizer best validation sequence accuracy, earliest tie",
+    "hierarchy_samples": 1,
+    "decoding": "deterministic argmax",
+    "threads": 1
+  },
+  "cnn_baseline": {
+    "val": {
+      "sequence_accuracy": 0.6521739363670349,
+      "digit_accuracy_by_position": [
+        0.8260869383811951,
+        0.83152174949646,
+        0.8804348111152649,
+        0.8478260636329651
+      ]
+    },
+    "test": {
+      "sequence_accuracy": 0.5925925970077515,
+      "digit_accuracy_by_position": [
+        0.8296296000480652,
+        0.7925925850868225,
+        0.8074073791503906,
+        0.7666666507720947
+      ]
+    }
+  },
+  "runs": {
+    "original": {
+      "history": [
+        4.04535342517652,
+        3.684148518662704,
+        3.415947594140705,
+        3.141680824129205,
+        2.9119712992718347,
+        2.710002070979068,
+        2.5529804543444983,
+        2.42496026817121,
+        2.293890965612311,
+        2.182952303635447,
+        2.0510721520373694,
+        1.9417315345061452,
+        1.8535874831049066,
+        1.78476241387819,
+        1.7259343141003658,
+        1.6841193563059758
+      ],
+      "training_seconds": 26.049675677000778,
+      "parameters": 232330,
+      "trainable_parameters": 154752,
+      "tokenizer_unchanged": true,
+      "cnn_unchanged": true,
+      "val": {
+        "overall": {
+          "samples": 184,
+          "digit_accuracy_by_position": [
+            0.239130437374115,
+            0.2771739065647125,
+            0.260869562625885,
+            0.28260868787765503
+          ],
+          "sequence_accuracy": 0.005434782709926367,
+          "sequence_top5": 0.010869565419852734,
+          "sequence_nll": 11.791255950927734
+        },
+        "latency_ms": {
+          "p50": 2.0368065002003277,
+          "p95": 2.339846200311513
+        },
+        "by_condition": {
+          "interference": {
+            "samples": 42,
+            "digit_accuracy_by_position": [
+              0.1666666716337204,
+              0.190476194024086,
+              0.261904776096344,
+              0.190476194024086
+            ],
+            "sequence_accuracy": 0.0,
+            "sequence_top5": 0.0,
+            "sequence_nll": 14.011167526245117
+          },
+          "noise": {
+            "samples": 46,
+            "digit_accuracy_by_position": [
+              0.239130437374115,
+              0.21739129722118378,
+              0.3478260934352875,
+              0.239130437374115
+            ],
+            "sequence_accuracy": 0.0,
+            "sequence_top5": 0.0,
+            "sequence_nll": 11.10391902923584
+          },
+          "partial_erasure": {
+            "samples": 47,
+            "digit_accuracy_by_position": [
+              0.23404255509376526,
+              0.40425533056259155,
+              0.21276596188545227,
+              0.38297873735427856
+            ],
+            "sequence_accuracy": 0.021276595070958138,
+            "sequence_top5": 0.021276595070958138,
+            "sequence_nll": 10.848576545715332
+          },
+          "reference": {
+            "samples": 49,
+            "digit_accuracy_by_position": [
+              0.30612245202064514,
+              0.2857142984867096,
+              0.22448979318141937,
+              0.30612245202064514
+            ],
+            "sequence_accuracy": 0.0,
+            "sequence_top5": 0.020408162847161293,
+            "sequence_nll": 11.437933921813965
+          }
+        },
+        "teacher_code_accuracy": [
+          0.6956521739130435,
+          0.2608695652173913,
+          0.44157608695652173
+        ],
+        "generated_code_accuracy": [
+          0.6956521739130435,
+          0.24456521739130435,
+          0.1331521739130435
+        ]
+      },
+      "test": {
+        "overall": {
+          "samples": 270,
+          "digit_accuracy_by_position": [
+            0.2888889014720917,
+            0.30000001192092896,
+            0.2777777910232544,
+            0.25925925374031067
+          ],
+          "sequence_accuracy": 0.0,
+          "sequence_top5": 0.0,
+          "sequence_nll": 11.23837947845459
+        },
+        "latency_ms": {
+          "p50": 2.0425730003807985,
+          "p95": 2.412913349826339
+        },
+        "by_condition": {
+          "interference": {
+            "samples": 67,
+            "digit_accuracy_by_position": [
+              0.23880596458911896,
+              0.2537313401699066,
+              0.26865673065185547,
+              0.1492537260055542
+            ],
+            "sequence_accuracy": 0.0,
+            "sequence_top5": 0.0,
+            "sequence_nll": 12.540019989013672
+          },
+          "noise": {
+            "samples": 68,
+            "digit_accuracy_by_position": [
+              0.3235294222831726,
+              0.27941176295280457,
+              0.27941176295280457,
+              0.29411765933036804
+            ],
+            "sequence_accuracy": 0.0,
+            "sequence_top5": 0.0,
+            "sequence_nll": 11.012601852416992
+          },
+          "partial_erasure": {
+            "samples": 67,
+            "digit_accuracy_by_position": [
+              0.34328359365463257,
+              0.23880596458911896,
+              0.3283582031726837,
+              0.26865673065185547
+            ],
+            "sequence_accuracy": 0.0,
+            "sequence_top5": 0.0,
+            "sequence_nll": 10.695426940917969
+          },
+          "reference": {
+            "samples": 68,
+            "digit_accuracy_by_position": [
+              0.25,
+              0.4264705777168274,
+              0.23529411852359772,
+              0.3235294222831726
+            ],
+            "sequence_accuracy": 0.0,
+            "sequence_top5": 0.0,
+            "sequence_nll": 10.716628074645996
+          }
+        },
+        "teacher_code_accuracy": [
+          0.6481481481481481,
+          0.25555555555555554,
+          0.45092592592592595
+        ],
+        "generated_code_accuracy": [
+          0.6481481481481481,
+          0.22037037037037038,
+          0.13148148148148148
+        ]
+      }
+    },
+    "structured": {
+      "history": [
+        3.422558696646439,
+        2.6611768132761906,
+        2.3968555237117566,
+        2.204088512219881,
+        2.052035319177728,
+        1.9379557088801735,
+        1.856205209305412,
+        1.7877147354577716,
+        1.7202694761125665,
+        1.6762385870281018,
+        1.6343751894800287,
+        1.6005921238347103,
+        1.5614171028137207,
+        1.5302058991632963,
+        1.5089403202659206,
+        1.4899480217381527
+      ],
+      "training_seconds": 26.057809276000626,
+      "parameters": 232330,
+      "trainable_parameters": 154752,
+      "tokenizer_unchanged": true,
+      "cnn_unchanged": true,
+      "val": {
+        "overall": {
+          "samples": 184,
+          "digit_accuracy_by_position": [
+            0.2771739065647125,
+            0.30434781312942505,
+            0.32608696818351746,
+            0.28260868787765503
+          ],
+          "sequence_accuracy": 0.005434782709926367,
+          "sequence_top5": 0.005434782709926367,
+          "sequence_nll": 8.8538179397583
+        },
+        "latency_ms": {
+          "p50": 2.0260460005374625,
+          "p95": 2.122368349591852
+        },
+        "by_condition": {
+          "interference": {
+            "samples": 42,
+            "digit_accuracy_by_position": [
+              0.1666666716337204,
+              0.261904776096344,
+              0.190476194024086,
+              0.190476194024086
+            ],
+            "sequence_accuracy": 0.0,
+            "sequence_top5": 0.0,
+            "sequence_nll": 9.580207824707031
+          },
+          "noise": {
+            "samples": 46,
+            "digit_accuracy_by_position": [
+              0.260869562625885,
+              0.3695652186870575,
+              0.45652174949645996,
+              0.3478260934352875
+            ],
+            "sequence_accuracy": 0.0,
+            "sequence_top5": 0.0,
+            "sequence_nll": 8.484895706176758
+          },
+          "partial_erasure": {
+            "samples": 47,
+            "digit_accuracy_by_position": [
+              0.3404255211353302,
+              0.3191489279270172,
+              0.2978723347187042,
+              0.3404255211353302
+            ],
+            "sequence_accuracy": 0.021276595070958138,
+            "sequence_top5": 0.021276595070958138,
+            "sequence_nll": 8.738947868347168
+          },
+          "reference": {
+            "samples": 49,
+            "digit_accuracy_by_position": [
+              0.3265306055545807,
+              0.26530611515045166,
+              0.3469387888908386,
+              0.2448979616165161
+            ],
+            "sequence_accuracy": 0.0,
+            "sequence_top5": 0.0,
+            "sequence_nll": 8.687715530395508
+          }
+        },
+        "teacher_code_accuracy": [
+          0.5815217391304348,
+          0.21467391304347827,
+          0.49728260869565216
+        ],
+        "generated_code_accuracy": [
+          0.5815217391304348,
+          0.20380434782608695,
+          0.297554347826087
+        ]
+      },
+      "test": {
+        "overall": {
+          "samples": 270,
+          "digit_accuracy_by_position": [
+            0.33703702688217163,
+            0.3222222328186035,
+            0.35185185074806213,
+            0.2888889014720917
+          ],
+          "sequence_accuracy": 0.0,
+          "sequence_top5": 0.0,
+          "sequence_nll": 8.751961708068848
+        },
+        "latency_ms": {
+          "p50": 2.0347479999145435,
+          "p95": 2.2552135499608994
+        },
+        "by_condition": {
+          "interference": {
+            "samples": 67,
+            "digit_accuracy_by_position": [
+              0.26865673065185547,
+              0.28358209133148193,
+              0.2238806039094925,
+              0.2238806039094925
+            ],
+            "sequence_accuracy": 0.0,
+            "sequence_top5": 0.0,
+            "sequence_nll": 9.337672233581543
+          },
+          "noise": {
+            "samples": 68,
+            "digit_accuracy_by_position": [
+              0.3529411852359772,
+              0.3382352888584137,
+              0.45588234066963196,
+              0.3382352888584137
+            ],
+            "sequence_accuracy": 0.0,
+            "sequence_top5": 0.0,
+            "sequence_nll": 8.388086318969727
+          },
+          "partial_erasure": {
+            "samples": 67,
+            "digit_accuracy_by_position": [
+              0.35820895433425903,
+              0.31343284249305725,
+              0.2985074520111084,
+              0.3283582031726837
+            ],
+            "sequence_accuracy": 0.0,
+            "sequence_top5": 0.0,
+            "sequence_nll": 8.830044746398926
+          },
+          "reference": {
+            "samples": 68,
+            "digit_accuracy_by_position": [
+              0.36764705181121826,
+              0.3529411852359772,
+              0.4264705777168274,
+              0.2647058963775635
+            ],
+            "sequence_accuracy": 0.0,
+            "sequence_top5": 0.0,
+            "sequence_nll": 8.461807250976562
+          }
+        },
+        "teacher_code_accuracy": [
+          0.5148148148148148,
+          0.26851851851851855,
+          0.5212962962962963
+        ],
+        "generated_code_accuracy": [
+          0.5148148148148148,
+          0.25925925925925924,
+          0.325
+        ]
+      }
+    }
+  }
+}

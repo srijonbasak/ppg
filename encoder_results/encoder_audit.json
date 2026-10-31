@@ -1,0 +1,502 @@
+{
+  "waveform": [
+    4,
+    2400
+  ],
+  "stft_complex": [
+    4,
+    129,
+    31
+  ],
+  "stft_power": [
+    4,
+    129,
+    31
+  ],
+  "mel_power": [
+    4,
+    40,
+    31
+  ],
+  "taps": {
+    "mel": [
+      4,
+      40,
+      31
+    ],
+    "stem": [
+      4,
+      64,
+      31
+    ],
+    "block1": [
+      4,
+      64,
+      31
+    ],
+    "block2": [
+      4,
+      64,
+      31
+    ],
+    "final": [
+      4,
+      64,
+      31
+    ]
+  },
+  "modules": {
+    "stem": {
+      "input": [
+        4,
+        40,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "Conv1d(40, 64, kernel_size=(5,), stride=(1,), padding=(2,))"
+    },
+    "blocks.0.net.0": {
+      "input": [
+        4,
+        64,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(1,))"
+    },
+    "blocks.0.net.1": {
+      "input": [
+        4,
+        64,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "GroupNorm(4, 64, eps=1e-05, affine=True, bias=True)"
+    },
+    "blocks.0.net.2": {
+      "input": [
+        4,
+        64,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "GELU(approximate='none')"
+    },
+    "blocks.0.net.3": {
+      "input": [
+        4,
+        64,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "Conv1d(64, 64, kernel_size=(1,), stride=(1,))"
+    },
+    "blocks.0.net.4": {
+      "input": [
+        4,
+        64,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "GroupNorm(4, 64, eps=1e-05, affine=True, bias=True)"
+    },
+    "blocks.1.net.0": {
+      "input": [
+        4,
+        64,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(2,), dilation=(2,))"
+    },
+    "blocks.1.net.1": {
+      "input": [
+        4,
+        64,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "GroupNorm(4, 64, eps=1e-05, affine=True, bias=True)"
+    },
+    "blocks.1.net.2": {
+      "input": [
+        4,
+        64,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "GELU(approximate='none')"
+    },
+    "blocks.1.net.3": {
+      "input": [
+        4,
+        64,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "Conv1d(64, 64, kernel_size=(1,), stride=(1,))"
+    },
+    "blocks.1.net.4": {
+      "input": [
+        4,
+        64,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "GroupNorm(4, 64, eps=1e-05, affine=True, bias=True)"
+    },
+    "blocks.2.net.0": {
+      "input": [
+        4,
+        64,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(4,), dilation=(4,))"
+    },
+    "blocks.2.net.1": {
+      "input": [
+        4,
+        64,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "GroupNorm(4, 64, eps=1e-05, affine=True, bias=True)"
+    },
+    "blocks.2.net.2": {
+      "input": [
+        4,
+        64,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "GELU(approximate='none')"
+    },
+    "blocks.2.net.3": {
+      "input": [
+        4,
+        64,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "Conv1d(64, 64, kernel_size=(1,), stride=(1,))"
+    },
+    "blocks.2.net.4": {
+      "input": [
+        4,
+        64,
+        31
+      ],
+      "output": [
+        4,
+        64,
+        31
+      ],
+      "operation": "GroupNorm(4, 64, eps=1e-05, affine=True, bias=True)"
+    }
+  },
+  "mel_support_hz": [
+    {
+      "mel_bin": 0,
+      "peak_hz": 31.25,
+      "nonzero_min_hz": 31.25,
+      "nonzero_max_hz": 31.25
+    },
+    {
+      "mel_bin": 1,
+      "peak_hz": 62.5,
+      "nonzero_min_hz": 62.5,
+      "nonzero_max_hz": 93.75
+    },
+    {
+      "mel_bin": 2,
+      "peak_hz": 125.0,
+      "nonzero_min_hz": 93.75,
+      "nonzero_max_hz": 125.0
+    },
+    {
+      "mel_bin": 3,
+      "peak_hz": 156.25,
+      "nonzero_min_hz": 156.25,
+      "nonzero_max_hz": 156.25
+    },
+    {
+      "mel_bin": 4,
+      "peak_hz": 187.5,
+      "nonzero_min_hz": 187.5,
+      "nonzero_max_hz": 187.5
+    },
+    {
+      "mel_bin": 5,
+      "peak_hz": 218.75,
+      "nonzero_min_hz": 218.75,
+      "nonzero_max_hz": 250.0
+    },
+    {
+      "mel_bin": 6,
+      "peak_hz": 281.25,
+      "nonzero_min_hz": 250.0,
+      "nonzero_max_hz": 281.25
+    },
+    {
+      "mel_bin": 7,
+      "peak_hz": 312.5,
+      "nonzero_min_hz": 312.5,
+      "nonzero_max_hz": 343.75
+    },
+    {
+      "mel_bin": 8,
+      "peak_hz": 375.0,
+      "nonzero_min_hz": 343.75,
+      "nonzero_max_hz": 406.25
+    },
+    {
+      "mel_bin": 9,
+      "peak_hz": 437.5,
+      "nonzero_min_hz": 406.25,
+      "nonzero_max_hz": 437.5
+    },
+    {
+      "mel_bin": 10,
+      "peak_hz": 468.75,
+      "nonzero_min_hz": 468.75,
+      "nonzero_max_hz": 500.0
+    },
+    {
+      "mel_bin": 11,
+      "peak_hz": 531.25,
+      "nonzero_min_hz": 500.0,
+      "nonzero_max_hz": 562.5
+    },
+    {
+      "mel_bin": 12,
+      "peak_hz": 593.75,
+      "nonzero_min_hz": 562.5,
+      "nonzero_max_hz": 625.0
+    },
+    {
+      "mel_bin": 13,
+      "peak_hz": 656.25,
+      "nonzero_min_hz": 625.0,
+      "nonzero_max_hz": 687.5
+    },
+    {
+      "mel_bin": 14,
+      "peak_hz": 718.75,
+      "nonzero_min_hz": 687.5,
+      "nonzero_max_hz": 750.0
+    },
+    {
+      "mel_bin": 15,
+      "peak_hz": 781.25,
+      "nonzero_min_hz": 750.0,
+      "nonzero_max_hz": 812.5
+    },
+    {
+      "mel_bin": 16,
+      "peak_hz": 843.75,
+      "nonzero_min_hz": 812.5,
+      "nonzero_max_hz": 906.25
+    },
+    {
+      "mel_bin": 17,
+      "peak_hz": 937.5,
+      "nonzero_min_hz": 875.0,
+      "nonzero_max_hz": 968.75
+    },
+    {
+      "mel_bin": 18,
+      "peak_hz": 1000.0,
+      "nonzero_min_hz": 968.75,
+      "nonzero_max_hz": 1062.5
+    },
+    {
+      "mel_bin": 19,
+      "peak_hz": 1093.75,
+      "nonzero_min_hz": 1031.25,
+      "nonzero_max_hz": 1125.0
+    },
+    {
+      "mel_bin": 20,
+      "peak_hz": 1156.25,
+      "nonzero_min_hz": 1125.0,
+      "nonzero_max_hz": 1218.75
+    },
+    {
+      "mel_bin": 21,
+      "peak_hz": 1250.0,
+      "nonzero_min_hz": 1187.5,
+      "nonzero_max_hz": 1312.5
+    },
+    {
+      "mel_bin": 22,
+      "peak_hz": 1343.75,
+      "nonzero_min_hz": 1281.25,
+      "nonzero_max_hz": 1406.25
+    },
+    {
+      "mel_bin": 23,
+      "peak_hz": 1437.5,
+      "nonzero_min_hz": 1375.0,
+      "nonzero_max_hz": 1531.25
+    },
+    {
+      "mel_bin": 24,
+      "peak_hz": 1562.5,
+      "nonzero_min_hz": 1468.75,
+      "nonzero_max_hz": 1625.0
+    },
+    {
+      "mel_bin": 25,
+      "peak_hz": 1656.25,
+      "nonzero_min_hz": 1593.75,
+      "nonzero_max_hz": 1750.0
+    },
+    {
+      "mel_bin": 26,
+      "peak_hz": 1781.25,
+      "nonzero_min_hz": 1687.5,
+      "nonzero_max_hz": 1843.75
+    },
+    {
+      "mel_bin": 27,
+      "peak_hz": 1875.0,
+      "nonzero_min_hz": 1812.5,
+      "nonzero_max_hz": 1968.75
+    },
+    {
+      "mel_bin": 28,
+      "peak_hz": 2000.0,
+      "nonzero_min_hz": 1906.25,
+      "nonzero_max_hz": 2093.75
+    },
+    {
+      "mel_bin": 29,
+      "peak_hz": 2125.0,
+      "nonzero_min_hz": 2031.25,
+      "nonzero_max_hz": 2250.0
+    },
+    {
+      "mel_bin": 30,
+      "peak_hz": 2281.25,
+      "nonzero_min_hz": 2156.25,
+      "nonzero_max_hz": 2375.0
+    },
+    {
+      "mel_bin": 31,
+      "peak_hz": 2406.25,
+      "nonzero_min_hz": 2312.5,
+      "nonzero_max_hz": 2531.25
+    },
+    {
+      "mel_bin": 32,
+      "peak_hz": 2562.5,
+      "nonzero_min_hz": 2437.5,
+      "nonzero_max_hz": 2687.5
+    },
+    {
+      "mel_bin": 33,
+      "peak_hz": 2718.75,
+      "nonzero_min_hz": 2593.75,
+      "nonzero_max_hz": 2843.75
+    },
+    {
+      "mel_bin": 34,
+      "peak_hz": 2875.0,
+      "nonzero_min_hz": 2750.0,
+      "nonzero_max_hz": 3000.0
+    },
+    {
+      "mel_bin": 35,
+      "peak_hz": 3031.25,
+      "nonzero_min_hz": 2906.25,
+      "nonzero_max_hz": 3187.5
+    },
+    {
+      "mel_bin": 36,
+      "peak_hz": 3218.75,
+      "nonzero_min_hz": 3062.5,
+      "nonzero_max_hz": 3375.0
+    },
+    {
+      "mel_bin": 37,
+      "peak_hz": 3406.25,
+      "nonzero_min_hz": 3250.0,
+      "nonzero_max_hz": 3562.5
+    },
+    {
+      "mel_bin": 38,
+      "peak_hz": 3593.75,
+      "nonzero_min_hz": 3437.5,
+      "nonzero_max_hz": 3750.0
+    },
+    {
+      "mel_bin": 39,
+      "peak_hz": 3781.25,
+      "nonzero_min_hz": 3625.0,
+      "nonzero_max_hz": 3968.75
+    }
+  ],
+  "manual_taps_equal_native_encoder": true,
+  "gain_halving_max_frontend_difference": 4.76837158203125e-07
+}

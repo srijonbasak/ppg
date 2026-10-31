@@ -1,0 +1,13 @@
+{
+  "oracle_inference_max_probability_difference": 0.0,
+  "training_vs_manual_level_logits_max_difference": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "flatten_event_alignment_exact": true,
+  "clean_audio_goertzel_accuracy": 1.0,
+  "reversing_event_order_level1_logit_mean_absolute_change": 0.005432750564068556,
+  "event_position_rms": 0.03634119778871536,
+  "audio_feature_rms": 1.882681965827942
+}

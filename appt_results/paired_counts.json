@@ -1,0 +1,14 @@
+{
+  "local": {
+    "appt_only_correct": 16,
+    "other_only_correct": 14,
+    "both_correct": 189,
+    "samples": 270
+  },
+  "no_prior": {
+    "appt_only_correct": 13,
+    "other_only_correct": 6,
+    "both_correct": 192,
+    "samples": 270
+  }
+}

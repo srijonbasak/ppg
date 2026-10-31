@@ -1,0 +1,7 @@
+{
+  "ppf/encoder_study.py": "893a93ff59b3fe1d3ddd1031b2a05cb7a79b6753f0090dce78c4ed2a2e600168",
+  "experiments/encoder_information.py": "234b3cd4abf154ade8ef78a13f4b93ccaf6bf4bc1ead8eec0b47cf033d631964",
+  "experiments/encoder_config.json": "6bda3172f9bc3a7213ca68b83bbf9141e74eb70a714dbf73722743103df8adc1",
+  "representation_results/cnn.pt": "6fa450c1e80ce36862d76b7f2071f071215a3f333c6281c4f33d210e690f1be6",
+  "gate_results/metrics.json": "66acedaf40d54bab4fdf0ab8c70ac1a7b8d2e7743cf46fda673e06cfbdf66d7e"
+}

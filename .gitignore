@@ -1,0 +1,26 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+/data/
+dist/
+build/
+*.egg-info/
+.coverage
+htmlcov/
+.DS_Store
+
+# Generated packaging assets; keep the packaging scripts and specs.
+/packaging/deb-stage/
+/packaging/dist-linux/
+/packaging/dist-windows/
+/packaging/downloads/
+/packaging/install-test-linux/
+/packaging/nsis/
+/packaging/windows-python/
+/packaging/wine-prefix/
+/packaging/work-linux/
+/packaging/work-windows/
+/packaging/*-build.log
+/packaging/windows-runtime.log

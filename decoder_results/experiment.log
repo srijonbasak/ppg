@@ -1,0 +1,60 @@
+317 validation signal {'original_joint': {'generated_digit_accuracy': 0.9633151888847351, 'oracle_delta': {'oracle1': -0.004076063632965088, 'oracle2': 0.0, 'oracle_all': -0.05842387676239014}}, 'original_aligned': {'generated_digit_accuracy': 0.9375, 'oracle_delta': {'oracle1': -0.0013586878776550293, 'oracle2': 0.0027173757553100586, 'oracle_all': 0.00951087474822998}}} train True
+317 recognition 1 2.6245900694529216
+317 recognition 2 1.2597364219029745
+317 recognition 3 0.8209390703837077
+317 recognition 4 0.6859797199567159
+317 recognition 5 0.6487431796391805
+317 recognition 6 0.6091899899641673
+317 recognition 7 0.5776929676532745
+317 recognition 8 0.5536157763004304
+317 recognition 9 0.5246834588050843
+317 recognition 10 0.5069285051027934
+317 recognition 11 0.48311009029547375
+317 recognition 12 0.46096854329109194
+317 recognition 13 0.45081099748611453
+317 recognition 14 0.4302101496855418
+317 recognition 15 0.420584654211998
+317 recognition 16 0.4068951827287674
+317 saved original_joint
+317 saved original_aligned
+317 saved recognition
+419 validation signal {'original_joint': {'generated_digit_accuracy': 0.9510869383811951, 'oracle_delta': {'oracle1': -0.008152127265930176, 'oracle2': -0.004076063632965088, 'oracle_all': -0.1086956262588501}}, 'original_aligned': {'generated_digit_accuracy': 0.9347826242446899, 'oracle_delta': {'oracle1': -0.0013586878776550293, 'oracle2': 0.00951087474822998, 'oracle_all': 0.01086956262588501}}} train True
+419 recognition 1 2.809117209116618
+419 recognition 2 1.6577790689468384
+419 recognition 3 1.187013980547587
+419 recognition 4 1.0325487701098124
+419 recognition 5 0.9805823707580567
+419 recognition 6 0.8909889761606852
+419 recognition 7 0.8260922741889953
+419 recognition 8 0.8024024526278178
+419 recognition 9 0.7624691073099772
+419 recognition 10 0.7365151111284892
+419 recognition 11 0.724965451558431
+419 recognition 12 0.6717673269907634
+419 recognition 13 0.6660172132651011
+419 recognition 14 0.6489729376633963
+419 recognition 15 0.6393899893760682
+419 recognition 16 0.609095944960912
+419 saved original_joint
+419 saved original_aligned
+419 saved recognition
+523 validation signal {'original_joint': {'generated_digit_accuracy': 0.9633151888847351, 'oracle_delta': {'oracle1': -0.008152127265930176, 'oracle2': -0.0013586878776550293, 'oracle_all': -0.08423912525177002}}, 'original_aligned': {'generated_digit_accuracy': 0.9375, 'oracle_delta': {'oracle1': -0.0013586878776550293, 'oracle2': 0.008152186870574951, 'oracle_all': 0.008152186870574951}}} train True
+523 recognition 1 2.811162888209025
+523 recognition 2 1.8564872694015504
+523 recognition 3 1.4115305836995442
+523 recognition 4 1.1217285553614298
+523 recognition 5 0.9907406600316365
+523 recognition 6 0.855152489344279
+523 recognition 7 0.8233457533518473
+523 recognition 8 0.7795442565282186
+523 recognition 9 0.7650532495975494
+523 recognition 10 0.724071307182312
+523 recognition 11 0.6851960496107737
+523 recognition 12 0.6630295165379843
+523 recognition 13 0.6481620025634766
+523 recognition 14 0.6233984816074372
+523 recognition 15 0.6072955040136973
+523 recognition 16 0.6086823876698811
+523 saved original_joint
+523 saved original_aligned
+523 saved recognition

@@ -1,0 +1,848 @@
+{
+  "317": {
+    "A_cnn": {
+      "zero_evidence_max_deviation_from_uniform": 0.0,
+      "row_only_mean_max_probability": 0.33333098888397217,
+      "row_only_compatible_mass": 0.9999929666519165,
+      "details": [
+        {
+          "row_hz": 697,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        }
+      ]
+    },
+    "B": {
+      "zero_evidence_max_deviation_from_uniform": 0.0,
+      "row_only_mean_max_probability": 0.33333098888397217,
+      "row_only_compatible_mass": 0.9999929666519165,
+      "details": [
+        {
+          "row_hz": 697,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        }
+      ]
+    },
+    "C_cnn": {
+      "zero_evidence_max_deviation_from_uniform": 0.0,
+      "row_only_mean_max_probability": 0.33333098888397217,
+      "row_only_compatible_mass": 0.9999929666519165,
+      "details": [
+        {
+          "row_hz": 697,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        }
+      ]
+    },
+    "D": {
+      "zero_evidence_max_deviation_from_uniform": 0.0,
+      "row_only_mean_max_probability": 0.33333098888397217,
+      "row_only_compatible_mass": 0.9999929666519165,
+      "details": [
+        {
+          "row_hz": 697,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        }
+      ]
+    }
+  },
+  "419": {
+    "A_cnn": {
+      "zero_evidence_max_deviation_from_uniform": 0.0,
+      "row_only_mean_max_probability": 0.33333098888397217,
+      "row_only_compatible_mass": 0.9999929666519165,
+      "details": [
+        {
+          "row_hz": 697,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        }
+      ]
+    },
+    "B": {
+      "zero_evidence_max_deviation_from_uniform": 0.0,
+      "row_only_mean_max_probability": 0.33333098888397217,
+      "row_only_compatible_mass": 0.9999929666519165,
+      "details": [
+        {
+          "row_hz": 697,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        }
+      ]
+    },
+    "C_cnn": {
+      "zero_evidence_max_deviation_from_uniform": 0.0,
+      "row_only_mean_max_probability": 0.33333098888397217,
+      "row_only_compatible_mass": 0.9999929666519165,
+      "details": [
+        {
+          "row_hz": 697,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        }
+      ]
+    },
+    "D": {
+      "zero_evidence_max_deviation_from_uniform": 0.0,
+      "row_only_mean_max_probability": 0.33333098888397217,
+      "row_only_compatible_mass": 0.9999929666519165,
+      "details": [
+        {
+          "row_hz": 697,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        }
+      ]
+    }
+  },
+  "523": {
+    "A_cnn": {
+      "zero_evidence_max_deviation_from_uniform": 0.0,
+      "row_only_mean_max_probability": 0.33333098888397217,
+      "row_only_compatible_mass": 0.9999929666519165,
+      "details": [
+        {
+          "row_hz": 697,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        }
+      ]
+    },
+    "B": {
+      "zero_evidence_max_deviation_from_uniform": 0.0,
+      "row_only_mean_max_probability": 0.33333098888397217,
+      "row_only_compatible_mass": 0.9999929666519165,
+      "details": [
+        {
+          "row_hz": 697,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        }
+      ]
+    },
+    "C_cnn": {
+      "zero_evidence_max_deviation_from_uniform": 0.0,
+      "row_only_mean_max_probability": 0.33333098888397217,
+      "row_only_compatible_mass": 0.9999929666519165,
+      "details": [
+        {
+          "row_hz": 697,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        }
+      ]
+    },
+    "D": {
+      "zero_evidence_max_deviation_from_uniform": 0.0,
+      "row_only_mean_max_probability": 0.33333098888397217,
+      "row_only_compatible_mass": 0.9999929666519165,
+      "details": [
+        {
+          "row_hz": 697,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 697,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 770,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 0.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 1.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        },
+        {
+          "row_hz": 852,
+          "phase": 2.0,
+          "max_probability": 0.33333098888397217,
+          "compatible_probability_mass": 0.9999929666519165,
+          "uniform_compatible_cross_entropy": 1.0986193418502808
+        }
+      ]
+    }
+  }
+}

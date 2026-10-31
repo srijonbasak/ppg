@@ -1,0 +1,19 @@
+{
+  "seed": 41,
+  "tokenizer_epochs": 60,
+  "tokenizer_batch_size": 256,
+  "tokenizer_learning_rate": 0.001,
+  "tokenizer_schedule": "cosine_to_0.00001",
+  "tokenizer_checkpoint_selection": "best_validation_sequence_accuracy",
+  "reconstruction_gate": 0.99,
+  "audio_train_sequences": 1200,
+  "audio_val_sequences": 200,
+  "audio_test_sequences": 300,
+  "audio_epochs": 8,
+  "audio_batch_size": 32,
+  "audio_learning_rate": 0.0003,
+  "hierarchy_samples": 4,
+  "conditions": ["reference", "noise", "interference", "partial_erasure"],
+  "device": "cpu",
+  "threads": 1
+}

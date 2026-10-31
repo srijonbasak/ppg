@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Parallel Possibility Lab · DTMF 0–9</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header><div class="mark">PPF</div><div><h1>Parallel Possibility Lab</h1><p>NCM-inspired DTMF digit prototype · research implementation</p></div></header>
+  <section class="workspace">
+    <article class="panel keypad-panel">
+      <div class="panel-title"><span>01</span><div><h2>Compose tones</h2><p>Press keys or use your keyboard</p></div></div>
+      <div class="keypad" id="keypad"></div>
+    </article>
+    <article class="panel control-panel">
+      <div class="panel-title"><span>02</span><div><h2>Sequence</h2><p>Synthesize clean or varied training audio</p></div></div>
+      <div class="display" id="sequence" aria-live="polite">—</div>
+      <div class="actions"><button id="play" class="primary">▶ Play</button><button id="clear">Clear</button></div>
+      <div class="grid2">
+        <label>Tone <b id="toneValue">125 ms</b><input id="tone" type="range" min="70" max="260" value="125"></label>
+        <label>Gap <b id="gapValue">25 ms</b><input id="gap" type="range" min="15" max="100" value="25"></label>
+      </div>
+      <label class="check"><input id="vary" type="checkbox" checked> Randomize durations and add light noise</label>
+      <button id="download">↓ Download WAV + label</button>
+    </article>
+    <article class="panel record-panel">
+      <div class="panel-title"><span>03</span><div><h2>Record a sample</h2><p>Label a microphone recording for your dataset</p></div></div>
+      <div class="record-row"><select id="label" aria-label="Ground-truth digit"></select><button id="record" class="record">● Record</button></div>
+      <p id="recordStatus" class="status">Choose the digit you will produce, then record.</p>
+      <div class="actions"><button id="saveRecording" disabled>↓ Save labeled sample</button><button id="predictRecording" disabled>Predict</button></div>
+    </article>
+    <article class="panel possibilities-panel">
+      <div class="panel-title"><span>04</span><div><h2>Top possibilities</h2><p>Model confidence, not only one hard answer</p></div></div>
+      <div id="possibilities" class="possibilities"><p class="empty">Start the server with a trained checkpoint, then predict a recording.</p></div>
+    </article>
+  </section>
+  <footer><span>Coarse → fine residual VQ</span><span>Parallel codes per level</span><span>Conditional Transformer</span></footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
+

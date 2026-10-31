@@ -1,0 +1,229 @@
+{
+  "tokenizer_digit_probes": [
+    {
+      "train_accuracy_by_position": [
+        0.3141666650772095,
+        0.3050000071525574,
+        0.2866666615009308,
+        0.3149999976158142
+      ],
+      "test_accuracy_by_position": [
+        0.2888889014720917,
+        0.2481481432914734,
+        0.307407408952713,
+        0.30000001192092896
+      ],
+      "test_all_positions_correct": 0.0,
+      "parameters": 10280
+    },
+    {
+      "train_accuracy_by_position": [
+        0.6825000047683716,
+        0.6725000143051147,
+        0.6941666603088379,
+        0.67166668176651
+      ],
+      "test_accuracy_by_position": [
+        0.46296295523643494,
+        0.42222222685813904,
+        0.4851851761341095,
+        0.4444444477558136
+      ],
+      "test_all_positions_correct": 0.07407407462596893,
+      "parameters": 10280
+    },
+    {
+      "train_accuracy_by_position": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "test_accuracy_by_position": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "test_all_positions_correct": 1.0,
+      "parameters": 10280
+    }
+  ],
+  "audio_to_code_probes": [
+    {
+      "train_accuracy_by_position": [
+        0.9975000023841858
+      ],
+      "test_accuracy_by_position": [
+        0.41111111640930176
+      ],
+      "test_all_positions_correct": 0.41111111640930176,
+      "parameters": 16448
+    },
+    {
+      "train_accuracy_by_position": [
+        1.0,
+        1.0
+      ],
+      "test_accuracy_by_position": [
+        0.6000000238418579,
+        0.5555555820465088
+      ],
+      "test_all_positions_correct": 0.3888888955116272,
+      "parameters": 32896
+    },
+    {
+      "train_accuracy_by_position": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "test_accuracy_by_position": [
+        0.8111110925674438,
+        0.8259259462356567,
+        0.7777777910232544,
+        0.8259259462356567
+      ],
+      "test_all_positions_correct": 0.5703703761100769,
+      "parameters": 65792
+    }
+  ],
+  "neighbors": {
+    "change_position_1": [
+      {
+        "changed_code_fraction_by_slot": [
+          0.6380000114440918
+        ],
+        "any_code_changed": 0.6380000114440918,
+        "mean_squared_embedding_distance": 0.013697344809770584
+      },
+      {
+        "changed_code_fraction_by_slot": [
+          0.9553999900817871,
+          0.0
+        ],
+        "any_code_changed": 0.9553999900817871,
+        "mean_squared_embedding_distance": 0.03984347730875015
+      },
+      {
+        "changed_code_fraction_by_slot": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "any_code_changed": 1.0,
+        "mean_squared_embedding_distance": 0.29965975880622864
+      }
+    ],
+    "change_position_2": [
+      {
+        "changed_code_fraction_by_slot": [
+          0.6399999856948853
+        ],
+        "any_code_changed": 0.6399999856948853,
+        "mean_squared_embedding_distance": 0.013757290318608284
+      },
+      {
+        "changed_code_fraction_by_slot": [
+          0.9535999894142151,
+          0.0
+        ],
+        "any_code_changed": 0.9535999894142151,
+        "mean_squared_embedding_distance": 0.03923004865646362
+      },
+      {
+        "changed_code_fraction_by_slot": [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "any_code_changed": 1.0,
+        "mean_squared_embedding_distance": 0.2995149791240692
+      }
+    ],
+    "change_position_3": [
+      {
+        "changed_code_fraction_by_slot": [
+          0.6362000107765198
+        ],
+        "any_code_changed": 0.6362000107765198,
+        "mean_squared_embedding_distance": 0.01384221762418747
+      },
+      {
+        "changed_code_fraction_by_slot": [
+          0.0,
+          0.9563999772071838
+        ],
+        "any_code_changed": 0.9563999772071838,
+        "mean_squared_embedding_distance": 0.03985746577382088
+      },
+      {
+        "changed_code_fraction_by_slot": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "any_code_changed": 1.0,
+        "mean_squared_embedding_distance": 0.30026111006736755
+      }
+    ],
+    "change_position_4": [
+      {
+        "changed_code_fraction_by_slot": [
+          0.6496000289916992
+        ],
+        "any_code_changed": 0.6496000289916992,
+        "mean_squared_embedding_distance": 0.01401522383093834
+      },
+      {
+        "changed_code_fraction_by_slot": [
+          0.0,
+          0.9581999778747559
+        ],
+        "any_code_changed": 0.9581999778747559,
+        "mean_squared_embedding_distance": 0.03977344557642937
+      },
+      {
+        "changed_code_fraction_by_slot": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "any_code_changed": 1.0,
+        "mean_squared_embedding_distance": 0.3003682792186737
+      }
+    ],
+    "unrelated_all_four_different": [
+      {
+        "changed_code_fraction_by_slot": [
+          0.9182000160217285
+        ],
+        "any_code_changed": 0.9182000160217285,
+        "mean_squared_embedding_distance": 0.029559558257460594
+      },
+      {
+        "changed_code_fraction_by_slot": [
+          0.9810000061988831,
+          0.9825999736785889
+        ],
+        "any_code_changed": 0.9995999932289124,
+        "mean_squared_embedding_distance": 0.14062334597110748
+      },
+      {
+        "changed_code_fraction_by_slot": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "any_code_changed": 1.0,
+        "mean_squared_embedding_distance": 1.200516939163208
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "ppf/sequence.py": "ba22a3a8ce29b248986a4b36f246cbd567c4ee2ebb6e4fef64cdd7166a9ae6a9",
+  "experiments/auxiliary_config.json": "04906a357276f51c0791167f3f786e2bc134ff576e02028a22f373870aeffe39",
+  "compositional_results/structured_tokenizer.pt": "ad20fbe5b081ef1e86208fc38337b9dfa78ffc64b20123a5407c082952ec5813",
+  "representation_results/cnn.pt": "6fa450c1e80ce36862d76b7f2071f071215a3f333c6281c4f33d210e690f1be6"
+}

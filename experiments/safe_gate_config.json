@@ -1,0 +1,17 @@
+{
+  "seeds": [317, 419, 523],
+  "relative_mel_floor": 0.001,
+  "frontend_selection": "validation clean accuracy >=99.5% and corrupted drop <=1 percentage point; no CNN weight changes",
+  "epochs": 16,
+  "gate_steps": 1000,
+  "gate_learning_rate": 0.01,
+  "gate_l2": 0.01,
+  "gate_fit_validation_fraction": 0.5,
+  "route_error_recall_target": 0.9,
+  "maximum_correct_to_wrong_rate": 0.005,
+  "acceptance_thresholds": [-0.5, -0.25, -0.1, 0, 0.02, 0.05, 0.1, 0.2, 0.4, 0.6, 0.8, 1.01],
+  "bootstrap_samples": 2000,
+  "confidence_interval": "paired cluster bootstrap over digit combinations; average across three model seeds",
+  "threads": 1,
+  "selection": "validation only; fixed final refiner epoch; identical gate for conventional and APPT proposals"
+}

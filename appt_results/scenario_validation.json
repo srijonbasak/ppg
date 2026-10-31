@@ -1,0 +1,5 @@
+{
+  "ideal_clean_goertzel_digit_accuracy": 1.0,
+  "checked_clean_digits": 1080,
+  "exactly_two_zero_windows_per_erased_sequence": true
+}

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dtmf-ppf"
+version = "0.1.0"
+description = "NCM-inspired Parallel Possibility Framework for DTMF digits"
+requires-python = ">=3.10,<3.14"
+dependencies = ["numpy>=1.26", "torch>=2.2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+ppf-generate = "ppf.cli:generate_main"
+ppf-train = "ppf.cli:train_main"
+ppf-evaluate = "ppf.cli:evaluate_main"
+ppf-serve = "ppf.server:main"
+ppf-smoke = "ppf.cli:smoke_main"
+
+[tool.setuptools.packages.find]
+include = ["ppf*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

@@ -1,0 +1,20 @@
+{
+  "seed": 317,
+  "tokenizer_epochs": 10,
+  "epochs": 16,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "code_loss_weight": 0.1,
+  "latent_dim": 32,
+  "codebook_size": 64,
+  "levels": [
+    1,
+    2,
+    4
+  ],
+  "uncertainty_error_recall_target": 0.9,
+  "audit_confidence_threshold": 0.8,
+  "top_k": 5,
+  "threads": 1,
+  "selection": "fixed final epoch; temperature and gate fitted on validation only"
+}

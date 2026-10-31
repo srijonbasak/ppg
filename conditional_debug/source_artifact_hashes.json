@@ -1,0 +1,11 @@
+{
+  "ppf/sequence.py": "6cb784899ed85e88866a279c01c2cee2138f6c4144d47f19189d1f886c2213e0",
+  "ppf/model.py": "42f8e5f65f78d2c0bb2ebf90d7c6d3c9148f98562393371b4ea05c0fbd60f000",
+  "experiments/debug_conditional.py": "316f2e01d76f4d0d00053a1ff82abdca80ee83982d696c4fa571fe1ac69ab668",
+  "experiments/debug_prefix_training.py": "ada2d0e52c7fbac03357acbb9aa2ae99d57a2f82de21b1cfeae0adc1239cdd13",
+  "experiments/debug_alignment.py": "16431c68a6096009c6ac204337e0b6c2840887faf86896f1b7ceb2bc1a5bd165",
+  "experiments/debug_tiny_generalization.py": "e589b316e08dc80e7960db21ac757694cf4fbe4104b570346eeb6358c6d73624",
+  "representation_results/tokenizer.pt": "b5ede0fbe70469928554b8c5dee695cdd270af44aa605f34891e15b58ba2329b",
+  "representation_results/cnn.pt": "6fa450c1e80ce36862d76b7f2071f071215a3f333c6281c4f33d210e690f1be6",
+  "representation_results/ppf.pt": "b8c5af92fa650651eef26badd61ab3ae6f557bded2fb48ace90fe1a6e4deac9f"
+}

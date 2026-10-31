@@ -1,0 +1,2189 @@
+{
+  "config": {
+    "seeds": [
+      317,
+      419,
+      523
+    ],
+    "epochs": 16,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "tokenizer_epochs": 10,
+    "graph_nodes": 42,
+    "graph_embedding": "fixed physical message aggregation plus train-only learned 32-dimensional PCA; no large GNN",
+    "ncm": "one Transformer decoder block, width 32, four attention heads; 1/2/4 residual codes",
+    "matched_features": "both graph and non-graph models receive the same CNN embeddings and seven measured frequency bands",
+    "compute_control": "equal updates plus supported-operation training-FLOP matching to the largest 16-epoch NCM budget",
+    "gate": "unchanged frozen conventional-reference route and acceptance masks from hierarchy_results",
+    "selection": "fixed budgets and validation-only temperatures; no test checkpoint selection"
+  },
+  "physics": {
+    "corrupted": {
+      "physical_pair_score_digit_accuracy": 0.8972222208976746,
+      "rewired_pair_score_digit_accuracy": 0.22592592239379883
+    },
+    "clean": {
+      "physical_pair_score_digit_accuracy": 1.0,
+      "rewired_pair_score_digit_accuracy": 0.18518517911434174
+    }
+  },
+  "seeds": {
+    "317": {
+      "profiled_training_flops_per_128": {
+        "A": 4685824,
+        "B": 4685824,
+        "C": 152421459,
+        "D": 152421459,
+        "rewired": 4685824,
+        "D_no_prior": 147636275,
+        "A_cnn": 4685824,
+        "C_cnn": 152421459
+      },
+      "target_training_flops": 91452875400.0,
+      "variants": {
+        "A": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 2811494400.0,
+            "temperature": 0.6165949702262878,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.9064815044403076,
+                "digit_ece_10_bins": 0.031069082069734577,
+                "digit_nll": 0.28492239117622375,
+                "digit_brier": 0.13672631978988647,
+                "sequence_top1": 0.737037037037037,
+                "sequence_top5": 0.8444444444444444,
+                "wrong_to_correct": 119,
+                "correct_to_wrong": 13,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 1.4446040004258975,
+                  "p95": 1.800013349202345
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.06897352077066898,
+                "digit_nll": 0.0843484103679657,
+                "digit_brier": 0.04032750800251961,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.3986664998810738,
+                  "p95": 1.647342047363054
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 521,
+            "steps": 19777,
+            "estimated_training_flops": 91453227008.0,
+            "temperature": 3.981071949005127,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.9194444417953491,
+                "digit_ece_10_bins": 0.015492153128434438,
+                "digit_nll": 0.260203093290329,
+                "digit_brier": 0.12245199084281921,
+                "sequence_top1": 0.7407407407407407,
+                "sequence_top5": 0.8703703703703703,
+                "wrong_to_correct": 136,
+                "correct_to_wrong": 16,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 1.4488024989987025,
+                  "p95": 1.5956079989337013
+                }
+              },
+              "clean": {
+                "digit_accuracy": 0.9138888716697693,
+                "digit_ece_10_bins": 0.08030722849071026,
+                "digit_nll": 0.2692016661167145,
+                "digit_brier": 0.11913049221038818,
+                "sequence_top1": 0.7074074074074074,
+                "sequence_top5": 0.9481481481481482,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 93,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.3952004992461298,
+                  "p95": 1.606740947681828
+                }
+              }
+            }
+          }
+        },
+        "B": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 2811494400.0,
+            "temperature": 0.5188000202178955,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.904629647731781,
+                "digit_ece_10_bins": 0.04158809167711297,
+                "digit_nll": 0.2922678589820862,
+                "digit_brier": 0.13932427763938904,
+                "sequence_top1": 0.725925925925926,
+                "sequence_top5": 0.8407407407407408,
+                "wrong_to_correct": 118,
+                "correct_to_wrong": 14,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 1.4804125003138324,
+                  "p95": 1.5786428495630387
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.03350117802619934,
+                "digit_nll": 0.034675292670726776,
+                "digit_brier": 0.0031683328561484814,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.3926805004302878,
+                  "p95": 1.534774600622768
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 521,
+            "steps": 19777,
+            "estimated_training_flops": 91453227008.0,
+            "temperature": 3.589219570159912,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.9324073791503906,
+                "digit_ece_10_bins": 0.022477301623439416,
+                "digit_nll": 0.23379458487033844,
+                "digit_brier": 0.108577661216259,
+                "sequence_top1": 0.774074074074074,
+                "sequence_top5": 0.8888888888888888,
+                "wrong_to_correct": 145,
+                "correct_to_wrong": 11,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 1.4850719999230932,
+                  "p95": 1.5498481014219576
+                }
+              },
+              "clean": {
+                "digit_accuracy": 0.9138888716697693,
+                "digit_ece_10_bins": 0.07794372737407684,
+                "digit_nll": 0.11199554800987244,
+                "digit_brier": 0.06406926363706589,
+                "sequence_top1": 0.7074074074074074,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 93,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.4220365010260139,
+                  "p95": 1.635043050555396
+                }
+              }
+            }
+          }
+        },
+        "C": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 0.8413951396942139,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8796296119689941,
+                "digit_ece_10_bins": 0.028521660860405973,
+                "digit_nll": 0.3712015748023987,
+                "digit_brier": 0.17635765671730042,
+                "sequence_top1": 0.6888888888888889,
+                "sequence_top5": 0.7777777777777778,
+                "wrong_to_correct": 96,
+                "correct_to_wrong": 19,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 2.097739999953774,
+                  "p95": 2.652291801314276
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.02907908521592617,
+                "digit_nll": 0.030092479661107063,
+                "digit_brier": 0.002563376212492585,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.4189804987836396,
+                  "p95": 2.1846406500117155
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 0.8413951396942139,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8796296119689941,
+                "digit_ece_10_bins": 0.028521660860405973,
+                "digit_nll": 0.3712015748023987,
+                "digit_brier": 0.17635765671730042,
+                "sequence_top1": 0.6888888888888889,
+                "sequence_top5": 0.7777777777777778,
+                "wrong_to_correct": 96,
+                "correct_to_wrong": 19,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 2.065458500510431,
+                  "p95": 2.2221682009330834
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.02907908521592617,
+                "digit_nll": 0.030092479661107063,
+                "digit_brier": 0.002563376212492585,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.4232635003281757,
+                  "p95": 2.206284700696415
+                }
+              }
+            }
+          }
+        },
+        "D": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 0.8128305077552795,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8824074268341064,
+                "digit_ece_10_bins": 0.036881681298837066,
+                "digit_nll": 0.3485701084136963,
+                "digit_brier": 0.16983874142169952,
+                "sequence_top1": 0.7037037037037037,
+                "sequence_top5": 0.8037037037037037,
+                "wrong_to_correct": 100,
+                "correct_to_wrong": 20,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 2.111271000103443,
+                  "p95": 2.28923675022088
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.02886500395834446,
+                "digit_nll": 0.029876934364438057,
+                "digit_brier": 0.002559453947469592,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.417147001120611,
+                  "p95": 2.1739286987212836
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 0.8128305077552795,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8824074268341064,
+                "digit_ece_10_bins": 0.036881681298837066,
+                "digit_nll": 0.3485701084136963,
+                "digit_brier": 0.16983874142169952,
+                "sequence_top1": 0.7037037037037037,
+                "sequence_top5": 0.8037037037037037,
+                "wrong_to_correct": 100,
+                "correct_to_wrong": 20,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 2.103300999806379,
+                  "p95": 2.370506300758279
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.02886500395834446,
+                "digit_nll": 0.029876934364438057,
+                "digit_brier": 0.002559453947469592,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.4190310012054397,
+                  "p95": 2.2025190493877744
+                }
+              }
+            }
+          }
+        },
+        "rewired": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 2811494400.0,
+            "temperature": 0.5559042692184448,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.9101851582527161,
+                "digit_ece_10_bins": 0.031120308762183413,
+                "digit_nll": 0.28233277797698975,
+                "digit_brier": 0.1339283138513565,
+                "sequence_top1": 0.737037037037037,
+                "sequence_top5": 0.8740740740740741,
+                "wrong_to_correct": 122,
+                "correct_to_wrong": 12,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 1.4825769994786242,
+                  "p95": 1.5324224510550266
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.034236758947372437,
+                "digit_nll": 0.03546064347028732,
+                "digit_brier": 0.0032524308189749718,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.3988974988023983,
+                  "p95": 1.564576802047668
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 521,
+            "steps": 19777,
+            "estimated_training_flops": 91453227008.0,
+            "temperature": 2.5409727096557617,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.9333333373069763,
+                "digit_ece_10_bins": 0.02655734759173356,
+                "digit_nll": 0.27252355217933655,
+                "digit_brier": 0.1101837158203125,
+                "sequence_top1": 0.7777777777777778,
+                "sequence_top5": 0.8851851851851852,
+                "wrong_to_correct": 147,
+                "correct_to_wrong": 12,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 1.493407500674948,
+                  "p95": 1.6778738499851895
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.04894332401454449,
+                "digit_nll": 0.05292998626828194,
+                "digit_brier": 0.011422325856983662,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.421520499206963,
+                  "p95": 1.6123970994158299
+                }
+              }
+            }
+          }
+        },
+        "D_no_prior": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 88581765000.0,
+            "temperature": 0.7585775852203369,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8962963223457336,
+                "digit_ece_10_bins": 0.031093143683392555,
+                "digit_nll": 0.3486551344394684,
+                "digit_brier": 0.1520635038614273,
+                "sequence_top1": 0.7222222222222222,
+                "sequence_top5": 0.8037037037037037,
+                "wrong_to_correct": 112,
+                "correct_to_wrong": 17,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 2.057888501440175,
+                  "p95": 2.3115451014746213
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.028438013046979904,
+                "digit_nll": 0.029448287561535835,
+                "digit_brier": 0.0025551298167556524,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.4281180028774543,
+                  "p95": 2.164463549343054
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 17,
+            "steps": 628,
+            "estimated_training_flops": 91534490500.0,
+            "temperature": 0.9015711545944214,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8999999761581421,
+                "digit_ece_10_bins": 0.02963976704631932,
+                "digit_nll": 0.3253490626811981,
+                "digit_brier": 0.148878812789917,
+                "sequence_top1": 0.7296296296296296,
+                "sequence_top5": 0.825925925925926,
+                "wrong_to_correct": 115,
+                "correct_to_wrong": 16,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 2.0748509996337816,
+                  "p95": 2.3653172007470857
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.028942415490746498,
+                "digit_nll": 0.029954819008708,
+                "digit_brier": 0.002561328699812293,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.4145274999464164,
+                  "p95": 2.1270346507662907
+                }
+              }
+            }
+          }
+        },
+        "A_cnn": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 2811494400.0,
+            "temperature": 0.4677351415157318,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.9074074029922485,
+                "digit_ece_10_bins": 0.040947455971036106,
+                "digit_nll": 0.3169515132904053,
+                "digit_brier": 0.14342007040977478,
+                "sequence_top1": 0.7333333333333333,
+                "sequence_top5": 0.8444444444444444,
+                "wrong_to_correct": 119,
+                "correct_to_wrong": 12,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 1.4315195003291592,
+                  "p95": 1.5235707507599725
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.04825889877974987,
+                "digit_nll": 0.052022531628608704,
+                "digit_brier": 0.011621265672147274,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.3998095000715693,
+                  "p95": 1.5996675501810382
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 521,
+            "steps": 19777,
+            "estimated_training_flops": 91453227008.0,
+            "temperature": 3.981071949005127,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.9212962985038757,
+                "digit_ece_10_bins": 0.019104746388620697,
+                "digit_nll": 0.26746389269828796,
+                "digit_brier": 0.12579697370529175,
+                "sequence_top1": 0.7444444444444445,
+                "sequence_top5": 0.8555555555555555,
+                "wrong_to_correct": 138,
+                "correct_to_wrong": 16,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 1.4386785005626734,
+                  "p95": 1.6360052510208332
+                }
+              },
+              "clean": {
+                "digit_accuracy": 0.9138888716697693,
+                "digit_ece_10_bins": 0.06874734722077847,
+                "digit_nll": 0.17809006571769714,
+                "digit_brier": 0.08486727625131607,
+                "sequence_top1": 0.7074074074074074,
+                "sequence_top5": 0.9481481481481482,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 93,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.4004799995745998,
+                  "p95": 1.5391270502732368
+                }
+              }
+            }
+          }
+        },
+        "C_cnn": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 0.7585775852203369,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8777777552604675,
+                "digit_ece_10_bins": 0.04001317065922194,
+                "digit_nll": 0.37302646040916443,
+                "digit_brier": 0.171693354845047,
+                "sequence_top1": 0.7,
+                "sequence_top5": 0.7888888888888889,
+                "wrong_to_correct": 90,
+                "correct_to_wrong": 15,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 2.0691454992629588,
+                  "p95": 2.270931299608492
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.029326073825359344,
+                "digit_nll": 0.03034219704568386,
+                "digit_brier": 0.0025694873183965683,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.420583499566419,
+                  "p95": 2.1739824522228437
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 0.7585775852203369,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8777777552604675,
+                "digit_ece_10_bins": 0.04001317065922194,
+                "digit_nll": 0.37302646040916443,
+                "digit_brier": 0.171693354845047,
+                "sequence_top1": 0.7,
+                "sequence_top5": 0.7888888888888889,
+                "wrong_to_correct": 90,
+                "correct_to_wrong": 15,
+                "expanded_positions": 3.896296262741089,
+                "candidate_leaves": 9066.6669921875,
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead",
+                "latency_ms": {
+                  "p50": 2.083683000819292,
+                  "p95": 2.3612924500412187
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.029326073825359344,
+                "digit_nll": 0.03034219704568386,
+                "digit_brier": 0.0025694873183965683,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a",
+                "latency_ms": {
+                  "p50": 1.4213604990800377,
+                  "p95": 2.18441509805416
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "419": {
+      "profiled_training_flops_per_128": {
+        "A": 4685824,
+        "B": 4685824,
+        "C": 152421459,
+        "D": 152421459,
+        "rewired": 4685824,
+        "D_no_prior": 147636275,
+        "A_cnn": 4685824,
+        "C_cnn": 152421459
+      },
+      "target_training_flops": 91452875400.0,
+      "variants": {
+        "A": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 2811494400.0,
+            "temperature": 0.6165949702262878,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.885185182094574,
+                "digit_ece_10_bins": 0.061219318929943256,
+                "digit_nll": 0.4766419529914856,
+                "digit_brier": 0.2023388147354126,
+                "sequence_top1": 0.6925925925925925,
+                "sequence_top5": 0.7962962962962963,
+                "wrong_to_correct": 95,
+                "correct_to_wrong": 12,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.4437780009757262,
+                  "p95": 1.7965306491532826
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.402378498823964,
+                  "p95": 1.6650590014251063
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 521,
+            "steps": 19777,
+            "estimated_training_flops": 91453227008.0,
+            "temperature": 2.5409727096557617,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8962963223457336,
+                "digit_ece_10_bins": 0.06015264926827513,
+                "digit_nll": 0.45594415068626404,
+                "digit_brier": 0.18986190855503082,
+                "sequence_top1": 0.7185185185185186,
+                "sequence_top5": 0.8148148148148148,
+                "wrong_to_correct": 102,
+                "correct_to_wrong": 7,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.4354975010064663,
+                  "p95": 1.6851691008923808
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.393772501614876,
+                  "p95": 1.527058451392804
+                }
+              }
+            }
+          }
+        },
+        "B": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 2811494400.0,
+            "temperature": 0.638263463973999,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8907407522201538,
+                "digit_ece_10_bins": 0.06475414743181318,
+                "digit_nll": 0.4684438705444336,
+                "digit_brier": 0.19798815250396729,
+                "sequence_top1": 0.7111111111111111,
+                "sequence_top5": 0.7962962962962963,
+                "wrong_to_correct": 97,
+                "correct_to_wrong": 8,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.4570224993804004,
+                  "p95": 1.9045164985072909
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.3895894990128,
+                  "p95": 1.5095449994987573
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 521,
+            "steps": 19777,
+            "estimated_training_flops": 91453227008.0,
+            "temperature": 2.72270131111145,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8990740776062012,
+                "digit_ece_10_bins": 0.0626301746815443,
+                "digit_nll": 0.4474051594734192,
+                "digit_brier": 0.18480642139911652,
+                "sequence_top1": 0.7185185185185186,
+                "sequence_top5": 0.8148148148148148,
+                "wrong_to_correct": 104,
+                "correct_to_wrong": 6,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.3923850001447136,
+                  "p95": 1.526950499646773
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.3865740002074745,
+                  "p95": 1.4606449483835604
+                }
+              }
+            }
+          }
+        },
+        "C": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 0.8128305077552795,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8629629611968994,
+                "digit_ece_10_bins": 0.07121823709167074,
+                "digit_nll": 0.5494924783706665,
+                "digit_brier": 0.23663178086280823,
+                "sequence_top1": 0.6777777777777778,
+                "sequence_top5": 0.762962962962963,
+                "wrong_to_correct": 66,
+                "correct_to_wrong": 7,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.4134150005702395,
+                  "p95": 2.1807767981954385
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.402705000145943,
+                  "p95": 1.5983703504389264
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 0.8128305077552795,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8629629611968994,
+                "digit_ece_10_bins": 0.07121823709167074,
+                "digit_nll": 0.5494924783706665,
+                "digit_brier": 0.23663178086280823,
+                "sequence_top1": 0.6777777777777778,
+                "sequence_top5": 0.762962962962963,
+                "wrong_to_correct": 66,
+                "correct_to_wrong": 7,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.4239504980650963,
+                  "p95": 2.1831786494658445
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.405966499078204,
+                  "p95": 1.645805649241083
+                }
+              }
+            }
+          }
+        },
+        "D": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 0.9660508632659912,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8787037134170532,
+                "digit_ece_10_bins": 0.061287068761885166,
+                "digit_nll": 0.4993841052055359,
+                "digit_brier": 0.21081556379795074,
+                "sequence_top1": 0.6814814814814815,
+                "sequence_top5": 0.7777777777777778,
+                "wrong_to_correct": 83,
+                "correct_to_wrong": 7,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.4580799997929716,
+                  "p95": 2.338596052140929
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.3872654999431688,
+                  "p95": 1.473812352014647
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 0.9660508632659912,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8787037134170532,
+                "digit_ece_10_bins": 0.061287068761885166,
+                "digit_nll": 0.4993841052055359,
+                "digit_brier": 0.21081556379795074,
+                "sequence_top1": 0.6814814814814815,
+                "sequence_top5": 0.7777777777777778,
+                "wrong_to_correct": 83,
+                "correct_to_wrong": 7,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.4182339982653502,
+                  "p95": 2.2150288479679148
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.388687500366359,
+                  "p95": 1.5173546991718467
+                }
+              }
+            }
+          }
+        },
+        "rewired": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 2811494400.0,
+            "temperature": 0.6165949702262878,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8888888955116272,
+                "digit_ece_10_bins": 0.06292388786096126,
+                "digit_nll": 0.468661904335022,
+                "digit_brier": 0.1982804238796234,
+                "sequence_top1": 0.7074074074074074,
+                "sequence_top5": 0.8037037037037037,
+                "wrong_to_correct": 96,
+                "correct_to_wrong": 9,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.4309780017356388,
+                  "p95": 1.670576349351904
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.3915684994572075,
+                  "p95": 1.5179836012976011
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 521,
+            "steps": 19777,
+            "estimated_training_flops": 91453227008.0,
+            "temperature": 2.3713738918304443,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.895370364189148,
+                "digit_ece_10_bins": 0.06477938377065584,
+                "digit_nll": 0.4531625211238861,
+                "digit_brier": 0.19030262529850006,
+                "sequence_top1": 0.7148148148148148,
+                "sequence_top5": 0.8185185185185185,
+                "wrong_to_correct": 97,
+                "correct_to_wrong": 3,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.4081899989832891,
+                  "p95": 1.5754743999423224
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.3932615001976956,
+                  "p95": 1.5682381994338357
+                }
+              }
+            }
+          }
+        },
+        "D_no_prior": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 88581765000.0,
+            "temperature": 0.9332543015480042,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8675925731658936,
+                "digit_ece_10_bins": 0.06766756140859798,
+                "digit_nll": 0.5325402021408081,
+                "digit_brier": 0.22732332348823547,
+                "sequence_top1": 0.6777777777777778,
+                "sequence_top5": 0.762962962962963,
+                "wrong_to_correct": 71,
+                "correct_to_wrong": 7,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.432797002053121,
+                  "p95": 2.293645000281685
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.394790000631474,
+                  "p95": 1.639321599213872
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 17,
+            "steps": 628,
+            "estimated_training_flops": 91534490500.0,
+            "temperature": 1.1481536626815796,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8601852059364319,
+                "digit_ece_10_bins": 0.06791378988418728,
+                "digit_nll": 0.5454058647155762,
+                "digit_brier": 0.23464788496494293,
+                "sequence_top1": 0.6814814814814815,
+                "sequence_top5": 0.774074074074074,
+                "wrong_to_correct": 63,
+                "correct_to_wrong": 7,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.4278474991442636,
+                  "p95": 2.243090101364942
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.3879559992346913,
+                  "p95": 1.5164272981564861
+                }
+              }
+            }
+          }
+        },
+        "A_cnn": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 2811494400.0,
+            "temperature": 0.5559042692184448,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8814814686775208,
+                "digit_ece_10_bins": 0.062442332273349166,
+                "digit_nll": 0.484224796295166,
+                "digit_brier": 0.20674319565296173,
+                "sequence_top1": 0.6925925925925925,
+                "sequence_top5": 0.7925925925925926,
+                "wrong_to_correct": 93,
+                "correct_to_wrong": 14,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.3959869993414031,
+                  "p95": 1.4984917997935554
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.3843399992765626,
+                  "p95": 1.4919820505383532
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 521,
+            "steps": 19777,
+            "estimated_training_flops": 91453227008.0,
+            "temperature": 3.981071949005127,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8907407522201538,
+                "digit_ece_10_bins": 0.0605415771715343,
+                "digit_nll": 0.462728887796402,
+                "digit_brier": 0.19497768580913544,
+                "sequence_top1": 0.7148148148148148,
+                "sequence_top5": 0.8111111111111111,
+                "wrong_to_correct": 95,
+                "correct_to_wrong": 6,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.3925349994678982,
+                  "p95": 1.5032275006888085
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.3870799994037952,
+                  "p95": 1.4498587501293514
+                }
+              }
+            }
+          }
+        },
+        "C_cnn": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 1.4621771574020386,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8611111044883728,
+                "digit_ece_10_bins": 0.06798903879825957,
+                "digit_nll": 0.5365612506866455,
+                "digit_brier": 0.2300814539194107,
+                "sequence_top1": 0.674074074074074,
+                "sequence_top5": 0.7592592592592593,
+                "wrong_to_correct": 64,
+                "correct_to_wrong": 7,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.409241498549818,
+                  "p95": 2.137418599522789
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.391088000673335,
+                  "p95": 1.4915758005372481
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 1.4621771574020386,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8611111044883728,
+                "digit_ece_10_bins": 0.06798903879825957,
+                "digit_nll": 0.5365612506866455,
+                "digit_brier": 0.2300814539194107,
+                "sequence_top1": 0.674074074074074,
+                "sequence_top5": 0.7592592592592593,
+                "wrong_to_correct": 64,
+                "correct_to_wrong": 7,
+                "expanded_positions": 3.9370369911193848,
+                "candidate_leaves": 9433.3330078125,
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877",
+                "latency_ms": {
+                  "p50": 1.4240555028663948,
+                  "p95": 2.170021049823845
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 4.0,
+                "candidate_leaves": 10000.0,
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33",
+                "latency_ms": {
+                  "p50": 1.3924949998909142,
+                  "p95": 1.655491999736114
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "523": {
+      "profiled_training_flops_per_128": {
+        "A": 4685824,
+        "B": 4685824,
+        "C": 152421459,
+        "D": 152421459,
+        "rewired": 4685824,
+        "D_no_prior": 147636275,
+        "A_cnn": 4685824,
+        "C_cnn": 152421459
+      },
+      "target_training_flops": 91452875400.0,
+      "variants": {
+        "A": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 2811494400.0,
+            "temperature": 0.8413951396942139,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8935185074806213,
+                "digit_ece_10_bins": 0.039760550775099546,
+                "digit_nll": 0.46507540345191956,
+                "digit_brier": 0.1842469573020935,
+                "sequence_top1": 0.7074074074074074,
+                "sequence_top5": 0.7962962962962963,
+                "wrong_to_correct": 102,
+                "correct_to_wrong": 10,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.302819500779151,
+                  "p95": 1.5888527495917513
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.2436615015758434,
+                  "p95": 1.489049800329667
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 521,
+            "steps": 19777,
+            "estimated_training_flops": 91453227008.0,
+            "temperature": 3.981071949005127,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.9009259343147278,
+                "digit_ece_10_bins": 0.039546175801660866,
+                "digit_nll": 0.45850688219070435,
+                "digit_brier": 0.17704735696315765,
+                "sequence_top1": 0.7148148148148148,
+                "sequence_top5": 0.8111111111111111,
+                "wrong_to_correct": 107,
+                "correct_to_wrong": 7,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.2901395002700156,
+                  "p95": 1.5180394510025506
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.2340425000729738,
+                  "p95": 1.2927655508974567
+                }
+              }
+            }
+          }
+        },
+        "B": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 2811494400.0,
+            "temperature": 0.5956621170043945,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.895370364189148,
+                "digit_ece_10_bins": 0.04182798706460744,
+                "digit_nll": 0.4604034125804901,
+                "digit_brier": 0.1811138540506363,
+                "sequence_top1": 0.7148148148148148,
+                "sequence_top5": 0.8037037037037037,
+                "wrong_to_correct": 103,
+                "correct_to_wrong": 9,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.2661944983847206,
+                  "p95": 1.51254410011461
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.2318139997660182,
+                  "p95": 1.3403914002992678
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 521,
+            "steps": 19777,
+            "estimated_training_flops": 91453227008.0,
+            "temperature": 2.454709053039551,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.9055555462837219,
+                "digit_ece_10_bins": 0.049640541430562735,
+                "digit_nll": 0.4662076532840729,
+                "digit_brier": 0.17410629987716675,
+                "sequence_top1": 0.7185185185185186,
+                "sequence_top5": 0.8185185185185185,
+                "wrong_to_correct": 112,
+                "correct_to_wrong": 7,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.2753119990520645,
+                  "p95": 1.5068585007611546
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.2330110002949368,
+                  "p95": 1.3474593502905914
+                }
+              }
+            }
+          }
+        },
+        "C": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 0.6839116215705872,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8842592835426331,
+                "digit_ece_10_bins": 0.0568689564242959,
+                "digit_nll": 0.534761369228363,
+                "digit_brier": 0.20603416860103607,
+                "sequence_top1": 0.7111111111111111,
+                "sequence_top5": 0.774074074074074,
+                "wrong_to_correct": 91,
+                "correct_to_wrong": 9,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.2738285004161298,
+                  "p95": 2.121178048037109
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.234418999956688,
+                  "p95": 1.3196316511312032
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 0.6839116215705872,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8842592835426331,
+                "digit_ece_10_bins": 0.0568689564242959,
+                "digit_nll": 0.534761369228363,
+                "digit_brier": 0.20603416860103607,
+                "sequence_top1": 0.7111111111111111,
+                "sequence_top5": 0.774074074074074,
+                "wrong_to_correct": 91,
+                "correct_to_wrong": 9,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.2905404983030166,
+                  "p95": 2.14018990045588
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.2389975017867982,
+                  "p95": 1.5621554008248495
+                }
+              }
+            }
+          }
+        },
+        "D": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 0.7328245043754578,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.885185182094574,
+                "digit_ece_10_bins": 0.04589142219629139,
+                "digit_nll": 0.4918186366558075,
+                "digit_brier": 0.19539889693260193,
+                "sequence_top1": 0.7111111111111111,
+                "sequence_top5": 0.7888888888888889,
+                "wrong_to_correct": 89,
+                "correct_to_wrong": 6,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.2850249986513518,
+                  "p95": 2.164453199475247
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.2417825000738958,
+                  "p95": 1.5537620001850883
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 0.7328245043754578,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.885185182094574,
+                "digit_ece_10_bins": 0.04589142219629139,
+                "digit_nll": 0.4918186366558075,
+                "digit_brier": 0.19539889693260193,
+                "sequence_top1": 0.7111111111111111,
+                "sequence_top5": 0.7888888888888889,
+                "wrong_to_correct": 89,
+                "correct_to_wrong": 6,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.3257830014481442,
+                  "p95": 2.200965551310219
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.2345889990683645,
+                  "p95": 1.3283330497870338
+                }
+              }
+            }
+          }
+        },
+        "rewired": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 2811494400.0,
+            "temperature": 0.5956621170043945,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.895370364189148,
+                "digit_ece_10_bins": 0.04187764402013272,
+                "digit_nll": 0.4632036089897156,
+                "digit_brier": 0.18240177631378174,
+                "sequence_top1": 0.7111111111111111,
+                "sequence_top5": 0.8,
+                "wrong_to_correct": 103,
+                "correct_to_wrong": 9,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.2588699992193142,
+                  "p95": 1.511628000116616
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.2313075003476115,
+                  "p95": 1.3106805494317086
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 521,
+            "steps": 19777,
+            "estimated_training_flops": 91453227008.0,
+            "temperature": 2.818382978439331,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.904629647731781,
+                "digit_ece_10_bins": 0.04666333587374538,
+                "digit_nll": 0.4528173804283142,
+                "digit_brier": 0.1720459908246994,
+                "sequence_top1": 0.7222222222222222,
+                "sequence_top5": 0.8111111111111111,
+                "wrong_to_correct": 110,
+                "correct_to_wrong": 6,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.3023979990975931,
+                  "p95": 1.539572499859787
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.2350550005066907,
+                  "p95": 1.3511257491700235
+                }
+              }
+            }
+          }
+        },
+        "D_no_prior": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 88581765000.0,
+            "temperature": 1.0,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8796296119689941,
+                "digit_ece_10_bins": 0.049502633773954585,
+                "digit_nll": 0.5143848657608032,
+                "digit_brier": 0.2053108662366867,
+                "sequence_top1": 0.6962962962962963,
+                "sequence_top5": 0.7851851851851852,
+                "wrong_to_correct": 82,
+                "correct_to_wrong": 5,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.2979295006516622,
+                  "p95": 2.1629170991218416
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.2457755001378246,
+                  "p95": 1.369969001825666
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 17,
+            "steps": 628,
+            "estimated_training_flops": 91534490500.0,
+            "temperature": 0.7852356433868408,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8833333253860474,
+                "digit_ece_10_bins": 0.049082997371442616,
+                "digit_nll": 0.5049620270729065,
+                "digit_brier": 0.20098260045051575,
+                "sequence_top1": 0.6962962962962963,
+                "sequence_top5": 0.7777777777777778,
+                "wrong_to_correct": 86,
+                "correct_to_wrong": 5,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.3141809995431686,
+                  "p95": 2.1847692507435568
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.2518269995780429,
+                  "p95": 1.54891770107497
+                }
+              }
+            }
+          }
+        },
+        "A_cnn": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 2811494400.0,
+            "temperature": 0.5754399299621582,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8925926089286804,
+                "digit_ece_10_bins": 0.04432018205989152,
+                "digit_nll": 0.4752861261367798,
+                "digit_brier": 0.1872507929801941,
+                "sequence_top1": 0.7111111111111111,
+                "sequence_top5": 0.8,
+                "wrong_to_correct": 101,
+                "correct_to_wrong": 10,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.3371844997891458,
+                  "p95": 2.1250844985843287
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.2357965006231098,
+                  "p95": 1.2952265480635103
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 521,
+            "steps": 19777,
+            "estimated_training_flops": 91453227008.0,
+            "temperature": 3.8459179401397705,
+            "parameters": 8906,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8981481194496155,
+                "digit_ece_10_bins": 0.03980927122756839,
+                "digit_nll": 0.46293067932128906,
+                "digit_brier": 0.1787513792514801,
+                "sequence_top1": 0.7148148148148148,
+                "sequence_top5": 0.8,
+                "wrong_to_correct": 105,
+                "correct_to_wrong": 8,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.3031449998379685,
+                  "p95": 1.5039390505990011
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.2468424993130611,
+                  "p95": 1.418924199424509
+                }
+              }
+            }
+          }
+        },
+        "C_cnn": {
+          "equal_updates": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 1.4621771574020386,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8712962865829468,
+                "digit_ece_10_bins": 0.03928559328778647,
+                "digit_nll": 0.5200319290161133,
+                "digit_brier": 0.21054130792617798,
+                "sequence_top1": 0.7037037037037037,
+                "sequence_top5": 0.7777777777777778,
+                "wrong_to_correct": 75,
+                "correct_to_wrong": 7,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.3196460004110122,
+                  "p95": 2.1604860499792267
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.2318239987507695,
+                  "p95": 1.292383600048197
+                }
+              }
+            }
+          },
+          "matched_flops": {
+            "epochs_touched": 16,
+            "steps": 608,
+            "estimated_training_flops": 91452875400.0,
+            "temperature": 1.4621771574020386,
+            "parameters": 34570,
+            "scenarios": {
+              "corrupted": {
+                "digit_accuracy": 0.8712962865829468,
+                "digit_ece_10_bins": 0.03928559328778647,
+                "digit_nll": 0.5200319290161133,
+                "digit_brier": 0.21054130792617798,
+                "sequence_top1": 0.7037037037037037,
+                "sequence_top5": 0.7777777777777778,
+                "wrong_to_correct": 75,
+                "correct_to_wrong": 7,
+                "expanded_positions": 1.625925898551941,
+                "candidate_leaves": 2430.933349609375,
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644",
+                "latency_ms": {
+                  "p50": 1.322666999840294,
+                  "p95": 2.1693098009563982
+                }
+              },
+              "clean": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "expanded_positions": 0.39629629254341125,
+                "candidate_leaves": 9.966666221618652,
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def",
+                "latency_ms": {
+                  "p50": 1.2519270003394922,
+                  "p95": 1.4448599984461907
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+USDT:2026-10-31 18:57:57 5:5 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-31 18:57:57 5:5 SyncActivityProfilerHandler.cpp:46] profiler_stop
+ERROR:2026-10-31 18:57:57 5:5 DeviceProperties.cpp:56] gpuGetDeviceCount failed with code 100
+317 A_cnn equal_updates 0.7333333333333333
+317 A_cnn matched_flops 0.7444444444444445
+USDT:2026-10-31 18:58:18 5:5 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-31 18:58:18 5:5 SyncActivityProfilerHandler.cpp:46] profiler_stop
+317 C_cnn equal_updates 0.7
+USDT:2026-10-31 18:58:25 5:5 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-31 18:58:25 5:5 SyncActivityProfilerHandler.cpp:46] profiler_stop
+419 A_cnn equal_updates 0.6925925925925925
+419 A_cnn matched_flops 0.7148148148148148
+USDT:2026-10-31 18:58:46 5:5 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-31 18:58:46 5:5 SyncActivityProfilerHandler.cpp:46] profiler_stop
+419 C_cnn equal_updates 0.674074074074074
+USDT:2026-10-31 18:58:53 5:5 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-31 18:58:53 5:5 SyncActivityProfilerHandler.cpp:46] profiler_stop
+523 A_cnn equal_updates 0.7111111111111111
+523 A_cnn matched_flops 0.7148148148148148
+USDT:2026-10-31 18:59:14 5:5 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-10-31 18:59:14 5:5 SyncActivityProfilerHandler.cpp:46] profiler_stop
+523 C_cnn equal_updates 0.7037037037037037

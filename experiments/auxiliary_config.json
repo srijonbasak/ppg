@@ -1,0 +1,19 @@
+{
+  "seed": 211,
+  "epochs": 16,
+  "learning_rate": 0.0003,
+  "batch_size": 32,
+  "code_loss": "mean teacher-forced code CE over three levels",
+  "auxiliary_weights": [0.1, 0.25, 1.0],
+  "early_targets": "frozen oracle-prefix decoder distributions, KL averaged over digits",
+  "final_target": "true four digits, mean cross entropy",
+  "rollout": "hard argmax forward, softmax straight-through backward, generated earlier embeddings",
+  "cnn": "frozen existing CNN",
+  "tokenizer_decoder": "frozen existing structured checkpoint",
+  "initialization": "identical fresh predictor and event positions in both arms",
+  "budget": "equal epochs and optimizer updates; both arms execute the auxiliary forward path",
+  "selection": "fixed final epoch, no test selection",
+  "hierarchy_samples": 1,
+  "decoding": "deterministic argmax",
+  "threads": 1
+}

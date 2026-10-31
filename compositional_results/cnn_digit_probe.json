@@ -1,0 +1,16 @@
+{
+  "train_accuracy_by_position": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "test_accuracy_by_position": [
+    0.8259259462356567,
+    0.8259259462356567,
+    0.800000011920929,
+    0.8333333134651184
+  ],
+  "test_all_positions_correct": 0.5962963104248047,
+  "parameters": 10280
+}

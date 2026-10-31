@@ -1,0 +1,14 @@
+{
+  "seed": 113,
+  "tiny_examples": 32,
+  "tiny_max_steps": 2000,
+  "tiny_learning_rate": 0.001,
+  "evaluate_every": 50,
+  "mixed_prefix_probability": 0.5,
+  "mixed_epochs": 8,
+  "mixed_learning_rate": 0.0003,
+  "batch_size": 32,
+  "threads": 1,
+  "heldout_usage": "fixed checkpoint evaluation only, no selection on test",
+  "tiny_stop": "all 32 sequences and all seven codes correct under greedy target-free generation"
+}

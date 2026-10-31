@@ -1,0 +1,10 @@
+{
+  "scope": "training-set linear probe on ordered frozen CNN event means; not generalization",
+  "all_code_accuracy": 1.0,
+  "all_seven_codes_correct_fraction": 1.0,
+  "accuracy_by_level": [
+    1.0,
+    1.0,
+    1.0
+  ]
+}

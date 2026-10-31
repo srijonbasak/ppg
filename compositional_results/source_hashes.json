@@ -1,0 +1,10 @@
+{
+  "ppf/sequence.py": "6cb784899ed85e88866a279c01c2cee2138f6c4144d47f19189d1f886c2213e0",
+  "ppf/compositional.py": "d3f4626cd839fd9e41008a50425cb2a4d586973981ff850a005e2b808015b6d9",
+  "experiments/compositional_config.json": "a05aa971083255ca0bbbf1c9144a716976ce0f45f11899cd010923dfc72fce7c",
+  "experiments/compositional_probes.py": "a0af2b9fe50a98adc01326aa3ef443510f956e36da2dee1910ce99ea20d7ef98",
+  "experiments/compositional_comparison.py": "bf084a73ee22626ed9881a76810ecf04a3f1aaf730f5d80b82ab6708218c7166",
+  "experiments/compositional_hierarchy_use.py": "026a231ee9e13c77412582123a3c02837699cbf969bdf8bdb08e0104bae0ffdf",
+  "representation_results/tokenizer.pt": "b5ede0fbe70469928554b8c5dee695cdd270af44aa605f34891e15b58ba2329b",
+  "representation_results/cnn.pt": "6fa450c1e80ce36862d76b7f2071f071215a3f333c6281c4f33d210e690f1be6"
+}

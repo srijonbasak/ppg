@@ -1,0 +1,128 @@
+CNN 1 2.0961264967918396
+CNN 2 1.5088918209075928
+CNN 3 1.2019688534109216
+CNN 4 1.0529994054844505
+CNN 5 0.8979394341769972
+CNN 6 0.7954971084469243
+CNN 7 0.7171833640650699
+CNN 8 0.6549569862453561
+PPF 1 4.098640285040203
+PPF 2 3.737178319378903
+PPF 3 3.4849972913139746
+PPF 4 3.266842108023794
+PPF 5 3.0879603687085604
+PPF 6 2.9581658463729057
+PPF 7 2.8328786586460315
+PPF 8 2.720425248146057
+{
+  "cnn": {
+    "overall": {
+      "sequence_top1": 0.5866666436195374,
+      "sequence_top5": 0.746666669845581,
+      "sequence_nll": 2.7574379444122314,
+      "digit_accuracy": 0.7983333468437195,
+      "sequence_ece_10_bins": 0.26678225491195917,
+      "sequence_brier": 0.6105549335479736
+    },
+    "by_condition": {
+      "reference": {
+        "sequence_top1": 0.9866666793823242,
+        "sequence_top5": 1.0,
+        "sequence_nll": 0.4509001672267914,
+        "digit_accuracy": 0.996666669845581,
+        "sequence_ece_10_bins": 0.3410876765847206,
+        "sequence_brier": 0.14123161137104034
+      },
+      "noise": {
+        "sequence_top1": 0.6399999856948853,
+        "sequence_top5": 0.9200000166893005,
+        "sequence_nll": 2.026010036468506,
+        "digit_accuracy": 0.8899999856948853,
+        "sequence_ece_10_bins": 0.42845261795446277,
+        "sequence_brier": 0.7087535262107849
+      },
+      "interference": {
+        "sequence_top1": 0.0533333346247673,
+        "sequence_top5": 0.09333333373069763,
+        "sequence_nll": 7.085082054138184,
+        "digit_accuracy": 0.38999998569488525,
+        "sequence_ece_10_bins": 0.056037500500679016,
+        "sequence_brier": 1.0048010349273682
+      },
+      "partial_erasure": {
+        "sequence_top1": 0.6666666865348816,
+        "sequence_top5": 0.9733333587646484,
+        "sequence_nll": 1.4677597284317017,
+        "digit_accuracy": 0.9166666865348816,
+        "sequence_ece_10_bins": 0.31965801340993494,
+        "sequence_brier": 0.5874334573745728
+      }
+    },
+    "latency_ms": {
+      "p50": 0.9646319999774278,
+      "p95": 1.1234893499477039
+    },
+    "parameters": 63818,
+    "gpu_memory_bytes": null
+  },
+  "ppf": {
+    "overall": {
+      "sequence_top1": 0.0,
+      "sequence_top5": 0.0,
+      "sequence_nll": 11.159399032592773,
+      "digit_accuracy": 0.14416666328907013,
+      "sequence_ece_10_bins": 0.08720050600823015,
+      "sequence_brier": 1.0182228088378906
+    },
+    "by_condition": {
+      "reference": {
+        "sequence_top1": 0.0,
+        "sequence_top5": 0.0,
+        "sequence_nll": 10.65260124206543,
+        "digit_accuracy": 0.1599999964237213,
+        "sequence_ece_10_bins": 0.09305659146048129,
+        "sequence_brier": 1.0199052095413208
+      },
+      "noise": {
+        "sequence_top1": 0.0,
+        "sequence_top5": 0.0,
+        "sequence_nll": 11.210423469543457,
+        "digit_accuracy": 0.1433333307504654,
+        "sequence_ece_10_bins": 0.07895783125422895,
+        "sequence_brier": 1.0160698890686035
+      },
+      "interference": {
+        "sequence_top1": 0.0,
+        "sequence_top5": 0.0,
+        "sequence_nll": 11.669958114624023,
+        "digit_accuracy": 0.10333333164453506,
+        "sequence_ece_10_bins": 0.08872536569833755,
+        "sequence_brier": 1.0193169116973877
+      },
+      "partial_erasure": {
+        "sequence_top1": 0.0,
+        "sequence_top5": 0.0,
+        "sequence_nll": 11.1046142578125,
+        "digit_accuracy": 0.17000000178813934,
+        "sequence_ece_10_bins": 0.08806222677230835,
+        "sequence_brier": 1.01759934425354
+      }
+    },
+    "latency_ms": {
+      "p50": 3.3679360003588954,
+      "p95": 3.4918605499115074
+    },
+    "parameters": 232330,
+    "gpu_memory_bytes": null,
+    "teacher_forced_code_accuracy_by_level": [
+      0.10333333333333333,
+      0.13333333333333333,
+      0.385
+    ],
+    "generated_code_accuracy_by_level": [
+      0.10333333333333333,
+      0.058333333333333334,
+      0.051666666666666666
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "manifest_tensor_label_alignment": true,
+  "checked_sequences": 1700,
+  "models": {
+    "original": {
+      "coarse_prediction_unchanged_after_event_rotation": 0.9233333468437195,
+      "coarse_target_unchanged_after_event_rotation": 0.1366666704416275,
+      "coarse_accuracy_rotated": 0.14666666090488434,
+      "coarse_logit_mean_abs_rotation_change": 0.049376845359802246,
+      "coarse_logit_std": 2.149090528488159,
+      "event_position_rms": 0.03634119778871536
+    },
+    "teacher_continuation": {
+      "coarse_prediction_unchanged_after_event_rotation": 0.28333333134651184,
+      "coarse_target_unchanged_after_event_rotation": 0.1366666704416275,
+      "coarse_accuracy_rotated": 0.6100000143051147,
+      "coarse_logit_mean_abs_rotation_change": 1.02946138381958,
+      "coarse_logit_std": 3.5228636264801025,
+      "event_position_rms": 0.09996336698532104
+    },
+    "mixed_prefix": {
+      "coarse_prediction_unchanged_after_event_rotation": 0.28333333134651184,
+      "coarse_target_unchanged_after_event_rotation": 0.1366666704416275,
+      "coarse_accuracy_rotated": 0.6000000238418579,
+      "coarse_logit_mean_abs_rotation_change": 0.9495849609375,
+      "coarse_logit_std": 3.318160057067871,
+      "event_position_rms": 0.0997181162238121
+    }
+  },
+  "cnn_predicted_label_bridge": {
+    "scope": "inference from CNN predicted digits; diagnostic bypass of generator, no ground-truth prediction inputs",
+    "digit_accuracy": 0.7983333468437195,
+    "sequence_accuracy": 0.5866666436195374,
+    "code_accuracy_by_level": [
+      0.70333331823349,
+      0.7049999833106995,
+      0.6775000095367432
+    ]
+  }
+}

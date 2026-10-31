@@ -1,0 +1,98 @@
+[
+  {
+    "seed": 7,
+    "events": 480,
+    "teacher_audio_tokenizer_digit_accuracy_by_level": [
+      0.12708333333333333,
+      0.12708333333333333,
+      0.125
+    ],
+    "teacher_audio_latent_mse_by_level": [
+      4245.899104817709,
+      4239.785302734375,
+      4233.57177734375
+    ],
+    "greedy_generated_digit_accuracy_by_level": [
+      0.12708333333333333,
+      0.12708333333333333,
+      0.12708333333333333
+    ],
+    "wrong_to_correct_counts": [
+      0.0,
+      0.0
+    ],
+    "correct_to_wrong_counts": [
+      0.0,
+      0.0
+    ],
+    "test_codebook_unique_codes": [
+      3,
+      3,
+      4
+    ]
+  },
+  {
+    "seed": 17,
+    "events": 480,
+    "teacher_audio_tokenizer_digit_accuracy_by_level": [
+      0.12708333333333333,
+      0.12708333333333333,
+      0.1125
+    ],
+    "teacher_audio_latent_mse_by_level": [
+      3643.6063151041667,
+      3638.07802734375,
+      3632.573795572917
+    ],
+    "greedy_generated_digit_accuracy_by_level": [
+      0.12708333333333333,
+      0.12291666666666666,
+      0.12291666666666666
+    ],
+    "wrong_to_correct_counts": [
+      2.0,
+      0.0
+    ],
+    "correct_to_wrong_counts": [
+      4.0,
+      0.0
+    ],
+    "test_codebook_unique_codes": [
+      2,
+      2,
+      4
+    ]
+  },
+  {
+    "seed": 27,
+    "events": 480,
+    "teacher_audio_tokenizer_digit_accuracy_by_level": [
+      0.12083333333333333,
+      0.11666666666666667,
+      0.11666666666666667
+    ],
+    "teacher_audio_latent_mse_by_level": [
+      3648.41748046875,
+      3641.6673502604167,
+      3634.9373860677083
+    ],
+    "greedy_generated_digit_accuracy_by_level": [
+      0.12083333333333333,
+      0.11875,
+      0.11875
+    ],
+    "wrong_to_correct_counts": [
+      5.0,
+      0.0
+    ],
+    "correct_to_wrong_counts": [
+      6.0,
+      0.0
+    ],
+    "test_codebook_unique_codes": [
+      2,
+      2,
+      4
+    ]
+  }
+]

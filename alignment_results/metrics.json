@@ -1,0 +1,4384 @@
+{
+  "config": {
+    "seeds": [
+      317,
+      419,
+      523
+    ],
+    "epochs": 16,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "lossless_memory_tokens": 128,
+    "lossless_adapter": "four exact current-adapter anchors plus reversible normalized native stem/final tokens; fixed time/type offsets",
+    "probe": "same 512->64 coarse-only linear head; fixed linear summaries and padding document active input dimensions",
+    "main_variants": [
+      "original_joint",
+      "lossless_joint",
+      "original_aligned",
+      "lossless_aligned"
+    ],
+    "extra_diagnostic": "level1-only supervised Transformer using current adapter",
+    "aligned_loss": "mean code CE on generated prefixes + mean digit CE on observed canonical prefixes; independent gradient paths",
+    "budget": "same training examples, batches and optimizer updates; higher-memory adapters have higher compute",
+    "selection": "fixed final epoch; existing validation fitting half for temperature only",
+    "threads": 1
+  },
+  "seeds": {
+    "317": {
+      "probes": {
+        "native_final": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.9351851940155029,
+            "code_nll": 0.2082124799489975
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.0034961234778165817
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.9375,
+            "code_nll": 0.22083261609077454
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.9067164063453674,
+            "code_nll": 0.28604555130004883
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.040568746626377106
+          }
+        },
+        "native_stem_final": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.9268518686294556,
+            "code_nll": 0.2008867710828781
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.001044115168042481
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.9154411554336548,
+            "code_nll": 0.22943130135536194
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.9067164063453674,
+            "code_nll": 0.26697880029678345
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.0659206286072731
+          }
+        },
+        "current_adapter": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.9444444179534912,
+            "code_nll": 0.18667511641979218
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.004649051930755377
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.9485294222831726,
+            "code_nll": 0.2064846009016037
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.9141790866851807,
+            "code_nll": 0.2565290331840515
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.09933280944824219
+          }
+        },
+        "lossless_adapter": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.9268518686294556,
+            "code_nll": 0.2008867710828781
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.0010441148187965155
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.9154411554336548,
+            "code_nll": 0.22943130135536194
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.9067164063453674,
+            "code_nll": 0.26697877049446106
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.06592066586017609
+          }
+        },
+        "actual_memory": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.9351851940155029,
+            "code_nll": 0.2170005738735199
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.005392325576394796
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.9154411554336548,
+            "code_nll": 0.23678255081176758
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.9179104566574097,
+            "code_nll": 0.2905721366405487
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.1993393898010254
+          }
+        },
+        "transformer_hidden": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.7648147940635681,
+            "code_nll": 1.0165655612945557
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.05708885192871094
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.7683823704719543,
+            "code_nll": 1.0877691507339478
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.6940298676490784,
+            "code_nll": 1.0491966009140015
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 0.5990740656852722,
+            "code_nll": 1.183742880821228
+          }
+        }
+      },
+      "audit": {
+        "analytic_adapter_coarse_accuracy": 1.0,
+        "analytic_after_audio_projection_accuracy": 1.0,
+        "audio_projection_singular_values": [
+          1.6292944591365381,
+          1.5425338137318654,
+          1.410995653441293,
+          1.378211487742423,
+          1.3562021601019625,
+          1.2067966937189858,
+          1.0557970564728731,
+          1.01891443053253,
+          0.9856613547039235,
+          0.9212862151125474,
+          0.8636788925674904,
+          0.8284389477008959,
+          0.7751501784607719,
+          0.7517534146951032,
+          0.686608249431304,
+          0.6308556971722789,
+          0.6206847970334172,
+          0.5638951752127003,
+          0.5371099757280334,
+          0.48142617535249416,
+          0.4575385969478928,
+          0.39478964776458936,
+          0.3636556134476046,
+          0.2773222193619707,
+          0.26482978934887724,
+          0.19195868700134874,
+          0.1771850558563459,
+          0.1454744179453785,
+          0.1219013677003431,
+          0.0829245435157887,
+          0.06471402659369287,
+          0.007789295907515505
+        ],
+        "lossless_reconstruction_max_error": 9.5367431640625e-07,
+        "anchor_max_error": 0.0,
+        "path_logits_max_difference": 0.0,
+        "target_indices_min_max": [
+          0,
+          63
+        ],
+        "attention_masks": "None; all memory/code positions included",
+        "loss_mask": "all 1/2/4 code positions supervised; no ignored labels"
+      },
+      "models": {
+        "original_joint": {
+          "history": [],
+          "training_seconds": 0.0,
+          "parameters": 34570,
+          "memory_tokens": 4,
+          "scenarios": {
+            "corrupted": {
+              "raw": {
+                "digit_accuracy": 0.8898147940635681,
+                "digit_ece_10_bins": 0.01935974856132816,
+                "digit_nll": 0.2838132381439209,
+                "digit_brier": 0.14298821985721588,
+                "sequence_top1": 0.7185184955596924,
+                "sequence_top5": 0.855555534362793,
+                "digit_accuracy_by_position": [
+                  0.8814814686775208,
+                  0.8888888955116272,
+                  0.8999999761581421,
+                  0.8888888955116272
+                ],
+                "mean_max_probability": 0.9024390578269958,
+                "code_accuracy": [
+                  0.46574074029922485,
+                  0.6759259104728699,
+                  0.5143518447875977
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.8537036776542664,
+                  "digit_ece_10_bins": 0.032144807250006124,
+                  "digit_nll": 0.4199672341346741,
+                  "digit_brier": 0.19782833755016327,
+                  "sequence_top1": 0.6777777671813965,
+                  "sequence_top5": 0.7925925850868225,
+                  "digit_accuracy_by_position": [
+                    0.8407407402992249,
+                    0.8703703880310059,
+                    0.8629629611968994,
+                    0.8407407402992249
+                  ],
+                  "mean_max_probability": 0.8467320203781128,
+                  "code_accuracy": [
+                    1.0,
+                    0.5967592597007751,
+                    0.5171296000480652
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.8824074268341064,
+                "digit_ece_10_bins": 0.02501825412036851,
+                "digit_nll": 0.326045960187912,
+                "digit_brier": 0.15837092697620392,
+                "sequence_top1": 0.7,
+                "sequence_top5": 0.8,
+                "wrong_to_correct": 102,
+                "correct_to_wrong": 22,
+                "latency_ms": {
+                  "p50": 1.900264498544857,
+                  "p95": 2.0450711494049756
+                },
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead"
+              }
+            },
+            "clean": {
+              "raw": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.0023392438888549805,
+                "digit_nll": 0.0023425882682204247,
+                "digit_brier": 9.021691766974982e-06,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "digit_accuracy_by_position": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "mean_max_probability": 0.997660756111145,
+                "code_accuracy": [
+                  1.0,
+                  1.0,
+                  0.981249988079071
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 1.0,
+                  "digit_ece_10_bins": 0.0023392438888549805,
+                  "digit_nll": 0.0023425882682204247,
+                  "digit_brier": 9.021691766974982e-06,
+                  "sequence_top1": 1.0,
+                  "sequence_top5": 1.0,
+                  "digit_accuracy_by_position": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "mean_max_probability": 0.997660756111145,
+                  "code_accuracy": [
+                    1.0,
+                    1.0,
+                    0.981249988079071
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.028503185138106346,
+                "digit_nll": 0.0295136459171772,
+                "digit_brier": 0.0025553577579557896,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.2070070006302558,
+                  "p95": 1.9885713500116253
+                },
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a"
+              }
+            },
+            "noisy": {
+              "raw": {
+                "digit_accuracy": 0.9816176295280457,
+                "digit_ece_10_bins": 0.02506976475706324,
+                "digit_nll": 0.09134063124656677,
+                "digit_brier": 0.03809240832924843,
+                "sequence_top1": 0.9264705777168274,
+                "sequence_top5": 0.9852941036224365,
+                "digit_accuracy_by_position": [
+                  0.970588207244873,
+                  0.9852941036224365,
+                  1.0,
+                  0.970588207244873
+                ],
+                "mean_max_probability": 0.9573063850402832,
+                "code_accuracy": [
+                  0.2757352888584137,
+                  0.654411792755127,
+                  0.3998161852359772
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9852941036224365,
+                  "digit_ece_10_bins": 0.054824671475216746,
+                  "digit_nll": 0.1494433730840683,
+                  "digit_brier": 0.0456886850297451,
+                  "sequence_top1": 0.9411764740943909,
+                  "sequence_top5": 0.970588207244873,
+                  "digit_accuracy_by_position": [
+                    0.9852941036224365,
+                    0.9852941036224365,
+                    0.9852941036224365,
+                    0.9852941036224365
+                  ],
+                  "mean_max_probability": 0.9304694533348083,
+                  "code_accuracy": [
+                    1.0,
+                    0.4797794222831726,
+                    0.390625
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9816176295280457,
+                "digit_ece_10_bins": 0.029047130839899182,
+                "digit_nll": 0.09597020596265793,
+                "digit_brier": 0.03935110569000244,
+                "sequence_top1": 0.9264705882352942,
+                "sequence_top5": 0.9852941176470589,
+                "wrong_to_correct": 16,
+                "correct_to_wrong": 3,
+                "latency_ms": {
+                  "p50": 1.9713405017682817,
+                  "p95": 2.0216951015754603
+                },
+                "policy_hash": "08853217e803d476473f2e882a4a7ab578710a469130872716f0b664908202fc"
+              }
+            },
+            "partial_erasure": {
+              "raw": {
+                "digit_accuracy": 0.9514925479888916,
+                "digit_ece_10_bins": 0.016516017611138523,
+                "digit_nll": 0.15835750102996826,
+                "digit_brier": 0.07560846209526062,
+                "sequence_top1": 0.8059701323509216,
+                "sequence_top5": 0.9701492786407471,
+                "digit_accuracy_by_position": [
+                  0.9701492786407471,
+                  0.9253731369972229,
+                  0.9552238583564758,
+                  0.9552238583564758
+                ],
+                "mean_max_probability": 0.9565398693084717,
+                "code_accuracy": [
+                  0.5634328126907349,
+                  0.7182835936546326,
+                  0.5634328126907349
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9365671873092651,
+                  "digit_ece_10_bins": 0.02957701135892421,
+                  "digit_nll": 0.20757624506950378,
+                  "digit_brier": 0.09477671980857849,
+                  "sequence_top1": 0.746268630027771,
+                  "sequence_top5": 1.0,
+                  "digit_accuracy_by_position": [
+                    0.9552238583564758,
+                    0.9253731369972229,
+                    0.9253731369972229,
+                    0.9402984976768494
+                  ],
+                  "mean_max_probability": 0.9206114411354065,
+                  "code_accuracy": [
+                    1.0,
+                    0.7014925479888916,
+                    0.5625
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9402984976768494,
+                "digit_ece_10_bins": 0.023618311272002757,
+                "digit_nll": 0.18848857283592224,
+                "digit_brier": 0.08940021693706512,
+                "sequence_top1": 0.7611940298507462,
+                "sequence_top5": 0.8208955223880597,
+                "wrong_to_correct": 5,
+                "correct_to_wrong": 2,
+                "latency_ms": {
+                  "p50": 1.1796100006904453,
+                  "p95": 1.9516104002832435
+                },
+                "policy_hash": "abde5af4f9696869717f965e5f362b71c8124f977b57170ac6c3ba3da97fc463"
+              }
+            },
+            "missing_frequency": {
+              "raw": {
+                "digit_accuracy": 0.0,
+                "digit_ece_10_bins": 0.5226362273097038,
+                "digit_nll": 4.599170207977295,
+                "digit_brier": 1.326505184173584,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.0,
+                "digit_accuracy_by_position": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "mean_max_probability": 0.5226361751556396,
+                "code_accuracy": [
+                  0.5990740656852722,
+                  0.14259259402751923,
+                  0.15486110746860504
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.0,
+                  "digit_ece_10_bins": 0.5178667306900024,
+                  "digit_nll": 4.374020576477051,
+                  "digit_brier": 1.2857595682144165,
+                  "sequence_top1": 0.0,
+                  "sequence_top5": 0.0,
+                  "digit_accuracy_by_position": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "mean_max_probability": 0.5178666710853577,
+                  "code_accuracy": [
+                    1.0,
+                    0.14259259402751923,
+                    0.15486110746860504
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.0972222238779068,
+                "digit_ece_10_bins": 0.5482665523886681,
+                "digit_nll": 3.777545213699341,
+                "digit_brier": 1.2843313217163086,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 236,
+                "latency_ms": {
+                  "p50": 1.837845498812385,
+                  "p95": 2.020790048482013
+                },
+                "policy_hash": "abe7bab71c5eab40488e56a976ef82423fb223612e23eab3f91c2d839b75d318"
+              }
+            }
+          },
+          "temperature": 1.035142183303833
+        },
+        "lossless_joint": {
+          "history": [
+            2.239523482322693,
+            1.1467166304588319,
+            0.7823951625823975,
+            0.6008310584227244,
+            0.5336364575227102,
+            0.4832091172536214,
+            0.4589737804730733,
+            0.42152805646260577,
+            0.3895296307404836,
+            0.37352880895137786,
+            0.3488644242286682,
+            0.3266198426485062,
+            0.32148437360922494,
+            0.3075785980621974,
+            0.298110472758611,
+            0.28716932773590087
+          ],
+          "training_seconds": 44.37827823299449,
+          "parameters": 34570,
+          "memory_tokens": 128,
+          "scenarios": {
+            "corrupted": {
+              "raw": {
+                "digit_accuracy": 0.8768518567085266,
+                "digit_ece_10_bins": 0.0160339011636097,
+                "digit_nll": 0.34645336866378784,
+                "digit_brier": 0.16256208717823029,
+                "sequence_top1": 0.6851851940155029,
+                "sequence_top5": 0.8222222328186035,
+                "digit_accuracy_by_position": [
+                  0.8777777552604675,
+                  0.885185182094574,
+                  0.8629629611968994,
+                  0.8814814686775208
+                ],
+                "mean_max_probability": 0.8921363949775696,
+                "code_accuracy": [
+                  0.42222222685813904,
+                  0.6504629850387573,
+                  0.5148147940635681
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.789814829826355,
+                  "digit_ece_10_bins": 0.046940582746174186,
+                  "digit_nll": 0.5708410739898682,
+                  "digit_brier": 0.2638058066368103,
+                  "sequence_top1": 0.5814814567565918,
+                  "sequence_top5": 0.7370370626449585,
+                  "digit_accuracy_by_position": [
+                    0.800000011920929,
+                    0.7888888716697693,
+                    0.7777777910232544,
+                    0.7925925850868225
+                  ],
+                  "mean_max_probability": 0.8222867846488953,
+                  "code_accuracy": [
+                    1.0,
+                    0.5958333611488342,
+                    0.5145833492279053
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.875,
+                "digit_ece_10_bins": 0.01794814204913564,
+                "digit_nll": 0.3711282014846802,
+                "digit_brier": 0.17269736528396606,
+                "sequence_top1": 0.6851851851851852,
+                "sequence_top5": 0.774074074074074,
+                "wrong_to_correct": 92,
+                "correct_to_wrong": 20,
+                "latency_ms": {
+                  "p50": 2.0055700006196275,
+                  "p95": 2.278021999154589
+                },
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead"
+              }
+            },
+            "clean": {
+              "raw": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.002574324607849121,
+                "digit_nll": 0.0025793099775910378,
+                "digit_brier": 1.382694154017372e-05,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "digit_accuracy_by_position": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "mean_max_probability": 0.9974256753921509,
+                "code_accuracy": [
+                  0.8824074268341064,
+                  1.0,
+                  0.981249988079071
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 1.0,
+                  "digit_ece_10_bins": 0.008274435997009277,
+                  "digit_nll": 0.00845612958073616,
+                  "digit_brier": 0.0005951498169451952,
+                  "sequence_top1": 1.0,
+                  "sequence_top5": 1.0,
+                  "digit_accuracy_by_position": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "mean_max_probability": 0.9917255640029907,
+                  "code_accuracy": [
+                    1.0,
+                    0.9412037134170532,
+                    0.981249988079071
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.02870813198387623,
+                "digit_nll": 0.029719095677137375,
+                "digit_brier": 0.00255700689740479,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.22795249990304,
+                  "p95": 2.0999275035137543
+                },
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a"
+              }
+            },
+            "noisy": {
+              "raw": {
+                "digit_accuracy": 0.966911792755127,
+                "digit_ece_10_bins": 0.013429781654849648,
+                "digit_nll": 0.17986884713172913,
+                "digit_brier": 0.0593414306640625,
+                "sequence_top1": 0.8823529481887817,
+                "sequence_top5": 0.9264705777168274,
+                "digit_accuracy_by_position": [
+                  0.9852941036224365,
+                  0.970588207244873,
+                  0.9558823704719543,
+                  0.9558823704719543
+                ],
+                "mean_max_probability": 0.9615859985351562,
+                "code_accuracy": [
+                  0.36764705181121826,
+                  0.6066176295280457,
+                  0.38327205181121826
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.970588207244873,
+                  "digit_ece_10_bins": 0.06476825918070972,
+                  "digit_nll": 0.17606526613235474,
+                  "digit_brier": 0.062078189104795456,
+                  "sequence_top1": 0.8823529481887817,
+                  "sequence_top5": 0.970588207244873,
+                  "digit_accuracy_by_position": [
+                    0.970588207244873,
+                    0.970588207244873,
+                    0.970588207244873,
+                    0.970588207244873
+                  ],
+                  "mean_max_probability": 0.9099356532096863,
+                  "code_accuracy": [
+                    1.0,
+                    0.5661764740943909,
+                    0.38327205181121826
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.966911792755127,
+                "digit_ece_10_bins": 0.016626066877506673,
+                "digit_nll": 0.18361787497997284,
+                "digit_brier": 0.06035274639725685,
+                "sequence_top1": 0.8823529411764706,
+                "sequence_top5": 0.9264705882352942,
+                "wrong_to_correct": 14,
+                "correct_to_wrong": 5,
+                "latency_ms": {
+                  "p50": 2.2075460001360625,
+                  "p95": 2.2803688028943725
+                },
+                "policy_hash": "08853217e803d476473f2e882a4a7ab578710a469130872716f0b664908202fc"
+              }
+            },
+            "partial_erasure": {
+              "raw": {
+                "digit_accuracy": 0.9440298676490784,
+                "digit_ece_10_bins": 0.021961987571557984,
+                "digit_nll": 0.22377654910087585,
+                "digit_brier": 0.08201056718826294,
+                "sequence_top1": 0.7761194109916687,
+                "sequence_top5": 0.9552238583564758,
+                "digit_accuracy_by_position": [
+                  0.9552238583564758,
+                  0.9104477763175964,
+                  0.9552238583564758,
+                  0.9552238583564758
+                ],
+                "mean_max_probability": 0.9624722599983215,
+                "code_accuracy": [
+                  0.4552238881587982,
+                  0.6921641826629639,
+                  0.5848880410194397
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.8992537260055542,
+                  "digit_ece_10_bins": 0.029436605400405824,
+                  "digit_nll": 0.32976117730140686,
+                  "digit_brier": 0.14642995595932007,
+                  "sequence_top1": 0.641791045665741,
+                  "sequence_top5": 0.9253731369972229,
+                  "digit_accuracy_by_position": [
+                    0.8656716346740723,
+                    0.89552241563797,
+                    0.8805969953536987,
+                    0.9552238583564758
+                  ],
+                  "mean_max_probability": 0.889859139919281,
+                  "code_accuracy": [
+                    1.0,
+                    0.6194030046463013,
+                    0.5708954930305481
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9328358173370361,
+                "digit_ece_10_bins": 0.024082739175355528,
+                "digit_nll": 0.22325775027275085,
+                "digit_brier": 0.10235338658094406,
+                "sequence_top1": 0.7313432835820896,
+                "sequence_top5": 0.8059701492537313,
+                "wrong_to_correct": 3,
+                "correct_to_wrong": 2,
+                "latency_ms": {
+                  "p50": 1.2126829969929531,
+                  "p95": 2.1110586043505464
+                },
+                "policy_hash": "abde5af4f9696869717f965e5f362b71c8124f977b57170ac6c3ba3da97fc463"
+              }
+            },
+            "missing_frequency": {
+              "raw": {
+                "digit_accuracy": 0.0972222238779068,
+                "digit_ece_10_bins": 0.5417959224432707,
+                "digit_nll": 5.8539814949035645,
+                "digit_brier": 1.4140124320983887,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.0,
+                "digit_accuracy_by_position": [
+                  0.09259258955717087,
+                  0.11481481790542603,
+                  0.08888889104127884,
+                  0.09259258955717087
+                ],
+                "mean_max_probability": 0.639018177986145,
+                "code_accuracy": [
+                  0.31388887763023376,
+                  0.3097222149372101,
+                  0.3118055462837219
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.28240740299224854,
+                  "digit_ece_10_bins": 0.18389726430177689,
+                  "digit_nll": 3.1111104488372803,
+                  "digit_brier": 0.9777963161468506,
+                  "sequence_top1": 0.0,
+                  "sequence_top5": 0.003703703638166189,
+                  "digit_accuracy_by_position": [
+                    0.29629629850387573,
+                    0.2925925850868225,
+                    0.2518518567085266,
+                    0.2888889014720917
+                  ],
+                  "mean_max_probability": 0.46630463004112244,
+                  "code_accuracy": [
+                    1.0,
+                    0.15694443881511688,
+                    0.3118055462837219
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.0972222238779068,
+                "digit_ece_10_bins": 0.6500567495822906,
+                "digit_nll": 5.439992904663086,
+                "digit_brier": 1.4173402786254883,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 236,
+                "latency_ms": {
+                  "p50": 2.137602001312189,
+                  "p95": 3.4562474007543633
+                },
+                "policy_hash": "abe7bab71c5eab40488e56a976ef82423fb223612e23eab3f91c2d839b75d318"
+              }
+            }
+          },
+          "temperature": 1.0
+        },
+        "original_aligned": {
+          "history": [
+            4.356871840159099,
+            2.056092257499695,
+            1.3767046531041462,
+            1.0245179120699566,
+            0.845884157816569,
+            0.7584372822443645,
+            0.7022984528541565,
+            0.6670798182487487,
+            0.6383870232105255,
+            0.6199539335568746,
+            0.6039207943280538,
+            0.5815218281745911,
+            0.5750760130087534,
+            0.5656926214694977,
+            0.5517169272899628,
+            0.5433215061823528
+          ],
+          "training_seconds": 12.012660895998124,
+          "parameters": 34570,
+          "memory_tokens": 4,
+          "scenarios": {
+            "corrupted": {
+              "raw": {
+                "digit_accuracy": 0.8509259223937988,
+                "digit_ece_10_bins": 0.021967579021293204,
+                "digit_nll": 0.4228956699371338,
+                "digit_brier": 0.19879280030727386,
+                "sequence_top1": 0.6481481194496155,
+                "sequence_top5": 0.7888888716697693,
+                "digit_accuracy_by_position": [
+                  0.8888888955116272,
+                  0.8629629611968994,
+                  0.8074073791503906,
+                  0.8444444537162781
+                ],
+                "mean_max_probability": 0.8640205264091492,
+                "code_accuracy": [
+                  0.9296296238899231,
+                  0.8782407641410828,
+                  0.6682870388031006
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.8601852059364319,
+                  "digit_ece_10_bins": 0.026352299377322197,
+                  "digit_nll": 0.3841683268547058,
+                  "digit_brier": 0.1874672770500183,
+                  "sequence_top1": 0.6666666865348816,
+                  "sequence_top5": 0.8185185194015503,
+                  "digit_accuracy_by_position": [
+                    0.8999999761581421,
+                    0.8814814686775208,
+                    0.8074073791503906,
+                    0.8518518805503845
+                  ],
+                  "mean_max_probability": 0.8636239767074585,
+                  "code_accuracy": [
+                    1.0,
+                    0.8842592835426331,
+                    0.6726852059364319
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.8592592477798462,
+                "digit_ece_10_bins": 0.023552668862976134,
+                "digit_nll": 0.4230656623840332,
+                "digit_brier": 0.19596520066261292,
+                "sequence_top1": 0.674074074074074,
+                "sequence_top5": 0.7555555555555555,
+                "wrong_to_correct": 88,
+                "correct_to_wrong": 33,
+                "latency_ms": {
+                  "p50": 1.9382270002097357,
+                  "p95": 2.1036348982306663
+                },
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead"
+              }
+            },
+            "clean": {
+              "raw": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.0014156699180603027,
+                "digit_nll": 0.0014177676057443023,
+                "digit_brier": 5.518335910892347e-06,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "digit_accuracy_by_position": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "mean_max_probability": 0.9985843300819397,
+                "code_accuracy": [
+                  1.0,
+                  1.0,
+                  0.981249988079071
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 1.0,
+                  "digit_ece_10_bins": 0.0014156699180603027,
+                  "digit_nll": 0.0014177676057443023,
+                  "digit_brier": 5.518335910892347e-06,
+                  "sequence_top1": 1.0,
+                  "sequence_top5": 1.0,
+                  "digit_accuracy_by_position": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "mean_max_probability": 0.9985843300819397,
+                  "code_accuracy": [
+                    1.0,
+                    1.0,
+                    0.981249988079071
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.028775939717888832,
+                "digit_nll": 0.02978736348450184,
+                "digit_brier": 0.0025579275097697973,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.2400205014273524,
+                  "p95": 2.0376662512717303
+                },
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a"
+              }
+            },
+            "noisy": {
+              "raw": {
+                "digit_accuracy": 0.970588207244873,
+                "digit_ece_10_bins": 0.015106458973605186,
+                "digit_nll": 0.1653250753879547,
+                "digit_brier": 0.05550835281610489,
+                "sequence_top1": 0.8823529481887817,
+                "sequence_top5": 0.9411764740943909,
+                "digit_accuracy_by_position": [
+                  0.9852941036224365,
+                  0.970588207244873,
+                  0.970588207244873,
+                  0.9558823704719543
+                ],
+                "mean_max_probability": 0.9629316926002502,
+                "code_accuracy": [
+                  0.9227941036224365,
+                  0.8308823704719543,
+                  0.5045955777168274
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.970588207244873,
+                  "digit_ece_10_bins": 0.014712748408783227,
+                  "digit_nll": 0.1459670513868332,
+                  "digit_brier": 0.05179211124777794,
+                  "sequence_top1": 0.8823529481887817,
+                  "sequence_top5": 0.970588207244873,
+                  "digit_accuracy_by_position": [
+                    0.9852941036224365,
+                    0.970588207244873,
+                    0.970588207244873,
+                    0.9558823704719543
+                  ],
+                  "mean_max_probability": 0.9614484310150146,
+                  "code_accuracy": [
+                    1.0,
+                    0.8363970518112183,
+                    0.5073529481887817
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.970588207244873,
+                "digit_ece_10_bins": 0.01951058371923864,
+                "digit_nll": 0.17021669447422028,
+                "digit_brier": 0.05679828301072121,
+                "sequence_top1": 0.8823529411764706,
+                "sequence_top5": 0.9411764705882353,
+                "wrong_to_correct": 14,
+                "correct_to_wrong": 4,
+                "latency_ms": {
+                  "p50": 2.013520002947189,
+                  "p95": 2.0681163518020185
+                },
+                "policy_hash": "08853217e803d476473f2e882a4a7ab578710a469130872716f0b664908202fc"
+              }
+            },
+            "partial_erasure": {
+              "raw": {
+                "digit_accuracy": 0.9141790866851807,
+                "digit_ece_10_bins": 0.039713150123134255,
+                "digit_nll": 0.31373339891433716,
+                "digit_brier": 0.13210666179656982,
+                "sequence_top1": 0.6567164063453674,
+                "sequence_top5": 0.9552238583564758,
+                "digit_accuracy_by_position": [
+                  0.9701492786407471,
+                  0.8805969953536987,
+                  0.8805969953536987,
+                  0.9253731369972229
+                ],
+                "mean_max_probability": 0.9343922138214111,
+                "code_accuracy": [
+                  0.9067164063453674,
+                  0.858208954334259,
+                  0.6781716346740723
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9328358173370361,
+                  "digit_ece_10_bins": 0.03611812845338136,
+                  "digit_nll": 0.261100709438324,
+                  "digit_brier": 0.11057985574007034,
+                  "sequence_top1": 0.7313432693481445,
+                  "sequence_top5": 0.9850746393203735,
+                  "digit_accuracy_by_position": [
+                    0.9850746393203735,
+                    0.9253731369972229,
+                    0.89552241563797,
+                    0.9253731369972229
+                  ],
+                  "mean_max_probability": 0.9324551224708557,
+                  "code_accuracy": [
+                    1.0,
+                    0.861940324306488,
+                    0.6893656849861145
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9328358173370361,
+                "digit_ece_10_bins": 0.02691630976187298,
+                "digit_nll": 0.23382757604122162,
+                "digit_brier": 0.10236414521932602,
+                "sequence_top1": 0.7313432835820896,
+                "sequence_top5": 0.8208955223880597,
+                "wrong_to_correct": 4,
+                "correct_to_wrong": 3,
+                "latency_ms": {
+                  "p50": 1.1973930013482459,
+                  "p95": 2.010813901142683
+                },
+                "policy_hash": "abde5af4f9696869717f965e5f362b71c8124f977b57170ac6c3ba3da97fc463"
+              }
+            },
+            "missing_frequency": {
+              "raw": {
+                "digit_accuracy": 0.10370370000600815,
+                "digit_ece_10_bins": 0.3445965498685837,
+                "digit_nll": 4.755730152130127,
+                "digit_brier": 1.1433597803115845,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.0,
+                "digit_accuracy_by_position": [
+                  0.10370370000600815,
+                  0.10370370000600815,
+                  0.11481481790542603,
+                  0.09259258955717087
+                ],
+                "mean_max_probability": 0.44830024242401123,
+                "code_accuracy": [
+                  0.6861110925674438,
+                  0.6425926089286804,
+                  0.32847222685813904
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.0972222238779068,
+                  "digit_ece_10_bins": 0.43782835826277733,
+                  "digit_nll": 4.777645587921143,
+                  "digit_brier": 1.18259859085083,
+                  "sequence_top1": 0.0,
+                  "sequence_top5": 0.0,
+                  "digit_accuracy_by_position": [
+                    0.09259258955717087,
+                    0.11481481790542603,
+                    0.08888889104127884,
+                    0.09259258955717087
+                  ],
+                  "mean_max_probability": 0.5350505709648132,
+                  "code_accuracy": [
+                    1.0,
+                    0.6425926089286804,
+                    0.4069444537162781
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.0972222238779068,
+                "digit_ece_10_bins": 0.4375026784837246,
+                "digit_nll": 4.032662391662598,
+                "digit_brier": 1.1466991901397705,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 236,
+                "latency_ms": {
+                  "p50": 1.8970735000038985,
+                  "p95": 2.08676460206334
+                },
+                "policy_hash": "abe7bab71c5eab40488e56a976ef82423fb223612e23eab3f91c2d839b75d318"
+              }
+            }
+          },
+          "temperature": 1.1481536626815796
+        },
+        "lossless_aligned": {
+          "history": [
+            4.298733921051025,
+            1.9868560711542764,
+            1.2425909773508708,
+            0.9445140584309896,
+            0.8289438692728678,
+            0.7590799673398336,
+            0.7199109260241191,
+            0.6834946203231812,
+            0.6648517004648844,
+            0.645367434422175,
+            0.6323692603905996,
+            0.6127151695887247,
+            0.6052674782276154,
+            0.5941189698378245,
+            0.5833951242764791,
+            0.5808146266142528
+          ],
+          "training_seconds": 44.27237058199535,
+          "parameters": 34570,
+          "memory_tokens": 128,
+          "scenarios": {
+            "corrupted": {
+              "raw": {
+                "digit_accuracy": 0.8379629850387573,
+                "digit_ece_10_bins": 0.017205998781719245,
+                "digit_nll": 0.42661041021347046,
+                "digit_brier": 0.20330440998077393,
+                "sequence_top1": 0.6629629731178284,
+                "sequence_top5": 0.7518518567085266,
+                "digit_accuracy_by_position": [
+                  0.8592592477798462,
+                  0.8333333134651184,
+                  0.8185185194015503,
+                  0.8407407402992249
+                ],
+                "mean_max_probability": 0.8431918621063232,
+                "code_accuracy": [
+                  0.8740741014480591,
+                  0.8569444417953491,
+                  0.6483796238899231
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.8398148417472839,
+                  "digit_ece_10_bins": 0.019803042509010993,
+                  "digit_nll": 0.4053209125995636,
+                  "digit_brier": 0.1974167376756668,
+                  "sequence_top1": 0.6629629731178284,
+                  "sequence_top5": 0.7629629373550415,
+                  "digit_accuracy_by_position": [
+                    0.8666666746139526,
+                    0.8481481671333313,
+                    0.8111110925674438,
+                    0.8333333134651184
+                  ],
+                  "mean_max_probability": 0.8427205681800842,
+                  "code_accuracy": [
+                    1.0,
+                    0.8666666746139526,
+                    0.6520833373069763
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.8425925970077515,
+                "digit_ece_10_bins": 0.020189373658467957,
+                "digit_nll": 0.4282999336719513,
+                "digit_brier": 0.20338179171085358,
+                "sequence_top1": 0.662962962962963,
+                "sequence_top5": 0.725925925925926,
+                "wrong_to_correct": 75,
+                "correct_to_wrong": 38,
+                "latency_ms": {
+                  "p50": 2.03908399635111,
+                  "p95": 2.3163269503129413
+                },
+                "policy_hash": "3064e8099ecf0ee912f60017d9b9cb2125ab895e7466a3edf67d826023bb6ead"
+              }
+            },
+            "clean": {
+              "raw": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.00464475154876709,
+                "digit_nll": 0.004663672298192978,
+                "digit_brier": 4.9529451644048095e-05,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "digit_accuracy_by_position": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "mean_max_probability": 0.9953552484512329,
+                "code_accuracy": [
+                  1.0,
+                  1.0,
+                  0.981249988079071
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 1.0,
+                  "digit_ece_10_bins": 0.00464475154876709,
+                  "digit_nll": 0.004663672298192978,
+                  "digit_brier": 4.9529451644048095e-05,
+                  "sequence_top1": 1.0,
+                  "sequence_top5": 1.0,
+                  "digit_accuracy_by_position": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "mean_max_probability": 0.9953552484512329,
+                  "code_accuracy": [
+                    1.0,
+                    1.0,
+                    0.981249988079071
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.02960848994553089,
+                "digit_nll": 0.030628394335508347,
+                "digit_brier": 0.0025790876243263483,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.2167555032647215,
+                  "p95": 2.0822179518290795
+                },
+                "policy_hash": "915935fd5a5c0c84375bcc17b33ee15afdf620759d6b1f882f283c9d39fe547a"
+              }
+            },
+            "noisy": {
+              "raw": {
+                "digit_accuracy": 0.970588207244873,
+                "digit_ece_10_bins": 0.030806184862740338,
+                "digit_nll": 0.14233219623565674,
+                "digit_brier": 0.060930751264095306,
+                "sequence_top1": 0.8970588445663452,
+                "sequence_top5": 0.970588207244873,
+                "digit_accuracy_by_position": [
+                  0.9411764740943909,
+                  0.9852941036224365,
+                  0.9852941036224365,
+                  0.970588207244873
+                ],
+                "mean_max_probability": 0.9450012445449829,
+                "code_accuracy": [
+                  0.8860294222831726,
+                  0.8125,
+                  0.49172794818878174
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9742646813392639,
+                  "digit_ece_10_bins": 0.04000383603852242,
+                  "digit_nll": 0.13439546525478363,
+                  "digit_brier": 0.05300722271203995,
+                  "sequence_top1": 0.9117646813392639,
+                  "sequence_top5": 0.9558823704719543,
+                  "digit_accuracy_by_position": [
+                    0.970588207244873,
+                    0.9852941036224365,
+                    0.970588207244873,
+                    0.970588207244873
+                  ],
+                  "mean_max_probability": 0.9421669244766235,
+                  "code_accuracy": [
+                    1.0,
+                    0.8216911554336548,
+                    0.49724265933036804
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.970588207244873,
+                "digit_ece_10_bins": 0.03371259814593941,
+                "digit_nll": 0.14716851711273193,
+                "digit_brier": 0.06221954897046089,
+                "sequence_top1": 0.8970588235294118,
+                "sequence_top5": 0.9705882352941176,
+                "wrong_to_correct": 13,
+                "correct_to_wrong": 3,
+                "latency_ms": {
+                  "p50": 2.19443549940479,
+                  "p95": 2.249474500786164
+                },
+                "policy_hash": "08853217e803d476473f2e882a4a7ab578710a469130872716f0b664908202fc"
+              }
+            },
+            "partial_erasure": {
+              "raw": {
+                "digit_accuracy": 0.9291045069694519,
+                "digit_ece_10_bins": 0.03516023437259719,
+                "digit_nll": 0.2786544859409332,
+                "digit_brier": 0.1083488017320633,
+                "sequence_top1": 0.7164179086685181,
+                "sequence_top5": 0.9402984976768494,
+                "digit_accuracy_by_position": [
+                  0.9701492786407471,
+                  0.89552241563797,
+                  0.89552241563797,
+                  0.9552238583564758
+                ],
+                "mean_max_probability": 0.9354920983314514,
+                "code_accuracy": [
+                  0.8320895433425903,
+                  0.8339552283287048,
+                  0.66697758436203
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9216417670249939,
+                  "digit_ece_10_bins": 0.028123533193138428,
+                  "digit_nll": 0.27490630745887756,
+                  "digit_brier": 0.11264338344335556,
+                  "sequence_top1": 0.6865671873092651,
+                  "sequence_top5": 0.9552238583564758,
+                  "digit_accuracy_by_position": [
+                    0.9402984976768494,
+                    0.9253731369972229,
+                    0.8805969953536987,
+                    0.9402984976768494
+                  ],
+                  "mean_max_probability": 0.9287991523742676,
+                  "code_accuracy": [
+                    1.0,
+                    0.85447758436203,
+                    0.6688432693481445
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9291045069694519,
+                "digit_ece_10_bins": 0.01942063126625726,
+                "digit_nll": 0.2192670851945877,
+                "digit_brier": 0.10014628618955612,
+                "sequence_top1": 0.7164179104477612,
+                "sequence_top5": 0.8059701492537313,
+                "wrong_to_correct": 2,
+                "correct_to_wrong": 2,
+                "latency_ms": {
+                  "p50": 1.1898899974767119,
+                  "p95": 2.0463157998165116
+                },
+                "policy_hash": "abde5af4f9696869717f965e5f362b71c8124f977b57170ac6c3ba3da97fc463"
+              }
+            },
+            "missing_frequency": {
+              "raw": {
+                "digit_accuracy": 0.0972222238779068,
+                "digit_ece_10_bins": 0.4065176174044609,
+                "digit_nll": 4.162433624267578,
+                "digit_brier": 1.1386853456497192,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.0,
+                "digit_accuracy_by_position": [
+                  0.09259258955717087,
+                  0.11481481790542603,
+                  0.08888889104127884,
+                  0.09259258955717087
+                ],
+                "mean_max_probability": 0.5037398338317871,
+                "code_accuracy": [
+                  0.904629647731781,
+                  0.6425926089286804,
+                  0.25208333134651184
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.0972222238779068,
+                  "digit_ece_10_bins": 0.4520188048481941,
+                  "digit_nll": 4.273965835571289,
+                  "digit_brier": 1.1902257204055786,
+                  "sequence_top1": 0.0,
+                  "sequence_top5": 0.0,
+                  "digit_accuracy_by_position": [
+                    0.09259258955717087,
+                    0.11481481790542603,
+                    0.08888889104127884,
+                    0.09259258955717087
+                  ],
+                  "mean_max_probability": 0.5492410063743591,
+                  "code_accuracy": [
+                    1.0,
+                    0.6425926089286804,
+                    0.2759259343147278
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.0972222238779068,
+                "digit_ece_10_bins": 0.4418720081448555,
+                "digit_nll": 3.71539044380188,
+                "digit_brier": 1.1309707164764404,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 236,
+                "latency_ms": {
+                  "p50": 2.004007503273897,
+                  "p95": 2.226280200193287
+                },
+                "policy_hash": "abe7bab71c5eab40488e56a976ef82423fb223612e23eab3f91c2d839b75d318"
+              }
+            }
+          },
+          "temperature": 1.364583134651184
+        },
+        "coarse_only": {
+          "history": [
+            2.7158662939071654,
+            1.0092155273755392,
+            0.48791427731513975,
+            0.3313707079490026,
+            0.2612393669287364,
+            0.22267276177803674,
+            0.1961840558052063,
+            0.1725083049138387,
+            0.16438226997852326,
+            0.15972844739754996,
+            0.15291547094782193,
+            0.14108355854948362,
+            0.13208099852005642,
+            0.1227009808520476,
+            0.12316505004962286,
+            0.11820273687442144
+          ],
+          "training_seconds": 3.1869802870060084,
+          "parameters": 34570,
+          "memory_tokens": 4,
+          "scenarios": {
+            "corrupted": {
+              "coarse_code_accuracy": 0.9259259104728699
+            },
+            "clean": {
+              "coarse_code_accuracy": 1.0
+            },
+            "noisy": {
+              "coarse_code_accuracy": 0.9154411554336548
+            },
+            "partial_erasure": {
+              "coarse_code_accuracy": 0.891791045665741
+            },
+            "missing_frequency": {
+              "coarse_code_accuracy": 0.40925925970077515
+            }
+          }
+        }
+      }
+    },
+    "419": {
+      "probes": {
+        "native_final": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.9296296238899231,
+            "code_nll": 0.2081766277551651
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.003242771839722991
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.9301470518112183,
+            "code_nll": 0.20337431132793427
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.8731343150138855,
+            "code_nll": 0.3286992907524109
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.02092072367668152
+          }
+        },
+        "native_stem_final": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.9240740537643433,
+            "code_nll": 0.20024444162845612
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.001634029089473188
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.9411764740943909,
+            "code_nll": 0.2050582319498062
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.861940324306488,
+            "code_nll": 0.30566346645355225
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.043211329728364944
+          }
+        },
+        "current_adapter": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.9509259462356567,
+            "code_nll": 0.18907472491264343
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.0036313445307314396
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.9448529481887817,
+            "code_nll": 0.198687344789505
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.9179104566574097,
+            "code_nll": 0.29029154777526855
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.04700414836406708
+          }
+        },
+        "lossless_adapter": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.9240740537643433,
+            "code_nll": 0.2002444714307785
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.0016340295551344752
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.9411764740943909,
+            "code_nll": 0.2050582319498062
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.861940324306488,
+            "code_nll": 0.30566346645355225
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.04321129620075226
+          }
+        },
+        "actual_memory": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.9370370507240295,
+            "code_nll": 0.23162797093391418
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.004821727517992258
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.9485294222831726,
+            "code_nll": 0.22444558143615723
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.8843283653259277,
+            "code_nll": 0.3781009614467621
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.06609214842319489
+          }
+        },
+        "transformer_hidden": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.7240740656852722,
+            "code_nll": 1.1647967100143433
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.06324028968811035
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.7316176295280457,
+            "code_nll": 1.1978564262390137
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.6791045069694519,
+            "code_nll": 1.2041730880737305
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 0.6944444179534912,
+            "code_nll": 1.9795355796813965
+          }
+        }
+      },
+      "audit": {
+        "analytic_adapter_coarse_accuracy": 1.0,
+        "analytic_after_audio_projection_accuracy": 1.0,
+        "audio_projection_singular_values": [
+          1.612504807466854,
+          1.465616004024692,
+          1.427980738439096,
+          1.3083211122052316,
+          1.2278594436345087,
+          1.1689633647741595,
+          1.0778682111416555,
+          0.9882601002959838,
+          0.8929943016685318,
+          0.8376552919059346,
+          0.8032121487897969,
+          0.7323014204769461,
+          0.7261979712700104,
+          0.6534948206029171,
+          0.6084883195987417,
+          0.5432403265091775,
+          0.5319536749527166,
+          0.47311967138385025,
+          0.42950370494775986,
+          0.3955060513903509,
+          0.3622028780784438,
+          0.35104127458314044,
+          0.3301332306878064,
+          0.3114672389579828,
+          0.2594011475184024,
+          0.19929373759532798,
+          0.15806853636869472,
+          0.12722112589012505,
+          0.10868749077949719,
+          0.07111412182932646,
+          0.04163978623969499,
+          0.010026218518602439
+        ],
+        "lossless_reconstruction_max_error": 9.5367431640625e-07,
+        "anchor_max_error": 0.0,
+        "path_logits_max_difference": 0.0,
+        "target_indices_min_max": [
+          0,
+          63
+        ],
+        "attention_masks": "None; all memory/code positions included",
+        "loss_mask": "all 1/2/4 code positions supervised; no ignored labels"
+      },
+      "models": {
+        "original_joint": {
+          "history": [],
+          "training_seconds": 0.0,
+          "parameters": 34570,
+          "memory_tokens": 4,
+          "scenarios": {
+            "corrupted": {
+              "raw": {
+                "digit_accuracy": 0.8870370388031006,
+                "digit_ece_10_bins": 0.03215476404875517,
+                "digit_nll": 0.3468545079231262,
+                "digit_brier": 0.15993809700012207,
+                "sequence_top1": 0.7111111283302307,
+                "sequence_top5": 0.8407407402992249,
+                "digit_accuracy_by_position": [
+                  0.9185185432434082,
+                  0.8925926089286804,
+                  0.8481481671333313,
+                  0.8888888955116272
+                ],
+                "mean_max_probability": 0.9118862748146057,
+                "code_accuracy": [
+                  0.4148148000240326,
+                  0.6606481671333313,
+                  0.5173611044883728
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.8185185194015503,
+                  "digit_ece_10_bins": 0.03488675388507545,
+                  "digit_nll": 0.5159636735916138,
+                  "digit_brier": 0.231488436460495,
+                  "sequence_top1": 0.5814814567565918,
+                  "sequence_top5": 0.7592592835426331,
+                  "digit_accuracy_by_position": [
+                    0.8185185194015503,
+                    0.8481481671333313,
+                    0.8111110925674438,
+                    0.7962962985038757
+                  ],
+                  "mean_max_probability": 0.8334991335868835,
+                  "code_accuracy": [
+                    1.0,
+                    0.5666666626930237,
+                    0.501620352268219
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.8703703880310059,
+                "digit_ece_10_bins": 0.06552597734844312,
+                "digit_nll": 0.5318170785903931,
+                "digit_brier": 0.22799192368984222,
+                "sequence_top1": 0.6851851851851852,
+                "sequence_top5": 0.7777777777777778,
+                "wrong_to_correct": 75,
+                "correct_to_wrong": 8,
+                "latency_ms": {
+                  "p50": 1.2042269991070498,
+                  "p95": 1.9885226494807284
+                },
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877"
+              }
+            },
+            "clean": {
+              "raw": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.000568389892578125,
+                "digit_nll": 0.000568675750400871,
+                "digit_brier": 7.27819781332073e-07,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "digit_accuracy_by_position": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "mean_max_probability": 0.9994316101074219,
+                "code_accuracy": [
+                  0.9157407283782959,
+                  1.0,
+                  0.9831018447875977
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 1.0,
+                  "digit_ece_10_bins": 0.02070642204489559,
+                  "digit_nll": 0.023601971566677094,
+                  "digit_brier": 0.0057597290724515915,
+                  "sequence_top1": 1.0,
+                  "sequence_top5": 1.0,
+                  "digit_accuracy_by_position": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "mean_max_probability": 0.979293704032898,
+                  "code_accuracy": [
+                    1.0,
+                    0.957870364189148,
+                    0.9620370268821716
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.1860269987664651,
+                  "p95": 1.2264955519640353
+                },
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33"
+              }
+            },
+            "noisy": {
+              "raw": {
+                "digit_accuracy": 0.970588207244873,
+                "digit_ece_10_bins": 0.019235465675592422,
+                "digit_nll": 0.14613980054855347,
+                "digit_brier": 0.05665181949734688,
+                "sequence_top1": 0.8823529481887817,
+                "sequence_top5": 0.970588207244873,
+                "digit_accuracy_by_position": [
+                  0.9852941036224365,
+                  0.9852941036224365,
+                  0.9411764740943909,
+                  0.970588207244873
+                ],
+                "mean_max_probability": 0.9708311557769775,
+                "code_accuracy": [
+                  0.33088234066963196,
+                  0.65625,
+                  0.4117647111415863
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9558823704719543,
+                  "digit_ece_10_bins": 0.048291600309312344,
+                  "digit_nll": 0.2041078805923462,
+                  "digit_brier": 0.08670948445796967,
+                  "sequence_top1": 0.8382353186607361,
+                  "sequence_top5": 0.9411764740943909,
+                  "digit_accuracy_by_position": [
+                    0.9558823704719543,
+                    0.9852941036224365,
+                    0.9558823704719543,
+                    0.9264705777168274
+                  ],
+                  "mean_max_probability": 0.9109346866607666,
+                  "code_accuracy": [
+                    1.0,
+                    0.46691176295280457,
+                    0.3860294222831726
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9632353186607361,
+                "digit_ece_10_bins": 0.04641374456696212,
+                "digit_nll": 0.19164906442165375,
+                "digit_brier": 0.08772820979356766,
+                "sequence_top1": 0.8529411764705882,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 9,
+                "correct_to_wrong": 1,
+                "latency_ms": {
+                  "p50": 1.194022497656988,
+                  "p95": 1.9364397507160902
+                },
+                "policy_hash": "8e74ca949b0df32acc2541c035c511102aa645856f04575006a5fffcdaa9a313"
+              }
+            },
+            "partial_erasure": {
+              "raw": {
+                "digit_accuracy": 0.9589552283287048,
+                "digit_ece_10_bins": 0.020224986103130504,
+                "digit_nll": 0.20541314780712128,
+                "digit_brier": 0.06843249499797821,
+                "sequence_top1": 0.8358209133148193,
+                "sequence_top5": 0.9552238583564758,
+                "digit_accuracy_by_position": [
+                  0.9552238583564758,
+                  0.9701492786407471,
+                  0.9253731369972229,
+                  0.9850746393203735
+                ],
+                "mean_max_probability": 0.9684587121009827,
+                "code_accuracy": [
+                  0.4291044771671295,
+                  0.7257462739944458,
+                  0.6054104566574097
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.89552241563797,
+                  "digit_ece_10_bins": 0.0616037865402177,
+                  "digit_nll": 0.3022336959838867,
+                  "digit_brier": 0.12880970537662506,
+                  "sequence_top1": 0.611940324306488,
+                  "sequence_top5": 0.9104477763175964,
+                  "digit_accuracy_by_position": [
+                    0.9253731369972229,
+                    0.89552241563797,
+                    0.8805969953536987,
+                    0.8805969953536987
+                  ],
+                  "mean_max_probability": 0.8920489549636841,
+                  "code_accuracy": [
+                    1.0,
+                    0.6343283653259277,
+                    0.5811567306518555
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9402984976768494,
+                "digit_ece_10_bins": 0.02271192402986344,
+                "digit_nll": 0.18518058955669403,
+                "digit_brier": 0.08873259276151657,
+                "sequence_top1": 0.7611940298507462,
+                "sequence_top5": 0.8656716417910447,
+                "wrong_to_correct": 4,
+                "correct_to_wrong": 1,
+                "latency_ms": {
+                  "p50": 1.1898999946424738,
+                  "p95": 1.9133389978378545
+                },
+                "policy_hash": "6e35ace1a28ef9c5c13bfb35ec84d2d4186e42c29f42c160785d48640df5124c"
+              }
+            },
+            "missing_frequency": {
+              "raw": {
+                "digit_accuracy": 0.09444444626569748,
+                "digit_ece_10_bins": 0.6471439017914236,
+                "digit_nll": 6.968528747558594,
+                "digit_brier": 1.4806674718856812,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.0,
+                "digit_accuracy_by_position": [
+                  0.07777778059244156,
+                  0.1111111119389534,
+                  0.08888889104127884,
+                  0.10000000149011612
+                ],
+                "mean_max_probability": 0.7415883541107178,
+                "code_accuracy": [
+                  0.0,
+                  0.0,
+                  0.1581018567085266
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.0,
+                  "digit_ece_10_bins": 0.6803180128335953,
+                  "digit_nll": 5.6719841957092285,
+                  "digit_brier": 1.494897484779358,
+                  "sequence_top1": 0.0,
+                  "sequence_top5": 0.0,
+                  "digit_accuracy_by_position": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "mean_max_probability": 0.6803179979324341,
+                  "code_accuracy": [
+                    1.0,
+                    0.2995370328426361,
+                    0.3097222149372101
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.21203704178333282,
+                "digit_ece_10_bins": 0.5200778245925903,
+                "digit_nll": 5.511068344116211,
+                "digit_brier": 1.2406773567199707,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.007407407407407408,
+                "wrong_to_correct": 102,
+                "correct_to_wrong": 214,
+                "latency_ms": {
+                  "p50": 1.9555899998522364,
+                  "p95": 2.0314116482040845
+                },
+                "policy_hash": "3d77d6848f48379139885f8c76c2a3f0ca3e424fc34824ccf566ee8f902d6966"
+              }
+            }
+          },
+          "temperature": 0.8128305077552795
+        },
+        "lossless_joint": {
+          "history": [
+            2.239239206314087,
+            1.220949637889862,
+            0.8034668715794882,
+            0.6268445261319479,
+            0.5428372697035472,
+            0.5056949440638224,
+            0.4771468079090118,
+            0.44658428033192954,
+            0.42483435769875844,
+            0.3954484192530314,
+            0.37591908673445384,
+            0.3596972690025965,
+            0.3412421385447184,
+            0.32842595140139264,
+            0.319829628666242,
+            0.30234243710835773
+          ],
+          "training_seconds": 45.98512478300108,
+          "parameters": 34570,
+          "memory_tokens": 128,
+          "scenarios": {
+            "corrupted": {
+              "raw": {
+                "digit_accuracy": 0.8638888597488403,
+                "digit_ece_10_bins": 0.04923441307619214,
+                "digit_nll": 0.4442708492279053,
+                "digit_brier": 0.19360913336277008,
+                "sequence_top1": 0.6740740537643433,
+                "sequence_top5": 0.8074073791503906,
+                "digit_accuracy_by_position": [
+                  0.8703703880310059,
+                  0.855555534362793,
+                  0.8481481671333313,
+                  0.8814814686775208
+                ],
+                "mean_max_probability": 0.9083993434906006,
+                "code_accuracy": [
+                  0.35462963581085205,
+                  0.6620370149612427,
+                  0.5356481671333313
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.8129629492759705,
+                  "digit_ece_10_bins": 0.03464993496891111,
+                  "digit_nll": 0.5911943316459656,
+                  "digit_brier": 0.2699260115623474,
+                  "sequence_top1": 0.5740740895271301,
+                  "sequence_top5": 0.7259259223937988,
+                  "digit_accuracy_by_position": [
+                    0.8444444537162781,
+                    0.7925925850868225,
+                    0.8037037253379822,
+                    0.8111110925674438
+                  ],
+                  "mean_max_probability": 0.8237249255180359,
+                  "code_accuracy": [
+                    1.0,
+                    0.5703703761100769,
+                    0.49884259700775146
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.8629629611968994,
+                "digit_ece_10_bins": 0.06710678826493677,
+                "digit_nll": 0.5658453702926636,
+                "digit_brier": 0.23452414572238922,
+                "sequence_top1": 0.674074074074074,
+                "sequence_top5": 0.774074074074074,
+                "wrong_to_correct": 64,
+                "correct_to_wrong": 5,
+                "latency_ms": {
+                  "p50": 1.2413730000844225,
+                  "p95": 2.2276319981756387
+                },
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877"
+              }
+            },
+            "clean": {
+              "raw": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.0004330277442932129,
+                "digit_nll": 0.0004333268152549863,
+                "digit_brier": 7.934765449135739e-07,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "digit_accuracy_by_position": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "mean_max_probability": 0.9995669722557068,
+                "code_accuracy": [
+                  0.7027778029441833,
+                  1.0,
+                  0.9831018447875977
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 1.0,
+                  "digit_ece_10_bins": 0.046320741064846516,
+                  "digit_nll": 0.059441495686769485,
+                  "digit_brier": 0.030914628878235817,
+                  "sequence_top1": 1.0,
+                  "sequence_top5": 1.0,
+                  "digit_accuracy_by_position": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "mean_max_probability": 0.9536792039871216,
+                  "code_accuracy": [
+                    1.0,
+                    0.957870364189148,
+                    0.9481481313705444
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.2573880012496375,
+                  "p95": 1.9423226483922917
+                },
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33"
+              }
+            },
+            "noisy": {
+              "raw": {
+                "digit_accuracy": 0.9485294222831726,
+                "digit_ece_10_bins": 0.03055288216819463,
+                "digit_nll": 0.23988844454288483,
+                "digit_brier": 0.08810359984636307,
+                "sequence_top1": 0.8235294222831726,
+                "sequence_top5": 0.9411764740943909,
+                "digit_accuracy_by_position": [
+                  0.9411764740943909,
+                  0.9852941036224365,
+                  0.9264705777168274,
+                  0.9411764740943909
+                ],
+                "mean_max_probability": 0.9790823459625244,
+                "code_accuracy": [
+                  0.3235294222831726,
+                  0.6911764740943909,
+                  0.43474265933036804
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9485294222831726,
+                  "digit_ece_10_bins": 0.07365188072435558,
+                  "digit_nll": 0.2669779360294342,
+                  "digit_brier": 0.10091711580753326,
+                  "sequence_top1": 0.8382353186607361,
+                  "sequence_top5": 0.9411764740943909,
+                  "digit_accuracy_by_position": [
+                    0.9852941036224365,
+                    0.9558823704719543,
+                    0.9264705777168274,
+                    0.9264705777168274
+                  ],
+                  "mean_max_probability": 0.8801989555358887,
+                  "code_accuracy": [
+                    1.0,
+                    0.5091911554336548,
+                    0.3814338147640228
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9595588445663452,
+                "digit_ece_10_bins": 0.038552836296730675,
+                "digit_nll": 0.24202588200569153,
+                "digit_brier": 0.09626396000385284,
+                "sequence_top1": 0.8529411764705882,
+                "sequence_top5": 0.9558823529411765,
+                "wrong_to_correct": 8,
+                "correct_to_wrong": 1,
+                "latency_ms": {
+                  "p50": 1.2523385012173094,
+                  "p95": 2.299531451353687
+                },
+                "policy_hash": "8e74ca949b0df32acc2541c035c511102aa645856f04575006a5fffcdaa9a313"
+              }
+            },
+            "partial_erasure": {
+              "raw": {
+                "digit_accuracy": 0.9216417670249939,
+                "digit_ece_10_bins": 0.04837105155456811,
+                "digit_nll": 0.2979130148887634,
+                "digit_brier": 0.11693393439054489,
+                "sequence_top1": 0.6865671873092651,
+                "sequence_top5": 0.9701492786407471,
+                "digit_accuracy_by_position": [
+                  0.9552238583564758,
+                  0.8507462739944458,
+                  0.9253731369972229,
+                  0.9552238583564758
+                ],
+                "mean_max_probability": 0.969336986541748,
+                "code_accuracy": [
+                  0.31343284249305725,
+                  0.6735074520111084,
+                  0.6128731369972229
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.888059675693512,
+                  "digit_ece_10_bins": 0.04648396937409416,
+                  "digit_nll": 0.35217171907424927,
+                  "digit_brier": 0.16973698139190674,
+                  "sequence_top1": 0.5820895433425903,
+                  "sequence_top5": 0.89552241563797,
+                  "digit_accuracy_by_position": [
+                    0.9104477763175964,
+                    0.8358209133148193,
+                    0.8656716346740723,
+                    0.9402984976768494
+                  ],
+                  "mean_max_probability": 0.8547297120094299,
+                  "code_accuracy": [
+                    1.0,
+                    0.5802238583564758,
+                    0.5708954930305481
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9253731369972229,
+                "digit_ece_10_bins": 0.01779586251359433,
+                "digit_nll": 0.22019097208976746,
+                "digit_brier": 0.10495507717132568,
+                "sequence_top1": 0.7014925373134329,
+                "sequence_top5": 0.8507462686567164,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 1,
+                "latency_ms": {
+                  "p50": 1.1966029996983707,
+                  "p95": 2.0741472966619763
+                },
+                "policy_hash": "6e35ace1a28ef9c5c13bfb35ec84d2d4186e42c29f42c160785d48640df5124c"
+              }
+            },
+            "missing_frequency": {
+              "raw": {
+                "digit_accuracy": 0.19166666269302368,
+                "digit_ece_10_bins": 0.6847569718956947,
+                "digit_nll": 7.2730712890625,
+                "digit_brier": 1.4994271993637085,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.0,
+                "digit_accuracy_by_position": [
+                  0.17037037014961243,
+                  0.22592592239379883,
+                  0.17777778208255768,
+                  0.192592591047287
+                ],
+                "mean_max_probability": 0.8764236569404602,
+                "code_accuracy": [
+                  0.09537036716938019,
+                  0.2004629671573639,
+                  0.3097222149372101
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.0972222238779068,
+                  "digit_ece_10_bins": 0.5314020365476608,
+                  "digit_nll": 4.040284633636475,
+                  "digit_brier": 1.2962900400161743,
+                  "sequence_top1": 0.0,
+                  "sequence_top5": 0.0,
+                  "digit_accuracy_by_position": [
+                    0.09259258955717087,
+                    0.11481481790542603,
+                    0.08888889104127884,
+                    0.09259258955717087
+                  ],
+                  "mean_max_probability": 0.6286242604255676,
+                  "code_accuracy": [
+                    1.0,
+                    0.35740742087364197,
+                    0.3097222149372101
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.3092592656612396,
+                "digit_ece_10_bins": 0.5456622764468193,
+                "digit_nll": 5.331154823303223,
+                "digit_brier": 1.2389147281646729,
+                "sequence_top1": 0.007407407407407408,
+                "sequence_top5": 0.007407407407407408,
+                "wrong_to_correct": 102,
+                "correct_to_wrong": 109,
+                "latency_ms": {
+                  "p50": 2.1769924969703425,
+                  "p95": 2.4485390484187515
+                },
+                "policy_hash": "3d77d6848f48379139885f8c76c2a3f0ca3e424fc34824ccf566ee8f902d6966"
+              }
+            }
+          },
+          "temperature": 0.7852356433868408
+        },
+        "original_aligned": {
+          "history": [
+            4.417233467102051,
+            2.144813626607259,
+            1.4921601963043214,
+            1.0849657185872397,
+            0.8823009085655212,
+            0.7871331906318665,
+            0.7308624756336212,
+            0.6909186021486918,
+            0.6611582132180532,
+            0.6398489662011464,
+            0.6185677846272787,
+            0.6027386899789174,
+            0.5892476733525595,
+            0.5748106368382772,
+            0.5678348604838054,
+            0.5586637266476949
+          ],
+          "training_seconds": 11.934275509003783,
+          "parameters": 34570,
+          "memory_tokens": 4,
+          "scenarios": {
+            "corrupted": {
+              "raw": {
+                "digit_accuracy": 0.8222222328186035,
+                "digit_ece_10_bins": 0.03906034131068736,
+                "digit_nll": 0.45477595925331116,
+                "digit_brier": 0.21608135104179382,
+                "sequence_top1": 0.6370370388031006,
+                "sequence_top5": 0.7370370626449585,
+                "digit_accuracy_by_position": [
+                  0.8814814686775208,
+                  0.7777777910232544,
+                  0.8185185194015503,
+                  0.8111110925674438
+                ],
+                "mean_max_probability": 0.8589898943901062,
+                "code_accuracy": [
+                  0.9259259104728699,
+                  0.8754629492759705,
+                  0.6652777791023254
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.8175926208496094,
+                  "digit_ece_10_bins": 0.03988225833745673,
+                  "digit_nll": 0.4415629506111145,
+                  "digit_brier": 0.2166091650724411,
+                  "sequence_top1": 0.6333333253860474,
+                  "sequence_top5": 0.7481481432914734,
+                  "digit_accuracy_by_position": [
+                    0.8629629611968994,
+                    0.8074073791503906,
+                    0.800000011920929,
+                    0.800000011920929
+                  ],
+                  "mean_max_probability": 0.8574747443199158,
+                  "code_accuracy": [
+                    1.0,
+                    0.8805555701255798,
+                    0.6668981313705444
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.8370370268821716,
+                "digit_ece_10_bins": 0.049012738512828946,
+                "digit_nll": 0.5753204226493835,
+                "digit_brier": 0.24927343428134918,
+                "sequence_top1": 0.6555555555555556,
+                "sequence_top5": 0.737037037037037,
+                "wrong_to_correct": 37,
+                "correct_to_wrong": 6,
+                "latency_ms": {
+                  "p50": 1.2298754954827018,
+                  "p95": 2.057678501296323
+                },
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877"
+              }
+            },
+            "clean": {
+              "raw": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.0017014145851135254,
+                "digit_nll": 0.0017046347493305802,
+                "digit_brier": 1.0453076356498059e-05,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "digit_accuracy_by_position": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "mean_max_probability": 0.9982985854148865,
+                "code_accuracy": [
+                  1.0,
+                  1.0,
+                  0.9831018447875977
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 1.0,
+                  "digit_ece_10_bins": 0.0017014145851135254,
+                  "digit_nll": 0.0017046347493305802,
+                  "digit_brier": 1.0453076356498059e-05,
+                  "sequence_top1": 1.0,
+                  "sequence_top5": 1.0,
+                  "digit_accuracy_by_position": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "mean_max_probability": 0.9982985854148865,
+                  "code_accuracy": [
+                    1.0,
+                    1.0,
+                    0.9831018447875977
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.2017119988740887,
+                  "p95": 1.2421130973962136
+                },
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33"
+              }
+            },
+            "noisy": {
+              "raw": {
+                "digit_accuracy": 0.9558823704719543,
+                "digit_ece_10_bins": 0.01239749084925279,
+                "digit_nll": 0.20727959275245667,
+                "digit_brier": 0.07346215099096298,
+                "sequence_top1": 0.8382353186607361,
+                "sequence_top5": 0.9411764740943909,
+                "digit_accuracy_by_position": [
+                  0.9852941036224365,
+                  0.9411764740943909,
+                  0.970588207244873,
+                  0.9264705777168274
+                ],
+                "mean_max_probability": 0.9670327305793762,
+                "code_accuracy": [
+                  0.9117646813392639,
+                  0.8290441036224365,
+                  0.5193014740943909
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9595588445663452,
+                  "digit_ece_10_bins": 0.011234628036618233,
+                  "digit_nll": 0.1738261729478836,
+                  "digit_brier": 0.0634339302778244,
+                  "sequence_top1": 0.8529411554336548,
+                  "sequence_top5": 0.970588207244873,
+                  "digit_accuracy_by_position": [
+                    0.9852941036224365,
+                    0.9558823704719543,
+                    0.970588207244873,
+                    0.9264705777168274
+                  ],
+                  "mean_max_probability": 0.9707934260368347,
+                  "code_accuracy": [
+                    1.0,
+                    0.8308823704719543,
+                    0.5165441036224365
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9632353186607361,
+                "digit_ece_10_bins": 0.042768155224621296,
+                "digit_nll": 0.2182265818119049,
+                "digit_brier": 0.0882093533873558,
+                "sequence_top1": 0.8529411764705882,
+                "sequence_top5": 0.9558823529411765,
+                "wrong_to_correct": 9,
+                "correct_to_wrong": 1,
+                "latency_ms": {
+                  "p50": 1.2063410031259991,
+                  "p95": 2.0108862496272195
+                },
+                "policy_hash": "8e74ca949b0df32acc2541c035c511102aa645856f04575006a5fffcdaa9a313"
+              }
+            },
+            "partial_erasure": {
+              "raw": {
+                "digit_accuracy": 0.9216417670249939,
+                "digit_ece_10_bins": 0.030441507580690086,
+                "digit_nll": 0.3138105571269989,
+                "digit_brier": 0.11224241554737091,
+                "sequence_top1": 0.6865671873092651,
+                "sequence_top5": 0.89552241563797,
+                "digit_accuracy_by_position": [
+                  0.9850746393203735,
+                  0.8507462739944458,
+                  0.9104477763175964,
+                  0.9402984976768494
+                ],
+                "mean_max_probability": 0.926661491394043,
+                "code_accuracy": [
+                  0.8843283653259277,
+                  0.8302238583564758,
+                  0.704291045665741
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9104477763175964,
+                  "digit_ece_10_bins": 0.026227158843539655,
+                  "digit_nll": 0.3068460524082184,
+                  "digit_brier": 0.12169617414474487,
+                  "sequence_top1": 0.641791045665741,
+                  "sequence_top5": 0.89552241563797,
+                  "digit_accuracy_by_position": [
+                    0.9552238583564758,
+                    0.9253731369972229,
+                    0.8507462739944458,
+                    0.9104477763175964
+                  ],
+                  "mean_max_probability": 0.917228102684021,
+                  "code_accuracy": [
+                    1.0,
+                    0.8414179086685181,
+                    0.7070895433425903
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9328358173370361,
+                "digit_ece_10_bins": 0.022467805887572467,
+                "digit_nll": 0.22163930535316467,
+                "digit_brier": 0.10044385492801666,
+                "sequence_top1": 0.7313432835820896,
+                "sequence_top5": 0.8507462686567164,
+                "wrong_to_correct": 1,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.190379996842239,
+                  "p95": 1.9707741994352541
+                },
+                "policy_hash": "6e35ace1a28ef9c5c13bfb35ec84d2d4186e42c29f42c160785d48640df5124c"
+              }
+            },
+            "missing_frequency": {
+              "raw": {
+                "digit_accuracy": 0.21481481194496155,
+                "digit_ece_10_bins": 0.5444791968911886,
+                "digit_nll": 6.415322780609131,
+                "digit_brier": 1.4220293760299683,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.0,
+                "digit_accuracy_by_position": [
+                  0.20000000298023224,
+                  0.21481481194496155,
+                  0.22962963581085205,
+                  0.21481481194496155
+                ],
+                "mean_max_probability": 0.7344908118247986,
+                "code_accuracy": [
+                  0.6944444179534912,
+                  0.5041666626930237,
+                  0.41712963581085205
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.3157407343387604,
+                  "digit_ece_10_bins": 0.24054109200369567,
+                  "digit_nll": 4.955917835235596,
+                  "digit_brier": 1.1367766857147217,
+                  "sequence_top1": 0.007407407276332378,
+                  "sequence_top5": 0.007407407276332378,
+                  "digit_accuracy_by_position": [
+                    0.3222222328186035,
+                    0.3037036955356598,
+                    0.3296296298503876,
+                    0.307407408952713
+                  ],
+                  "mean_max_probability": 0.5314786434173584,
+                  "code_accuracy": [
+                    1.0,
+                    0.8097222447395325,
+                    0.49351853132247925
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.21481481194496155,
+                "digit_ece_10_bins": 0.5426509138196707,
+                "digit_nll": 6.2298688888549805,
+                "digit_brier": 1.4178913831710815,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 109,
+                "latency_ms": {
+                  "p50": 1.9847410039801616,
+                  "p95": 2.0632770989323035
+                },
+                "policy_hash": "3d77d6848f48379139885f8c76c2a3f0ca3e424fc34824ccf566ee8f902d6966"
+              }
+            }
+          },
+          "temperature": 1.1885021924972534
+        },
+        "lossless_aligned": {
+          "history": [
+            4.4318290774027504,
+            2.0793960603078205,
+            1.4281643406550089,
+            1.0329548382759095,
+            0.8527770018577576,
+            0.7754484566052755,
+            0.7269676184654236,
+            0.6963610688845316,
+            0.6726641678810119,
+            0.6527154831091563,
+            0.6339772303899129,
+            0.6196493323644002,
+            0.6069190434614817,
+            0.5948708025614421,
+            0.5878194197018941,
+            0.5817488002777099
+          ],
+          "training_seconds": 44.731542530003935,
+          "parameters": 34570,
+          "memory_tokens": 128,
+          "scenarios": {
+            "corrupted": {
+              "raw": {
+                "digit_accuracy": 0.824999988079071,
+                "digit_ece_10_bins": 0.03010694429394789,
+                "digit_nll": 0.41440314054489136,
+                "digit_brier": 0.20784078538417816,
+                "sequence_top1": 0.6407407522201538,
+                "sequence_top5": 0.7740740776062012,
+                "digit_accuracy_by_position": [
+                  0.8592592477798462,
+                  0.8185185194015503,
+                  0.8111110925674438,
+                  0.8111110925674438
+                ],
+                "mean_max_probability": 0.8551069498062134,
+                "code_accuracy": [
+                  0.8907407522201538,
+                  0.8685185313224792,
+                  0.6493055820465088
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.824999988079071,
+                  "digit_ece_10_bins": 0.02850531425792724,
+                  "digit_nll": 0.4262225031852722,
+                  "digit_brier": 0.21120138466358185,
+                  "sequence_top1": 0.6296296119689941,
+                  "sequence_top5": 0.7740740776062012,
+                  "digit_accuracy_by_position": [
+                    0.8666666746139526,
+                    0.8407407402992249,
+                    0.8037037253379822,
+                    0.7888888716697693
+                  ],
+                  "mean_max_probability": 0.851418137550354,
+                  "code_accuracy": [
+                    1.0,
+                    0.8731481432914734,
+                    0.6543981432914734
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.8398148417472839,
+                "digit_ece_10_bins": 0.047415072680450976,
+                "digit_nll": 0.5577371716499329,
+                "digit_brier": 0.24355022609233856,
+                "sequence_top1": 0.674074074074074,
+                "sequence_top5": 0.7592592592592593,
+                "wrong_to_correct": 41,
+                "correct_to_wrong": 7,
+                "latency_ms": {
+                  "p50": 1.217572502355324,
+                  "p95": 2.131970699701924
+                },
+                "policy_hash": "8d7db131ce273d793138b52570039f03b55b1c9145cfa3c85293cd5713b8d877"
+              }
+            },
+            "clean": {
+              "raw": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.00215071439743042,
+                "digit_nll": 0.002155767986550927,
+                "digit_brier": 1.573221743456088e-05,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "digit_accuracy_by_position": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "mean_max_probability": 0.9978492856025696,
+                "code_accuracy": [
+                  1.0,
+                  1.0,
+                  0.9831018447875977
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 1.0,
+                  "digit_ece_10_bins": 0.00215071439743042,
+                  "digit_nll": 0.002155767986550927,
+                  "digit_brier": 1.573221743456088e-05,
+                  "sequence_top1": 1.0,
+                  "sequence_top5": 1.0,
+                  "digit_accuracy_by_position": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "mean_max_probability": 0.9978492856025696,
+                  "code_accuracy": [
+                    1.0,
+                    1.0,
+                    0.9831018447875977
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.1893035007233266,
+                  "p95": 1.2147785004344769
+                },
+                "policy_hash": "837990d21f83346d402da817f469bfc167a73a9e2eac2d52dd097080725bfc33"
+              }
+            },
+            "noisy": {
+              "raw": {
+                "digit_accuracy": 0.9595588445663452,
+                "digit_ece_10_bins": 0.025380408274941146,
+                "digit_nll": 0.18704505264759064,
+                "digit_brier": 0.0689680352807045,
+                "sequence_top1": 0.8382353186607361,
+                "sequence_top5": 0.9558823704719543,
+                "digit_accuracy_by_position": [
+                  0.9852941036224365,
+                  0.970588207244873,
+                  0.9558823704719543,
+                  0.9264705777168274
+                ],
+                "mean_max_probability": 0.9660143852233887,
+                "code_accuracy": [
+                  0.8823529481887817,
+                  0.8033088445663452,
+                  0.5
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9632353186607361,
+                  "digit_ece_10_bins": 0.018983552407007664,
+                  "digit_nll": 0.1662384420633316,
+                  "digit_brier": 0.0642552524805069,
+                  "sequence_top1": 0.8676470518112183,
+                  "sequence_top5": 0.9852941036224365,
+                  "digit_accuracy_by_position": [
+                    0.9852941036224365,
+                    0.970588207244873,
+                    0.970588207244873,
+                    0.9264705777168274
+                  ],
+                  "mean_max_probability": 0.9677814245223999,
+                  "code_accuracy": [
+                    1.0,
+                    0.814338207244873,
+                    0.5082720518112183
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9632353186607361,
+                "digit_ece_10_bins": 0.04141782131046057,
+                "digit_nll": 0.2033582180738449,
+                "digit_brier": 0.08984469622373581,
+                "sequence_top1": 0.8529411764705882,
+                "sequence_top5": 0.9705882352941176,
+                "wrong_to_correct": 9,
+                "correct_to_wrong": 1,
+                "latency_ms": {
+                  "p50": 1.1980099989159498,
+                  "p95": 2.0615609017113457
+                },
+                "policy_hash": "8e74ca949b0df32acc2541c035c511102aa645856f04575006a5fffcdaa9a313"
+              }
+            },
+            "partial_erasure": {
+              "raw": {
+                "digit_accuracy": 0.9179104566574097,
+                "digit_ece_10_bins": 0.01961226644925773,
+                "digit_nll": 0.26972779631614685,
+                "digit_brier": 0.11393941193819046,
+                "sequence_top1": 0.6716417670249939,
+                "sequence_top5": 0.9552238583564758,
+                "digit_accuracy_by_position": [
+                  0.9552238583564758,
+                  0.8656716346740723,
+                  0.89552241563797,
+                  0.9552238583564758
+                ],
+                "mean_max_probability": 0.9286797046661377,
+                "code_accuracy": [
+                  0.8208954930305481,
+                  0.8302238583564758,
+                  0.691231369972229
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9104477763175964,
+                  "digit_ece_10_bins": 0.02675896295113489,
+                  "digit_nll": 0.3025566339492798,
+                  "digit_brier": 0.1283642202615738,
+                  "sequence_top1": 0.641791045665741,
+                  "sequence_top5": 0.9253731369972229,
+                  "digit_accuracy_by_position": [
+                    0.9701492786407471,
+                    0.9104477763175964,
+                    0.8507462739944458,
+                    0.9104477763175964
+                  ],
+                  "mean_max_probability": 0.9145077466964722,
+                  "code_accuracy": [
+                    1.0,
+                    0.8264925479888916,
+                    0.6949626803398132
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9365671873092651,
+                "digit_ece_10_bins": 0.019948959336034022,
+                "digit_nll": 0.1967933624982834,
+                "digit_brier": 0.0929689109325409,
+                "sequence_top1": 0.746268656716418,
+                "sequence_top5": 0.8656716417910447,
+                "wrong_to_correct": 2,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.1889570014318451,
+                  "p95": 2.029372501419857
+                },
+                "policy_hash": "6e35ace1a28ef9c5c13bfb35ec84d2d4186e42c29f42c160785d48640df5124c"
+              }
+            },
+            "missing_frequency": {
+              "raw": {
+                "digit_accuracy": 0.10092592239379883,
+                "digit_ece_10_bins": 0.3357039913535118,
+                "digit_nll": 5.151718616485596,
+                "digit_brier": 1.1805245876312256,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.0,
+                "digit_accuracy_by_position": [
+                  0.12222222238779068,
+                  0.08888889104127884,
+                  0.10000000149011612,
+                  0.09259258955717087
+                ],
+                "mean_max_probability": 0.4366299510002136,
+                "code_accuracy": [
+                  1.0,
+                  0.7995370626449585,
+                  0.3097222149372101
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.10092592239379883,
+                  "digit_ece_10_bins": 0.3357039913535118,
+                  "digit_nll": 5.151718616485596,
+                  "digit_brier": 1.1805245876312256,
+                  "sequence_top1": 0.0,
+                  "sequence_top5": 0.0,
+                  "digit_accuracy_by_position": [
+                    0.12222222238779068,
+                    0.08888889104127884,
+                    0.10000000149011612,
+                    0.09259258955717087
+                  ],
+                  "mean_max_probability": 0.4366299510002136,
+                  "code_accuracy": [
+                    1.0,
+                    0.7995370626449585,
+                    0.3097222149372101
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.21851852536201477,
+                "digit_ece_10_bins": 0.3283054977655411,
+                "digit_nll": 4.663458824157715,
+                "digit_brier": 1.1195099353790283,
+                "sequence_top1": 0.003703703703703704,
+                "sequence_top5": 0.007407407407407408,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 105,
+                "latency_ms": {
+                  "p50": 2.1577460065600462,
+                  "p95": 3.0406025995034724
+                },
+                "policy_hash": "3d77d6848f48379139885f8c76c2a3f0ca3e424fc34824ccf566ee8f902d6966"
+              }
+            }
+          },
+          "temperature": 1.2302688360214233
+        },
+        "coarse_only": {
+          "history": [
+            2.832931912740072,
+            1.0906089115142823,
+            0.534934511979421,
+            0.35939198593298594,
+            0.27693020820617675,
+            0.23754619797070822,
+            0.20766651272773742,
+            0.18815888434648514,
+            0.17564371426900227,
+            0.1618153338630994,
+            0.1584329025944074,
+            0.14497821778059006,
+            0.1364779394865036,
+            0.1336907338599364,
+            0.1274171767135461,
+            0.12288802931706111
+          ],
+          "training_seconds": 3.0939413309970405,
+          "parameters": 34570,
+          "memory_tokens": 4,
+          "scenarios": {
+            "corrupted": {
+              "coarse_code_accuracy": 0.9166666865348816
+            },
+            "clean": {
+              "coarse_code_accuracy": 1.0
+            },
+            "noisy": {
+              "coarse_code_accuracy": 0.908088207244873
+            },
+            "partial_erasure": {
+              "coarse_code_accuracy": 0.8731343150138855
+            },
+            "missing_frequency": {
+              "coarse_code_accuracy": 1.0
+            }
+          }
+        }
+      }
+    },
+    "523": {
+      "probes": {
+        "native_final": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.9203703999519348,
+            "code_nll": 0.2334725707769394
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.0029873743187636137
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.9264705777168274,
+            "code_nll": 0.21792905032634735
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.8656716346740723,
+            "code_nll": 0.36575525999069214
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.02589915692806244
+          }
+        },
+        "native_stem_final": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.9138888716697693,
+            "code_nll": 0.22289833426475525
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.0010560511145740747
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.9338235259056091,
+            "code_nll": 0.2223844826221466
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.8507462739944458,
+            "code_nll": 0.3528901934623718
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.03069491498172283
+          }
+        },
+        "current_adapter": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.9388889074325562,
+            "code_nll": 0.21073845028877258
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.0038624051958322525
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.9375,
+            "code_nll": 0.19849009811878204
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.891791045665741,
+            "code_nll": 0.3382457494735718
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.0255564097315073
+          }
+        },
+        "lossless_adapter": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.9138888716697693,
+            "code_nll": 0.22289831936359406
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.0010560511145740747
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.9338235259056091,
+            "code_nll": 0.2223844826221466
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.8507462739944458,
+            "code_nll": 0.35289016366004944
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.030694909393787384
+          }
+        },
+        "actual_memory": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.925000011920929,
+            "code_nll": 0.2531447112560272
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.00496069947257638
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.9191176295280457,
+            "code_nll": 0.2676806151866913
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.8694030046463013,
+            "code_nll": 0.3938283622264862
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.046351153403520584
+          }
+        },
+        "transformer_hidden": {
+          "corrupted": {
+            "coarse_code_accuracy": 0.7092592716217041,
+            "code_nll": 1.1753146648406982
+          },
+          "clean": {
+            "coarse_code_accuracy": 1.0,
+            "code_nll": 0.08048629760742188
+          },
+          "noisy": {
+            "coarse_code_accuracy": 0.8088235259056091,
+            "code_nll": 1.1369596719741821
+          },
+          "partial_erasure": {
+            "coarse_code_accuracy": 0.5783582329750061,
+            "code_nll": 1.2869148254394531
+          },
+          "missing_frequency": {
+            "coarse_code_accuracy": 0.5990740656852722,
+            "code_nll": 1.6569547653198242
+          }
+        }
+      },
+      "audit": {
+        "analytic_adapter_coarse_accuracy": 1.0,
+        "analytic_after_audio_projection_accuracy": 1.0,
+        "audio_projection_singular_values": [
+          1.5794914528269863,
+          1.5255388454722723,
+          1.4755047486189512,
+          1.367236057419705,
+          1.2440104472154538,
+          1.1955211313687477,
+          1.124330622068826,
+          1.0411574987477175,
+          0.9482288789037868,
+          0.9078977536229229,
+          0.853274786067006,
+          0.7614308914946575,
+          0.741835565068719,
+          0.7061240597149857,
+          0.6818974601139861,
+          0.6386022148899819,
+          0.5877933845689723,
+          0.5776773299380298,
+          0.504184725289193,
+          0.4680283439307759,
+          0.44134295475480134,
+          0.43368973581857284,
+          0.3723965298069945,
+          0.34651384401126023,
+          0.2815159303429161,
+          0.22884381294695738,
+          0.19851787978164462,
+          0.19382084492338106,
+          0.13108036218450475,
+          0.0820553446274476,
+          0.0579495284051775,
+          0.05219312225880932
+        ],
+        "lossless_reconstruction_max_error": 9.5367431640625e-07,
+        "anchor_max_error": 0.0,
+        "path_logits_max_difference": 0.0,
+        "target_indices_min_max": [
+          0,
+          63
+        ],
+        "attention_masks": "None; all memory/code positions included",
+        "loss_mask": "all 1/2/4 code positions supervised; no ignored labels"
+      },
+      "models": {
+        "original_joint": {
+          "history": [],
+          "training_seconds": 0.0,
+          "parameters": 34570,
+          "memory_tokens": 4,
+          "scenarios": {
+            "corrupted": {
+              "raw": {
+                "digit_accuracy": 0.8916666507720947,
+                "digit_ece_10_bins": 0.03679054253734648,
+                "digit_nll": 0.3490195870399475,
+                "digit_brier": 0.1565563678741455,
+                "sequence_top1": 0.729629635810852,
+                "sequence_top5": 0.8222222328186035,
+                "digit_accuracy_by_position": [
+                  0.8740741014480591,
+                  0.9111111164093018,
+                  0.8666666746139526,
+                  0.914814829826355
+                ],
+                "mean_max_probability": 0.9191777110099792,
+                "code_accuracy": [
+                  0.3305555582046509,
+                  0.6180555820465088,
+                  0.510185182094574
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.8324074149131775,
+                  "digit_ece_10_bins": 0.03467953155632131,
+                  "digit_nll": 0.4931056797504425,
+                  "digit_brier": 0.22743883728981018,
+                  "sequence_top1": 0.6407407522201538,
+                  "sequence_top5": 0.770370364189148,
+                  "digit_accuracy_by_position": [
+                    0.8444444537162781,
+                    0.8444444537162781,
+                    0.8148148059844971,
+                    0.8259259462356567
+                  ],
+                  "mean_max_probability": 0.8603129982948303,
+                  "code_accuracy": [
+                    1.0,
+                    0.4990740716457367,
+                    0.5064814686775208
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.8768518567085266,
+                "digit_ece_10_bins": 0.04008351219817996,
+                "digit_nll": 0.5299870371818542,
+                "digit_brier": 0.20711438357830048,
+                "sequence_top1": 0.6962962962962963,
+                "sequence_top5": 0.7703703703703704,
+                "wrong_to_correct": 78,
+                "correct_to_wrong": 4,
+                "latency_ms": {
+                  "p50": 1.0675810008251574,
+                  "p95": 1.9652499478979735
+                },
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644"
+              }
+            },
+            "clean": {
+              "raw": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.00498431921005249,
+                "digit_nll": 0.005086629185825586,
+                "digit_brier": 0.0002851665485650301,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "digit_accuracy_by_position": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "mean_max_probability": 0.9950156807899475,
+                "code_accuracy": [
+                  0.8185185194015503,
+                  1.0,
+                  0.9856481552124023
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 1.0,
+                  "digit_ece_10_bins": 0.010825693607330322,
+                  "digit_nll": 0.011034567840397358,
+                  "digit_brier": 0.0005531529313884676,
+                  "sequence_top1": 1.0,
+                  "sequence_top5": 1.0,
+                  "digit_accuracy_by_position": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "mean_max_probability": 0.9891743063926697,
+                  "code_accuracy": [
+                    1.0,
+                    0.9513888955116272,
+                    0.9613425731658936
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.0299690002284478,
+                  "p95": 1.0507570987101644
+                },
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def"
+              }
+            },
+            "noisy": {
+              "raw": {
+                "digit_accuracy": 0.9816176295280457,
+                "digit_ece_10_bins": 0.014410144765861332,
+                "digit_nll": 0.11673948168754578,
+                "digit_brier": 0.03744500130414963,
+                "sequence_top1": 0.9264705777168274,
+                "sequence_top5": 0.970588207244873,
+                "digit_accuracy_by_position": [
+                  0.970588207244873,
+                  0.9852941036224365,
+                  0.9852941036224365,
+                  0.9852941036224365
+                ],
+                "mean_max_probability": 0.9863227605819702,
+                "code_accuracy": [
+                  0.3125,
+                  0.5496323704719543,
+                  0.3814338147640228
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9595588445663452,
+                  "digit_ece_10_bins": 0.040544770075939596,
+                  "digit_nll": 0.1754750907421112,
+                  "digit_brier": 0.06557592004537582,
+                  "sequence_top1": 0.8529411554336548,
+                  "sequence_top5": 0.9558823704719543,
+                  "digit_accuracy_by_position": [
+                    0.970588207244873,
+                    0.9852941036224365,
+                    0.9264705777168274,
+                    0.9558823704719543
+                  ],
+                  "mean_max_probability": 0.9219099283218384,
+                  "code_accuracy": [
+                    1.0,
+                    0.3547794222831726,
+                    0.4053308963775635
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9779411554336548,
+                "digit_ece_10_bins": 0.056239680387079716,
+                "digit_nll": 0.1898982673883438,
+                "digit_brier": 0.06489217281341553,
+                "sequence_top1": 0.9264705882352942,
+                "sequence_top5": 0.9558823529411765,
+                "wrong_to_correct": 14,
+                "correct_to_wrong": 2,
+                "latency_ms": {
+                  "p50": 1.198460999148665,
+                  "p95": 1.9815494979411596
+                },
+                "policy_hash": "8cec85673ea51169d8b3c3cdee77c54c3311fc8debeaa30ddafde6bdaa81745a"
+              }
+            },
+            "partial_erasure": {
+              "raw": {
+                "digit_accuracy": 0.9589552283287048,
+                "digit_ece_10_bins": 0.02805940608959645,
+                "digit_nll": 0.2723790407180786,
+                "digit_brier": 0.0773959830403328,
+                "sequence_top1": 0.8358209133148193,
+                "sequence_top5": 0.9402984976768494,
+                "digit_accuracy_by_position": [
+                  0.9701492786407471,
+                  0.9552238583564758,
+                  0.9402984976768494,
+                  0.9701492786407471
+                ],
+                "mean_max_probability": 0.9823387265205383,
+                "code_accuracy": [
+                  0.33582088351249695,
+                  0.6958954930305481,
+                  0.6147388219833374
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9179104566574097,
+                  "digit_ece_10_bins": 0.03128577274037525,
+                  "digit_nll": 0.240360826253891,
+                  "digit_brier": 0.11187183111906052,
+                  "sequence_top1": 0.6716417670249939,
+                  "sequence_top5": 0.9701492786407471,
+                  "digit_accuracy_by_position": [
+                    0.9701492786407471,
+                    0.9253731369972229,
+                    0.8805969953536987,
+                    0.89552241563797
+                  ],
+                  "mean_max_probability": 0.9234726428985596,
+                  "code_accuracy": [
+                    1.0,
+                    0.5988805890083313,
+                    0.5998134613037109
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9291045069694519,
+                "digit_ece_10_bins": 0.028122717747464776,
+                "digit_nll": 0.27150726318359375,
+                "digit_brier": 0.10580924153327942,
+                "sequence_top1": 0.7164179104477612,
+                "sequence_top5": 0.8507462686567164,
+                "wrong_to_correct": 1,
+                "correct_to_wrong": 1,
+                "latency_ms": {
+                  "p50": 1.026617996103596,
+                  "p95": 1.1161442023876587
+                },
+                "policy_hash": "acad94731ae8e984f8e1d50374c7167382acf3a74ef2f8e34c16027e7b1d69ff"
+              }
+            },
+            "missing_frequency": {
+              "raw": {
+                "digit_accuracy": 0.1101851835846901,
+                "digit_ece_10_bins": 0.4813897907733917,
+                "digit_nll": 5.55691385269165,
+                "digit_brier": 1.3282334804534912,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.0,
+                "digit_accuracy_by_position": [
+                  0.14074073731899261,
+                  0.10740740597248077,
+                  0.10370370000600815,
+                  0.08888889104127884
+                ],
+                "mean_max_probability": 0.5283756852149963,
+                "code_accuracy": [
+                  0.0,
+                  0.36157408356666565,
+                  0.17152777314186096
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.11296296119689941,
+                  "digit_ece_10_bins": 0.4000128898769617,
+                  "digit_nll": 3.5297014713287354,
+                  "digit_brier": 1.0873279571533203,
+                  "sequence_top1": 0.0,
+                  "sequence_top5": 0.003703703638166189,
+                  "digit_accuracy_by_position": [
+                    0.10370370000600815,
+                    0.12222222238779068,
+                    0.10740740597248077,
+                    0.11851851642131805
+                  ],
+                  "mean_max_probability": 0.5129758715629578,
+                  "code_accuracy": [
+                    1.0,
+                    0.5143518447875977,
+                    0.3203703761100769
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.19814814627170563,
+                "digit_ece_10_bins": 0.5462030470371246,
+                "digit_nll": 3.9098434448242188,
+                "digit_brier": 1.2956018447875977,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.003703703703703704,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 127,
+                "latency_ms": {
+                  "p50": 1.8048825040750671,
+                  "p95": 1.9780666520091472
+                },
+                "policy_hash": "d2a75d5f9d317b3c4adf2ff710337a08975fe74870109f1ee193aaf75fd6ed00"
+              }
+            }
+          },
+          "temperature": 0.8709635734558105
+        },
+        "lossless_joint": {
+          "history": [
+            2.225567774772644,
+            1.1811819076538086,
+            0.8275935522715251,
+            0.6633690416812896,
+            0.5759538372357687,
+            0.5307743910948436,
+            0.48328819473584494,
+            0.46112644592920937,
+            0.42641721685727435,
+            0.4022271470228831,
+            0.38468414584795635,
+            0.36489782691001893,
+            0.34243133584658303,
+            0.32497130274772645,
+            0.32168093502521516,
+            0.30668060918649037
+          ],
+          "training_seconds": 45.16799095800525,
+          "parameters": 34570,
+          "memory_tokens": 128,
+          "scenarios": {
+            "corrupted": {
+              "raw": {
+                "digit_accuracy": 0.8657407164573669,
+                "digit_ece_10_bins": 0.026637558985385112,
+                "digit_nll": 0.39056453108787537,
+                "digit_brier": 0.18205755949020386,
+                "sequence_top1": 0.6777777671813965,
+                "sequence_top5": 0.8148148059844971,
+                "digit_accuracy_by_position": [
+                  0.8703703880310059,
+                  0.8592592477798462,
+                  0.855555534362793,
+                  0.8777777552604675
+                ],
+                "mean_max_probability": 0.8834778666496277,
+                "code_accuracy": [
+                  0.3768518567085266,
+                  0.5754629373550415,
+                  0.5280092358589172
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.8287037014961243,
+                  "digit_ece_10_bins": 0.022960784888709895,
+                  "digit_nll": 0.550286054611206,
+                  "digit_brier": 0.2393578737974167,
+                  "sequence_top1": 0.6000000238418579,
+                  "sequence_top5": 0.7555555701255798,
+                  "digit_accuracy_by_position": [
+                    0.855555534362793,
+                    0.8296296000480652,
+                    0.8111110925674438,
+                    0.8185185194015503
+                  ],
+                  "mean_max_probability": 0.822952389717102,
+                  "code_accuracy": [
+                    1.0,
+                    0.49166667461395264,
+                    0.5064814686775208
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.8777777552604675,
+                "digit_ece_10_bins": 0.059868070820812136,
+                "digit_nll": 0.5366159081459045,
+                "digit_brier": 0.21530009806156158,
+                "sequence_top1": 0.7,
+                "sequence_top5": 0.7703703703703704,
+                "wrong_to_correct": 81,
+                "correct_to_wrong": 6,
+                "latency_ms": {
+                  "p50": 1.0702864965423942,
+                  "p95": 2.0727970517327776
+                },
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644"
+              }
+            },
+            "clean": {
+              "raw": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.001482248306274414,
+                "digit_nll": 0.0014838529750704765,
+                "digit_brier": 4.5090650928614195e-06,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "digit_accuracy_by_position": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "mean_max_probability": 0.9985177516937256,
+                "code_accuracy": [
+                  0.9027777910232544,
+                  0.957870364189148,
+                  0.9856481552124023
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 1.0,
+                  "digit_ece_10_bins": 0.020502341678366065,
+                  "digit_nll": 0.02266019769012928,
+                  "digit_brier": 0.004752209410071373,
+                  "sequence_top1": 1.0,
+                  "sequence_top5": 1.0,
+                  "digit_accuracy_by_position": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "mean_max_probability": 0.9794977307319641,
+                  "code_accuracy": [
+                    1.0,
+                    0.9092592597007751,
+                    0.9856481552124023
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.051415496476693,
+                  "p95": 1.3947704504971625
+                },
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def"
+              }
+            },
+            "noisy": {
+              "raw": {
+                "digit_accuracy": 0.9558823704719543,
+                "digit_ece_10_bins": 0.02153143030591309,
+                "digit_nll": 0.20095306634902954,
+                "digit_brier": 0.07309076189994812,
+                "sequence_top1": 0.8529411554336548,
+                "sequence_top5": 0.9558823704719543,
+                "digit_accuracy_by_position": [
+                  0.970588207244873,
+                  0.9558823704719543,
+                  0.9558823704719543,
+                  0.9411764740943909
+                ],
+                "mean_max_probability": 0.9507305026054382,
+                "code_accuracy": [
+                  0.2977941036224365,
+                  0.5349264740943909,
+                  0.3970588147640228
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9448529481887817,
+                  "digit_ece_10_bins": 0.08282308577327058,
+                  "digit_nll": 0.237893745303154,
+                  "digit_brier": 0.1071104183793068,
+                  "sequence_top1": 0.8088235259056091,
+                  "sequence_top5": 0.970588207244873,
+                  "digit_accuracy_by_position": [
+                    0.9558823704719543,
+                    0.9558823704719543,
+                    0.9264705777168274,
+                    0.9411764740943909
+                  ],
+                  "mean_max_probability": 0.8675318360328674,
+                  "code_accuracy": [
+                    1.0,
+                    0.3952205777168274,
+                    0.3704044222831726
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.970588207244873,
+                "digit_ece_10_bins": 0.05719876621151343,
+                "digit_nll": 0.18552877008914948,
+                "digit_brier": 0.06981533020734787,
+                "sequence_top1": 0.9117647058823529,
+                "sequence_top5": 0.9558823529411765,
+                "wrong_to_correct": 13,
+                "correct_to_wrong": 3,
+                "latency_ms": {
+                  "p50": 1.2050785007886589,
+                  "p95": 2.1222881521680392
+                },
+                "policy_hash": "8cec85673ea51169d8b3c3cdee77c54c3311fc8debeaa30ddafde6bdaa81745a"
+              }
+            },
+            "partial_erasure": {
+              "raw": {
+                "digit_accuracy": 0.9328358173370361,
+                "digit_ece_10_bins": 0.018841085286112502,
+                "digit_nll": 0.2880845367908478,
+                "digit_brier": 0.1052330732345581,
+                "sequence_top1": 0.7313432693481445,
+                "sequence_top5": 0.9253731369972229,
+                "digit_accuracy_by_position": [
+                  0.9701492786407471,
+                  0.89552241563797,
+                  0.89552241563797,
+                  0.9701492786407471
+                ],
+                "mean_max_probability": 0.931905210018158,
+                "code_accuracy": [
+                  0.40671640634536743,
+                  0.6548507213592529,
+                  0.6091417670249939
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.891791045665741,
+                  "digit_ece_10_bins": 0.03464957801043056,
+                  "digit_nll": 0.3561393618583679,
+                  "digit_brier": 0.15104781091213226,
+                  "sequence_top1": 0.5671641826629639,
+                  "sequence_top5": 0.89552241563797,
+                  "digit_accuracy_by_position": [
+                    0.9552238583564758,
+                    0.8358209133148193,
+                    0.8656716346740723,
+                    0.9104477763175964
+                  ],
+                  "mean_max_probability": 0.8840712904930115,
+                  "code_accuracy": [
+                    1.0,
+                    0.5671641826629639,
+                    0.5998134613037109
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9328358173370361,
+                "digit_ece_10_bins": 0.021169703919440508,
+                "digit_nll": 0.21779069304466248,
+                "digit_brier": 0.09832154214382172,
+                "sequence_top1": 0.7313432835820896,
+                "sequence_top5": 0.8507462686567164,
+                "wrong_to_correct": 1,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.0301639995304868,
+                  "p95": 1.1198654014151541
+                },
+                "policy_hash": "acad94731ae8e984f8e1d50374c7167382acf3a74ef2f8e34c16027e7b1d69ff"
+              }
+            },
+            "missing_frequency": {
+              "raw": {
+                "digit_accuracy": 0.09444444626569748,
+                "digit_ece_10_bins": 0.30148911476135254,
+                "digit_nll": 3.1526031494140625,
+                "digit_brier": 1.0387086868286133,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.003703703638166189,
+                "digit_accuracy_by_position": [
+                  0.07777778059244156,
+                  0.1111111119389534,
+                  0.08888889104127884,
+                  0.10000000149011612
+                ],
+                "mean_max_probability": 0.38019120693206787,
+                "code_accuracy": [
+                  0.40925925970077515,
+                  0.3097222149372101,
+                  0.15486110746860504
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.11759259551763535,
+                  "digit_ece_10_bins": 0.5114092119038105,
+                  "digit_nll": 4.396989822387695,
+                  "digit_brier": 1.2350460290908813,
+                  "sequence_top1": 0.0,
+                  "sequence_top5": 0.003703703638166189,
+                  "digit_accuracy_by_position": [
+                    0.10740740597248077,
+                    0.10000000149011612,
+                    0.14074073731899261,
+                    0.12222222238779068
+                  ],
+                  "mean_max_probability": 0.6290018558502197,
+                  "code_accuracy": [
+                    1.0,
+                    0.3097222149372101,
+                    0.15486110746860504
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.19814814627170563,
+                "digit_ece_10_bins": 0.40433984994888306,
+                "digit_nll": 2.5471127033233643,
+                "digit_brier": 1.0223027467727661,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.003703703703703704,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 127,
+                "latency_ms": {
+                  "p50": 1.8890325009124354,
+                  "p95": 2.1323335015040357
+                },
+                "policy_hash": "d2a75d5f9d317b3c4adf2ff710337a08975fe74870109f1ee193aaf75fd6ed00"
+              }
+            }
+          },
+          "temperature": 0.9015711545944214
+        },
+        "original_aligned": {
+          "history": [
+            4.362456528345744,
+            2.15049702167511,
+            1.485371855099996,
+            1.1278824297587078,
+            0.9559353351593017,
+            0.8411425733566285,
+            0.7680140622456868,
+            0.7171837266286214,
+            0.6789083902041118,
+            0.6558876597881317,
+            0.631960479815801,
+            0.6141877249876658,
+            0.5987248047192891,
+            0.5864365847905477,
+            0.5783196679751078,
+            0.568419315814972
+          ],
+          "training_seconds": 11.3662505100001,
+          "parameters": 34570,
+          "memory_tokens": 4,
+          "scenarios": {
+            "corrupted": {
+              "raw": {
+                "digit_accuracy": 0.8277778029441833,
+                "digit_ece_10_bins": 0.018193815754784737,
+                "digit_nll": 0.43116894364356995,
+                "digit_brier": 0.2140086442232132,
+                "sequence_top1": 0.6185185313224792,
+                "sequence_top5": 0.7592592835426331,
+                "digit_accuracy_by_position": [
+                  0.8592592477798462,
+                  0.8370370268821716,
+                  0.7962962985038757,
+                  0.8185185194015503
+                ],
+                "mean_max_probability": 0.8423218131065369,
+                "code_accuracy": [
+                  0.9083333611488342,
+                  0.8513888716697693,
+                  0.6856481432914734
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.8370370268821716,
+                  "digit_ece_10_bins": 0.01648414873488946,
+                  "digit_nll": 0.3959725499153137,
+                  "digit_brier": 0.19893643260002136,
+                  "sequence_top1": 0.644444465637207,
+                  "sequence_top5": 0.7555555701255798,
+                  "digit_accuracy_by_position": [
+                    0.8629629611968994,
+                    0.855555534362793,
+                    0.8148148059844971,
+                    0.8148148059844971
+                  ],
+                  "mean_max_probability": 0.8448309898376465,
+                  "code_accuracy": [
+                    1.0,
+                    0.8583333492279053,
+                    0.6893518567085266
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.8620370626449585,
+                "digit_ece_10_bins": 0.04051886184606701,
+                "digit_nll": 0.5310013294219971,
+                "digit_brier": 0.2191423773765564,
+                "sequence_top1": 0.6777777777777778,
+                "sequence_top5": 0.7592592592592593,
+                "wrong_to_correct": 62,
+                "correct_to_wrong": 4,
+                "latency_ms": {
+                  "p50": 1.0836764995474368,
+                  "p95": 1.99745460304257
+                },
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644"
+              }
+            },
+            "clean": {
+              "raw": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.0028443336486816406,
+                "digit_nll": 0.002853584475815296,
+                "digit_brier": 2.413681613688823e-05,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "digit_accuracy_by_position": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "mean_max_probability": 0.9971556663513184,
+                "code_accuracy": [
+                  1.0,
+                  1.0,
+                  0.9856481552124023
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 1.0,
+                  "digit_ece_10_bins": 0.0028443336486816406,
+                  "digit_nll": 0.002853584475815296,
+                  "digit_brier": 2.413681613688823e-05,
+                  "sequence_top1": 1.0,
+                  "sequence_top5": 1.0,
+                  "digit_accuracy_by_position": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "mean_max_probability": 0.9971556663513184,
+                  "code_accuracy": [
+                    1.0,
+                    1.0,
+                    0.9856481552124023
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.0322739981347695,
+                  "p95": 1.4728796028066415
+                },
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def"
+              }
+            },
+            "noisy": {
+              "raw": {
+                "digit_accuracy": 0.9632353186607361,
+                "digit_ece_10_bins": 0.022764709137845784,
+                "digit_nll": 0.13657844066619873,
+                "digit_brier": 0.05521301180124283,
+                "sequence_top1": 0.8529411554336548,
+                "sequence_top5": 0.9558823704719543,
+                "digit_accuracy_by_position": [
+                  0.970588207244873,
+                  0.9852941036224365,
+                  0.9264705777168274,
+                  0.970588207244873
+                ],
+                "mean_max_probability": 0.9562646150588989,
+                "code_accuracy": [
+                  0.908088207244873,
+                  0.7959558963775635,
+                  0.545036792755127
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.966911792755127,
+                  "digit_ece_10_bins": 0.01792197849135846,
+                  "digit_nll": 0.12748686969280243,
+                  "digit_brier": 0.05222998932003975,
+                  "sequence_top1": 0.8676470518112183,
+                  "sequence_top5": 0.970588207244873,
+                  "digit_accuracy_by_position": [
+                    0.970588207244873,
+                    0.9852941036224365,
+                    0.9411764740943909,
+                    0.970588207244873
+                  ],
+                  "mean_max_probability": 0.9586129784584045,
+                  "code_accuracy": [
+                    1.0,
+                    0.8125,
+                    0.5441176295280457
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9816176295280457,
+                "digit_ece_10_bins": 0.07018392905592918,
+                "digit_nll": 0.13774745166301727,
+                "digit_brier": 0.05602119117975235,
+                "sequence_top1": 0.9264705882352942,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 14,
+                "correct_to_wrong": 1,
+                "latency_ms": {
+                  "p50": 1.2045274961565156,
+                  "p95": 1.9855366008414421
+                },
+                "policy_hash": "8cec85673ea51169d8b3c3cdee77c54c3311fc8debeaa30ddafde6bdaa81745a"
+              }
+            },
+            "partial_erasure": {
+              "raw": {
+                "digit_accuracy": 0.89552241563797,
+                "digit_ece_10_bins": 0.030669433853603323,
+                "digit_nll": 0.3581872582435608,
+                "digit_brier": 0.14696258306503296,
+                "sequence_top1": 0.5820895433425903,
+                "sequence_top5": 0.9253731369972229,
+                "digit_accuracy_by_position": [
+                  0.9253731369972229,
+                  0.8656716346740723,
+                  0.8805969953536987,
+                  0.9104477763175964
+                ],
+                "mean_max_probability": 0.9126394391059875,
+                "code_accuracy": [
+                  0.861940324306488,
+                  0.8171641826629639,
+                  0.6986940503120422
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9216417670249939,
+                  "digit_ece_10_bins": 0.0183550221263431,
+                  "digit_nll": 0.281574547290802,
+                  "digit_brier": 0.1127564013004303,
+                  "sequence_top1": 0.6865671873092651,
+                  "sequence_top5": 0.9104477763175964,
+                  "digit_accuracy_by_position": [
+                    0.9402984976768494,
+                    0.9253731369972229,
+                    0.9253731369972229,
+                    0.89552241563797
+                  ],
+                  "mean_max_probability": 0.9241669774055481,
+                  "code_accuracy": [
+                    1.0,
+                    0.8227611780166626,
+                    0.7033582329750061
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9291045069694519,
+                "digit_ece_10_bins": 0.024306993931531906,
+                "digit_nll": 0.20552243292331696,
+                "digit_brier": 0.09852487593889236,
+                "sequence_top1": 0.7164179104477612,
+                "sequence_top5": 0.8656716417910447,
+                "wrong_to_correct": 1,
+                "correct_to_wrong": 1,
+                "latency_ms": {
+                  "p50": 1.0275800013914704,
+                  "p95": 1.109985599759966
+                },
+                "policy_hash": "acad94731ae8e984f8e1d50374c7167382acf3a74ef2f8e34c16027e7b1d69ff"
+              }
+            },
+            "missing_frequency": {
+              "raw": {
+                "digit_accuracy": 0.2916666567325592,
+                "digit_ece_10_bins": 0.2514672731049359,
+                "digit_nll": 3.676804304122925,
+                "digit_brier": 1.0862882137298584,
+                "sequence_top1": 0.003703703638166189,
+                "sequence_top5": 0.007407407276332378,
+                "digit_accuracy_by_position": [
+                  0.29629629850387573,
+                  0.28518518805503845,
+                  0.29629629850387573,
+                  0.2888889014720917
+                ],
+                "mean_max_probability": 0.5431339144706726,
+                "code_accuracy": [
+                  0.904629647731781,
+                  0.6092592477798462,
+                  0.25717592239379883
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.2916666567325592,
+                  "digit_ece_10_bins": 0.23151686834171414,
+                  "digit_nll": 4.332201957702637,
+                  "digit_brier": 1.0653533935546875,
+                  "sequence_top1": 0.003703703638166189,
+                  "sequence_top5": 0.007407407276332378,
+                  "digit_accuracy_by_position": [
+                    0.29629629850387573,
+                    0.28518518805503845,
+                    0.29629629850387573,
+                    0.2888889014720917
+                  ],
+                  "mean_max_probability": 0.5231835246086121,
+                  "code_accuracy": [
+                    1.0,
+                    0.6092592477798462,
+                    0.2611111104488373
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.2916666567325592,
+                "digit_ece_10_bins": 0.32582538574934006,
+                "digit_nll": 3.023622989654541,
+                "digit_brier": 1.0272789001464844,
+                "sequence_top1": 0.003703703703703704,
+                "sequence_top5": 0.018518518518518517,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 26,
+                "latency_ms": {
+                  "p50": 1.8234279996249825,
+                  "p95": 1.999420997890411
+                },
+                "policy_hash": "d2a75d5f9d317b3c4adf2ff710337a08975fe74870109f1ee193aaf75fd6ed00"
+              }
+            }
+          },
+          "temperature": 1.273503065109253
+        },
+        "lossless_aligned": {
+          "history": [
+            4.3423370774587,
+            2.134492243131002,
+            1.4431036361058553,
+            1.0929186201095582,
+            0.9360687120755513,
+            0.836585389773051,
+            0.778394852479299,
+            0.7346749234199524,
+            0.7060637160142262,
+            0.6890553363164266,
+            0.6684216296672821,
+            0.6543994983037312,
+            0.6389819447199504,
+            0.6270076950391134,
+            0.6218798987070719,
+            0.6079598693052928
+          ],
+          "training_seconds": 44.51059547800105,
+          "parameters": 34570,
+          "memory_tokens": 128,
+          "scenarios": {
+            "corrupted": {
+              "raw": {
+                "digit_accuracy": 0.8259259462356567,
+                "digit_ece_10_bins": 0.02659918658901006,
+                "digit_nll": 0.4614286720752716,
+                "digit_brier": 0.216065913438797,
+                "sequence_top1": 0.614814817905426,
+                "sequence_top5": 0.7481481432914734,
+                "digit_accuracy_by_position": [
+                  0.8222222328186035,
+                  0.8703703880310059,
+                  0.8037037253379822,
+                  0.8074073791503906
+                ],
+                "mean_max_probability": 0.8435149192810059,
+                "code_accuracy": [
+                  0.864814817905426,
+                  0.8189814686775208,
+                  0.6497685313224792
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.8287037014961243,
+                  "digit_ece_10_bins": 0.022396475280402228,
+                  "digit_nll": 0.4301386773586273,
+                  "digit_brier": 0.20981355011463165,
+                  "sequence_top1": 0.614814817905426,
+                  "sequence_top5": 0.7555555701255798,
+                  "digit_accuracy_by_position": [
+                    0.8370370268821716,
+                    0.8666666746139526,
+                    0.7925925850868225,
+                    0.8185185194015503
+                  ],
+                  "mean_max_probability": 0.8416222333908081,
+                  "code_accuracy": [
+                    1.0,
+                    0.8296296000480652,
+                    0.6539351940155029
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.8629629611968994,
+                "digit_ece_10_bins": 0.04395326308440417,
+                "digit_nll": 0.545099675655365,
+                "digit_brier": 0.2212703377008438,
+                "sequence_top1": 0.6851851851851852,
+                "sequence_top5": 0.7592592592592593,
+                "wrong_to_correct": 63,
+                "correct_to_wrong": 4,
+                "latency_ms": {
+                  "p50": 1.0999879996234085,
+                  "p95": 2.154724648789852
+                },
+                "policy_hash": "16baced99c525fc4cc85279fec65edceba6a146a801fb34ae2d93a9fac9ae644"
+              }
+            },
+            "clean": {
+              "raw": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.004431486129760742,
+                "digit_nll": 0.00445222482085228,
+                "digit_brier": 5.409402365330607e-05,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "digit_accuracy_by_position": [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "mean_max_probability": 0.9955685138702393,
+                "code_accuracy": [
+                  1.0,
+                  1.0,
+                  0.9856481552124023
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 1.0,
+                  "digit_ece_10_bins": 0.004431486129760742,
+                  "digit_nll": 0.00445222482085228,
+                  "digit_brier": 5.409402365330607e-05,
+                  "sequence_top1": 1.0,
+                  "sequence_top5": 1.0,
+                  "digit_accuracy_by_position": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "mean_max_probability": 0.9955685138702393,
+                  "code_accuracy": [
+                    1.0,
+                    1.0,
+                    0.9856481552124023
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 1.0,
+                "digit_ece_10_bins": 0.045535034500062466,
+                "digit_nll": 0.04853320121765137,
+                "digit_brier": 0.007347009144723415,
+                "sequence_top1": 1.0,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.0840575014299247,
+                  "p95": 1.5228351487166945
+                },
+                "policy_hash": "e227d3bab5acead7e66efa8026673af36f966570b12d9e649f5ac50727ac8def"
+              }
+            },
+            "noisy": {
+              "raw": {
+                "digit_accuracy": 0.966911792755127,
+                "digit_ece_10_bins": 0.024279254081193358,
+                "digit_nll": 0.13151128590106964,
+                "digit_brier": 0.04653481766581535,
+                "sequence_top1": 0.8970588445663452,
+                "sequence_top5": 0.9411764740943909,
+                "digit_accuracy_by_position": [
+                  0.970588207244873,
+                  0.9852941036224365,
+                  0.970588207244873,
+                  0.9411764740943909
+                ],
+                "mean_max_probability": 0.9581934809684753,
+                "code_accuracy": [
+                  0.9227941036224365,
+                  0.7555146813392639,
+                  0.49172794818878174
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9595588445663452,
+                  "digit_ece_10_bins": 0.02101910806959495,
+                  "digit_nll": 0.1499338299036026,
+                  "digit_brier": 0.058851711452007294,
+                  "sequence_top1": 0.8382353186607361,
+                  "sequence_top5": 0.970588207244873,
+                  "digit_accuracy_by_position": [
+                    0.9558823704719543,
+                    0.970588207244873,
+                    0.9558823704719543,
+                    0.9558823704719543
+                  ],
+                  "mean_max_probability": 0.9599089026451111,
+                  "code_accuracy": [
+                    1.0,
+                    0.7610294222831726,
+                    0.49264705181121826
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9852941036224365,
+                "digit_ece_10_bins": 0.07090931199491024,
+                "digit_nll": 0.1317080557346344,
+                "digit_brier": 0.05310257896780968,
+                "sequence_top1": 0.9411764705882353,
+                "sequence_top5": 1.0,
+                "wrong_to_correct": 16,
+                "correct_to_wrong": 2,
+                "latency_ms": {
+                  "p50": 1.2125225002819207,
+                  "p95": 2.090708401374286
+                },
+                "policy_hash": "8cec85673ea51169d8b3c3cdee77c54c3311fc8debeaa30ddafde6bdaa81745a"
+              }
+            },
+            "partial_erasure": {
+              "raw": {
+                "digit_accuracy": 0.888059675693512,
+                "digit_ece_10_bins": 0.055445868987590075,
+                "digit_nll": 0.41964995861053467,
+                "digit_brier": 0.16147658228874207,
+                "sequence_top1": 0.5522388219833374,
+                "sequence_top5": 0.9402984976768494,
+                "digit_accuracy_by_position": [
+                  0.9253731369972229,
+                  0.8805969953536987,
+                  0.8656716346740723,
+                  0.8805969953536987
+                ],
+                "mean_max_probability": 0.9319532513618469,
+                "code_accuracy": [
+                  0.753731369972229,
+                  0.7873134613037109,
+                  0.6753731369972229
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.9029850959777832,
+                  "digit_ece_10_bins": 0.01900900567216013,
+                  "digit_nll": 0.326880544424057,
+                  "digit_brier": 0.1319284737110138,
+                  "sequence_top1": 0.611940324306488,
+                  "sequence_top5": 0.9104477763175964,
+                  "digit_accuracy_by_position": [
+                    0.9552238583564758,
+                    0.9104477763175964,
+                    0.8507462739944458,
+                    0.89552241563797
+                  ],
+                  "mean_max_probability": 0.9151919484138489,
+                  "code_accuracy": [
+                    1.0,
+                    0.8041045069694519,
+                    0.6809701323509216
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.9291045069694519,
+                "digit_ece_10_bins": 0.02636352914851159,
+                "digit_nll": 0.21439340710639954,
+                "digit_brier": 0.10137375444173813,
+                "sequence_top1": 0.7164179104477612,
+                "sequence_top5": 0.8656716417910447,
+                "wrong_to_correct": 1,
+                "correct_to_wrong": 1,
+                "latency_ms": {
+                  "p50": 1.0312169979442842,
+                  "p95": 1.2234837951837105
+                },
+                "policy_hash": "acad94731ae8e984f8e1d50374c7167382acf3a74ef2f8e34c16027e7b1d69ff"
+              }
+            },
+            "missing_frequency": {
+              "raw": {
+                "digit_accuracy": 0.11759259551763535,
+                "digit_ece_10_bins": 0.3409358151257038,
+                "digit_nll": 3.9427404403686523,
+                "digit_brier": 1.0796860456466675,
+                "sequence_top1": 0.0,
+                "sequence_top5": 0.003703703638166189,
+                "digit_accuracy_by_position": [
+                  0.10740740597248077,
+                  0.10000000149011612,
+                  0.14074073731899261,
+                  0.12222222238779068
+                ],
+                "mean_max_probability": 0.45852845907211304,
+                "code_accuracy": [
+                  0.904629647731781,
+                  0.5143518447875977,
+                  0.09861110895872116
+                ],
+                "oracle_level1": {
+                  "digit_accuracy": 0.11759259551763535,
+                  "digit_ece_10_bins": 0.3500147722661495,
+                  "digit_nll": 3.9358041286468506,
+                  "digit_brier": 1.0918829441070557,
+                  "sequence_top1": 0.0,
+                  "sequence_top5": 0.003703703638166189,
+                  "digit_accuracy_by_position": [
+                    0.10740740597248077,
+                    0.10000000149011612,
+                    0.14074073731899261,
+                    0.12222222238779068
+                  ],
+                  "mean_max_probability": 0.46760740876197815,
+                  "code_accuracy": [
+                    1.0,
+                    0.5143518447875977,
+                    0.09861110895872116
+                  ]
+                }
+              },
+              "protected": {
+                "digit_accuracy": 0.3157407343387604,
+                "digit_ece_10_bins": 0.31002652645111084,
+                "digit_nll": 2.777200222015381,
+                "digit_brier": 0.9964410662651062,
+                "sequence_top1": 0.007407407407407408,
+                "sequence_top5": 0.022222222222222223,
+                "wrong_to_correct": 0,
+                "correct_to_wrong": 0,
+                "latency_ms": {
+                  "p50": 1.902874999359483,
+                  "p95": 2.143801501370035
+                },
+                "policy_hash": "d2a75d5f9d317b3c4adf2ff710337a08975fe74870109f1ee193aaf75fd6ed00"
+              }
+            }
+          },
+          "temperature": 1.364583134651184
+        },
+        "coarse_only": {
+          "history": [
+            2.790515170097351,
+            1.0638177975018819,
+            0.5522602915763855,
+            0.38539348721504213,
+            0.3093188097079595,
+            0.2599208980798721,
+            0.23392478426297506,
+            0.2217771949370702,
+            0.19422053515911103,
+            0.17430344760417937,
+            0.16319599280754726,
+            0.16600006053845087,
+            0.15229514886935552,
+            0.1425600244104862,
+            0.13467934558788935,
+            0.13122886483867963
+          ],
+          "training_seconds": 3.1224919160013087,
+          "parameters": 34570,
+          "memory_tokens": 4,
+          "scenarios": {
+            "corrupted": {
+              "coarse_code_accuracy": 0.9074074029922485
+            },
+            "clean": {
+              "coarse_code_accuracy": 1.0
+            },
+            "noisy": {
+              "coarse_code_accuracy": 0.908088207244873
+            },
+            "partial_erasure": {
+              "coarse_code_accuracy": 0.8694030046463013
+            },
+            "missing_frequency": {
+              "coarse_code_accuracy": 0.904629647731781
+            }
+          }
+        }
+      }
+    }
+  }
+}

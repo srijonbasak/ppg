@@ -1,0 +1,20 @@
+{
+  "seeds": [
+    317,
+    419,
+    523
+  ],
+  "equal_update_epochs": 16,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "flat_tokenizer_epochs": 10,
+  "compute_matching": "PyTorch profiler training matmul FLOPs on batch 128; simple heads continue until D's 16-epoch estimated training FLOPs",
+  "gate_reference": "frozen conventional local_gated route AND acceptance outputs from gate_results per seed",
+  "candidate_support": "precomputed per-position choices; all ten digits at routed positions",
+  "C_definition": "observed complete 1/2/4 residual reconstruction, including intermediate scale",
+  "B_definition": "independently trained full-resolution 4-position VQ; never residual fine codes with missing coarse context",
+  "D_definition": "unchanged learned 1/2/4 next-level predictor and ranker",
+  "bootstrap_samples": 2000,
+  "threads": 1,
+  "selection": "fixed budgets, validation-only per-variant temperature, no test checkpoint selection"
+}

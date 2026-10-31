@@ -1,0 +1,512 @@
+{
+  "317": {
+    "A_cnn": {
+      "row_only_mean_max_probability": 0.8196137547492981,
+      "row_only_compatible_mass": 0.3164575455399851,
+      "details": [
+        {
+          "max_probability": 0.7540510296821594,
+          "compatible_probability_mass": 0.9192629456520081
+        },
+        {
+          "max_probability": 0.7478905320167542,
+          "compatible_probability_mass": 0.9171249866485596
+        },
+        {
+          "max_probability": 0.7486034631729126,
+          "compatible_probability_mass": 0.9174607396125793
+        },
+        {
+          "max_probability": 0.7535035014152527,
+          "compatible_probability_mass": 0.0011908585438504815
+        },
+        {
+          "max_probability": 0.7398282289505005,
+          "compatible_probability_mass": 0.0014585391618311405
+        },
+        {
+          "max_probability": 0.7287633419036865,
+          "compatible_probability_mass": 0.0014896917855367064
+        },
+        {
+          "max_probability": 0.973780632019043,
+          "compatible_probability_mass": 0.024338895455002785
+        },
+        {
+          "max_probability": 0.9623894691467285,
+          "compatible_probability_mass": 0.03559810295701027
+        },
+        {
+          "max_probability": 0.9677135944366455,
+          "compatible_probability_mass": 0.03019315004348755
+        }
+      ]
+    },
+    "B": {
+      "row_only_mean_max_probability": 0.7790170775519477,
+      "row_only_compatible_mass": 0.316372648295429,
+      "details": [
+        {
+          "max_probability": 0.7540510296821594,
+          "compatible_probability_mass": 0.9192629456520081
+        },
+        {
+          "max_probability": 0.7478905320167542,
+          "compatible_probability_mass": 0.9171249866485596
+        },
+        {
+          "max_probability": 0.7486034631729126,
+          "compatible_probability_mass": 0.9174607396125793
+        },
+        {
+          "max_probability": 0.6459068059921265,
+          "compatible_probability_mass": 0.0054966723546385765
+        },
+        {
+          "max_probability": 0.5990859270095825,
+          "compatible_probability_mass": 0.006881126668304205
+        },
+        {
+          "max_probability": 0.6177986860275269,
+          "compatible_probability_mass": 0.006549782585352659
+        },
+        {
+          "max_probability": 0.9721534252166748,
+          "compatible_probability_mass": 0.020702827721834183
+        },
+        {
+          "max_probability": 0.9592726230621338,
+          "compatible_probability_mass": 0.0303957499563694
+        },
+        {
+          "max_probability": 0.9663912057876587,
+          "compatible_probability_mass": 0.023479003459215164
+        }
+      ]
+    },
+    "C_cnn": {
+      "row_only_mean_max_probability": 0.6392864187558492,
+      "row_only_compatible_mass": 0.3762716219450037,
+      "details": [
+        {
+          "max_probability": 0.7540510296821594,
+          "compatible_probability_mass": 0.9192629456520081
+        },
+        {
+          "max_probability": 0.7478905320167542,
+          "compatible_probability_mass": 0.9171249866485596
+        },
+        {
+          "max_probability": 0.7486034631729126,
+          "compatible_probability_mass": 0.9174607396125793
+        },
+        {
+          "max_probability": 0.3534468412399292,
+          "compatible_probability_mass": 0.20659635961055756
+        },
+        {
+          "max_probability": 0.3534468412399292,
+          "compatible_probability_mass": 0.20659635961055756
+        },
+        {
+          "max_probability": 0.3534468412399292,
+          "compatible_probability_mass": 0.20659635961055756
+        },
+        {
+          "max_probability": 0.814230740070343,
+          "compatible_probability_mass": 0.004268948920071125
+        },
+        {
+          "max_probability": 0.814230740070343,
+          "compatible_probability_mass": 0.004268948920071125
+        },
+        {
+          "max_probability": 0.814230740070343,
+          "compatible_probability_mass": 0.004268948920071125
+        }
+      ]
+    },
+    "D": {
+      "row_only_mean_max_probability": 0.46600545446077984,
+      "row_only_compatible_mass": 0.5025572379430135,
+      "details": [
+        {
+          "max_probability": 0.7540510296821594,
+          "compatible_probability_mass": 0.9192629456520081
+        },
+        {
+          "max_probability": 0.7478905320167542,
+          "compatible_probability_mass": 0.9171249866485596
+        },
+        {
+          "max_probability": 0.7486034631729126,
+          "compatible_probability_mass": 0.9174607396125793
+        },
+        {
+          "max_probability": 0.40176698565483093,
+          "compatible_probability_mass": 0.2892962396144867
+        },
+        {
+          "max_probability": 0.40176698565483093,
+          "compatible_probability_mass": 0.2892962396144867
+        },
+        {
+          "max_probability": 0.40176698565483093,
+          "compatible_probability_mass": 0.2892962396144867
+        },
+        {
+          "max_probability": 0.29179397225379944,
+          "compatible_probability_mass": 0.2931567430496216
+        },
+        {
+          "max_probability": 0.29179397225379944,
+          "compatible_probability_mass": 0.2931567430496216
+        },
+        {
+          "max_probability": 0.15461516380310059,
+          "compatible_probability_mass": 0.31496426463127136
+        }
+      ]
+    }
+  },
+  "419": {
+    "A_cnn": {
+      "row_only_mean_max_probability": 0.8587189846568637,
+      "row_only_compatible_mass": 0.34952442575660014,
+      "details": [
+        {
+          "max_probability": 0.7656944394111633,
+          "compatible_probability_mass": 0.10160865634679794
+        },
+        {
+          "max_probability": 0.7670242786407471,
+          "compatible_probability_mass": 0.10003285855054855
+        },
+        {
+          "max_probability": 0.7442951202392578,
+          "compatible_probability_mass": 0.11761515587568283
+        },
+        {
+          "max_probability": 0.9023775458335876,
+          "compatible_probability_mass": 0.0010042008943855762
+        },
+        {
+          "max_probability": 0.891036331653595,
+          "compatible_probability_mass": 0.0013503656955435872
+        },
+        {
+          "max_probability": 0.8883535265922546,
+          "compatible_probability_mass": 0.001322144060395658
+        },
+        {
+          "max_probability": 0.9260745048522949,
+          "compatible_probability_mass": 0.9438591003417969
+        },
+        {
+          "max_probability": 0.9233395457267761,
+          "compatible_probability_mass": 0.9406828284263611
+        },
+        {
+          "max_probability": 0.9202755689620972,
+          "compatible_probability_mass": 0.9382445216178894
+        }
+      ]
+    },
+    "B": {
+      "row_only_mean_max_probability": 0.7982656326558855,
+      "row_only_compatible_mass": 0.36409087023801273,
+      "details": [
+        {
+          "max_probability": 0.9581759572029114,
+          "compatible_probability_mass": 0.03176683560013771
+        },
+        {
+          "max_probability": 0.9605864882469177,
+          "compatible_probability_mass": 0.02968447655439377
+        },
+        {
+          "max_probability": 0.956520676612854,
+          "compatible_probability_mass": 0.03351324796676636
+        },
+        {
+          "max_probability": 0.4829329550266266,
+          "compatible_probability_mass": 0.11307103931903839
+        },
+        {
+          "max_probability": 0.5396116375923157,
+          "compatible_probability_mass": 0.12335570901632309
+        },
+        {
+          "max_probability": 0.5168733596801758,
+          "compatible_probability_mass": 0.12264007329940796
+        },
+        {
+          "max_probability": 0.9260745048522949,
+          "compatible_probability_mass": 0.9438591003417969
+        },
+        {
+          "max_probability": 0.9233395457267761,
+          "compatible_probability_mass": 0.9406828284263611
+        },
+        {
+          "max_probability": 0.9202755689620972,
+          "compatible_probability_mass": 0.9382445216178894
+        }
+      ]
+    },
+    "C_cnn": {
+      "row_only_mean_max_probability": 0.6145409941673279,
+      "row_only_compatible_mass": 0.5173631211121877,
+      "details": [
+        {
+          "max_probability": 0.391599178314209,
+          "compatible_probability_mass": 0.4066002070903778
+        },
+        {
+          "max_probability": 0.391599178314209,
+          "compatible_probability_mass": 0.4066002070903778
+        },
+        {
+          "max_probability": 0.391599178314209,
+          "compatible_probability_mass": 0.4066002070903778
+        },
+        {
+          "max_probability": 0.5287939310073853,
+          "compatible_probability_mass": 0.20456033945083618
+        },
+        {
+          "max_probability": 0.5287939310073853,
+          "compatible_probability_mass": 0.20456033945083618
+        },
+        {
+          "max_probability": 0.5287939310073853,
+          "compatible_probability_mass": 0.20456033945083618
+        },
+        {
+          "max_probability": 0.9260745048522949,
+          "compatible_probability_mass": 0.9438591003417969
+        },
+        {
+          "max_probability": 0.9233395457267761,
+          "compatible_probability_mass": 0.9406828284263611
+        },
+        {
+          "max_probability": 0.9202755689620972,
+          "compatible_probability_mass": 0.9382445216178894
+        }
+      ]
+    },
+    "D": {
+      "row_only_mean_max_probability": 0.5610144038995107,
+      "row_only_compatible_mass": 0.47475316127141315,
+      "details": [
+        {
+          "max_probability": 0.3460118770599365,
+          "compatible_probability_mass": 0.17577999830245972
+        },
+        {
+          "max_probability": 0.3460118770599365,
+          "compatible_probability_mass": 0.17577999830245972
+        },
+        {
+          "max_probability": 0.3460118770599365,
+          "compatible_probability_mass": 0.17577999830245972
+        },
+        {
+          "max_probability": 0.4138014614582062,
+          "compatible_probability_mass": 0.30755066871643066
+        },
+        {
+          "max_probability": 0.4138014614582062,
+          "compatible_probability_mass": 0.30755066871643066
+        },
+        {
+          "max_probability": 0.4138014614582062,
+          "compatible_probability_mass": 0.30755066871643066
+        },
+        {
+          "max_probability": 0.9260745048522949,
+          "compatible_probability_mass": 0.9438591003417969
+        },
+        {
+          "max_probability": 0.9233395457267761,
+          "compatible_probability_mass": 0.9406828284263611
+        },
+        {
+          "max_probability": 0.9202755689620972,
+          "compatible_probability_mass": 0.9382445216178894
+        }
+      ]
+    }
+  },
+  "523": {
+    "A_cnn": {
+      "row_only_mean_max_probability": 0.712594555483924,
+      "row_only_compatible_mass": 0.5797899613777796,
+      "details": [
+        {
+          "max_probability": 0.7540510296821594,
+          "compatible_probability_mass": 0.9192629456520081
+        },
+        {
+          "max_probability": 0.7478905320167542,
+          "compatible_probability_mass": 0.9171249866485596
+        },
+        {
+          "max_probability": 0.7486034631729126,
+          "compatible_probability_mass": 0.9174607396125793
+        },
+        {
+          "max_probability": 0.5662749409675598,
+          "compatible_probability_mass": 0.6626450419425964
+        },
+        {
+          "max_probability": 0.5625579953193665,
+          "compatible_probability_mass": 0.6591094732284546
+        },
+        {
+          "max_probability": 0.5606253147125244,
+          "compatible_probability_mass": 0.6576176285743713
+        },
+        {
+          "max_probability": 0.8044959306716919,
+          "compatible_probability_mass": 0.1805875450372696
+        },
+        {
+          "max_probability": 0.8374598026275635,
+          "compatible_probability_mass": 0.14892472326755524
+        },
+        {
+          "max_probability": 0.8313919901847839,
+          "compatible_probability_mass": 0.15537656843662262
+        }
+      ]
+    },
+    "B": {
+      "row_only_mean_max_probability": 0.7680986391173469,
+      "row_only_compatible_mass": 0.5286325151100755,
+      "details": [
+        {
+          "max_probability": 0.7540510296821594,
+          "compatible_probability_mass": 0.9192629456520081
+        },
+        {
+          "max_probability": 0.7478905320167542,
+          "compatible_probability_mass": 0.9171249866485596
+        },
+        {
+          "max_probability": 0.7486034631729126,
+          "compatible_probability_mass": 0.9174607396125793
+        },
+        {
+          "max_probability": 0.5662749409675598,
+          "compatible_probability_mass": 0.6626450419425964
+        },
+        {
+          "max_probability": 0.5625579953193665,
+          "compatible_probability_mass": 0.6591094732284546
+        },
+        {
+          "max_probability": 0.5606253147125244,
+          "compatible_probability_mass": 0.6576176285743713
+        },
+        {
+          "max_probability": 0.9918293356895447,
+          "compatible_probability_mass": 0.007476231083273888
+        },
+        {
+          "max_probability": 0.9904333353042603,
+          "compatible_probability_mass": 0.008589600212872028
+        },
+        {
+          "max_probability": 0.99062180519104,
+          "compatible_probability_mass": 0.008405989035964012
+        }
+      ]
+    },
+    "C_cnn": {
+      "row_only_mean_max_probability": 0.5859324898984697,
+      "row_only_compatible_mass": 0.6647698647446103,
+      "details": [
+        {
+          "max_probability": 0.7540510296821594,
+          "compatible_probability_mass": 0.9192629456520081
+        },
+        {
+          "max_probability": 0.7478905320167542,
+          "compatible_probability_mass": 0.9171249866485596
+        },
+        {
+          "max_probability": 0.7486034631729126,
+          "compatible_probability_mass": 0.9174607396125793
+        },
+        {
+          "max_probability": 0.5662749409675598,
+          "compatible_probability_mass": 0.6626450419425964
+        },
+        {
+          "max_probability": 0.5625579953193665,
+          "compatible_probability_mass": 0.6591094732284546
+        },
+        {
+          "max_probability": 0.5606253147125244,
+          "compatible_probability_mass": 0.6576176285743713
+        },
+        {
+          "max_probability": 0.4444630444049835,
+          "compatible_probability_mass": 0.416569322347641
+        },
+        {
+          "max_probability": 0.4444630444049835,
+          "compatible_probability_mass": 0.416569322347641
+        },
+        {
+          "max_probability": 0.4444630444049835,
+          "compatible_probability_mass": 0.416569322347641
+        }
+      ]
+    },
+    "D": {
+      "row_only_mean_max_probability": 0.7708904412057664,
+      "row_only_compatible_mass": 0.5259479335379891,
+      "details": [
+        {
+          "max_probability": 0.7540510296821594,
+          "compatible_probability_mass": 0.9192629456520081
+        },
+        {
+          "max_probability": 0.7478905320167542,
+          "compatible_probability_mass": 0.9171249866485596
+        },
+        {
+          "max_probability": 0.7486034631729126,
+          "compatible_probability_mass": 0.9174607396125793
+        },
+        {
+          "max_probability": 0.5662749409675598,
+          "compatible_probability_mass": 0.6626450419425964
+        },
+        {
+          "max_probability": 0.5625579953193665,
+          "compatible_probability_mass": 0.6591094732284546
+        },
+        {
+          "max_probability": 0.5606253147125244,
+          "compatible_probability_mass": 0.6576176285743713
+        },
+        {
+          "max_probability": 0.9993368983268738,
+          "compatible_probability_mass": 0.00010352872777730227
+        },
+        {
+          "max_probability": 0.9993368983268738,
+          "compatible_probability_mass": 0.00010352872777730227
+        },
+        {
+          "max_probability": 0.9993368983268738,
+          "compatible_probability_mass": 0.00010352872777730227
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "seeds": [
+    317,
+    419,
+    523
+  ],
+  "epochs": 16,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "tokenizer_epochs": 10,
+  "graph_nodes": 42,
+  "graph_embedding": "fixed physical message aggregation plus train-only learned 32-dimensional PCA; no large GNN",
+  "ncm": "one Transformer decoder block, width 32, four attention heads; 1/2/4 residual codes",
+  "matched_features": "both graph and non-graph models receive the same CNN embeddings and seven measured frequency bands",
+  "compute_control": "equal updates plus supported-operation training-FLOP matching to the largest 16-epoch NCM budget",
+  "gate": "unchanged frozen conventional-reference route and acceptance masks from hierarchy_results",
+  "selection": "fixed budgets and validation-only temperatures; no test checkpoint selection",
+  "missing_band_guard": {
+    "scope": "shared analytic postprocessing; no main-test activation",
+    "strong_frame_energy_fraction": 0.8,
+    "presence_peak": 0.01,
+    "absence_ratio": 1e-05,
+    "other_digit_floor": 1e-06
+  }
+}

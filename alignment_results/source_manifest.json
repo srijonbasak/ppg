@@ -1,0 +1,20 @@
+{
+  "representation_results/cnn.pt": "6fa450c1e80ce36862d76b7f2071f071215a3f333c6281c4f33d210e690f1be6",
+  "experiments/alignment_config.json": "f6cf2e98c96e8f640d9eab30e3b26ed1c444443a653772d3d300ad2d73d58c73",
+  "experiments/adapter_alignment.py": "e3f29ac707a95d25160a8ae8f6f9a2e461cf3420f7eafd68d4ed0e985b6c4dcd",
+  "ppf/alignment_study.py": "d20522d502f1b30bbc4f286bf93b861e32016213568f63ab4962ea6259ff858a",
+  "encoder_results/seed_317/final_ncm.pt": "3789f0a80489c0486b258092c122e73bee6e6f1556582af7baef89dbf584d142",
+  "encoder_results/seed_317/adapters.pt": "9c54a06e5367741bbc7d526542e111529b06e9cf564725551cba11b22b8d93f5",
+  "encoder_results/seed_419/final_ncm.pt": "3b4452908dc81c723b0611bb69dc3a1d952179cdd339451af69008b0b94e3a0f",
+  "encoder_results/seed_419/adapters.pt": "9c54a06e5367741bbc7d526542e111529b06e9cf564725551cba11b22b8d93f5",
+  "encoder_results/seed_523/final_ncm.pt": "dca6f1361c03e14f08488f601e4210d62a580c9e8cedbc19e1a0fb56751a2e31",
+  "encoder_results/seed_523/adapters.pt": "9c54a06e5367741bbc7d526542e111529b06e9cf564725551cba11b22b8d93f5",
+  "alignment_results/seed_317/original_joint.pt": "e9e9ba7acfd1aab62fa365d7a805a06d3ec99aaa9177b61a0f16109dbc3590f5",
+  "alignment_results/seed_419/original_joint.pt": "e01a199d9a16429288cde1194581f79438676396f3aac84065392ae343350c21",
+  "alignment_results/seed_523/original_joint.pt": "87fd1864ef24236207d98085a24e84d91162895bb767ba014798273ed1fb47af",
+  "checkpoint_tensor_identity_verified_seeds": [
+    317,
+    419,
+    523
+  ]
+}

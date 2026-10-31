@@ -1,0 +1,10 @@
+{
+  "corrupted": {
+    "physical_pair_score_digit_accuracy": 0.8972222208976746,
+    "rewired_pair_score_digit_accuracy": 0.22592592239379883
+  },
+  "clean": {
+    "physical_pair_score_digit_accuracy": 1.0,
+    "rewired_pair_score_digit_accuracy": 0.18518517911434174
+  }
+}

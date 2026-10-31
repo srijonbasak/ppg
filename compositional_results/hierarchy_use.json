@@ -1,0 +1,48 @@
+{
+  "original": {
+    "oracle_fine_only_digit_accuracy": 0.9574074149131775,
+    "oracle_fine_only_sequence_accuracy": 0.8814814686775208,
+    "fine_codes_per_digit": {
+      "0": 9,
+      "1": 6,
+      "2": 5,
+      "3": 9,
+      "4": 10,
+      "5": 7,
+      "6": 10,
+      "7": 8,
+      "8": 7,
+      "9": 6
+    },
+    "generated_fine_only_digit_accuracy": 0.2805555462837219,
+    "generated_decoder_digits_changed_when_removing_coarse_and_middle": 0.0018518518190830946,
+    "generated_decoder_digits_changed_when_swapping_coarse_and_middle": 0.31296294927597046
+  },
+  "structured": {
+    "oracle_fine_only_digit_accuracy": 1.0,
+    "oracle_fine_only_sequence_accuracy": 1.0,
+    "fine_codes_per_digit": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1
+    },
+    "generated_fine_only_digit_accuracy": 0.32499998807907104,
+    "generated_decoder_digits_changed_when_removing_coarse_and_middle": 0.0,
+    "generated_decoder_digits_changed_when_swapping_coarse_and_middle": 0.0
+  },
+  "cnn_baseline": {
+    "sequence_accuracy": 0.5925925970077515,
+    "sequence_top5": 0.7444444298744202,
+    "latency_ms": {
+      "p50": 0.8885570000529697,
+      "p95": 0.9754810000231373
+    }
+  }
+}

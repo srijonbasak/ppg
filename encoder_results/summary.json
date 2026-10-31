@@ -1,0 +1,2684 @@
+{
+  "summary": {
+    "probes": {
+      "mel": {
+        "clean": {
+          "digit_accuracy": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "mean_max_probability": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "latency_ms": {
+            "p50": 0.21619883409584872,
+            "p95": 0.2356314498683787
+          },
+          "frequency_band_nmse": 0.0007350035011768341
+        },
+        "corrupted": {
+          "digit_accuracy": {
+            "mean": 0.8827160398165385,
+            "seed_std": 0.017330729242310917
+          },
+          "sequence_top1": {
+            "mean": 0.7074073950449625,
+            "seed_std": 0.046259241675314894
+          },
+          "sequence_top5": {
+            "mean": 0.8617283900578817,
+            "seed_std": 0.014021977586810721
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.028772660201260198,
+            "seed_std": 0.003135540671988086
+          },
+          "mean_max_probability": {
+            "mean": 0.8995994528134664,
+            "seed_std": 0.010785472367555851
+          },
+          "latency_ms": {
+            "p50": 0.2164476657829558,
+            "p95": 0.24088008340186207
+          },
+          "frequency_band_nmse": 0.01798289641737938
+        },
+        "noisy": {
+          "digit_accuracy": {
+            "mean": 0.969362735748291,
+            "seed_std": 0.03083270491901926
+          },
+          "sequence_top1": {
+            "mean": 0.9019607901573181,
+            "seed_std": 0.08099369321920324
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.05346029158681631,
+            "seed_std": 0.004180357594037591
+          },
+          "mean_max_probability": {
+            "mean": 0.9177507956822714,
+            "seed_std": 0.026958166264826004
+          },
+          "latency_ms": {
+            "p50": 0.21904083284122558,
+            "p95": 0.2634123839622286
+          },
+          "frequency_band_nmse": 0.01577724702656269
+        },
+        "partial_erasure": {
+          "digit_accuracy": {
+            "mean": 0.9452736179033915,
+            "seed_std": 0.021217319315677986
+          },
+          "sequence_top1": {
+            "mean": 0.7810945312182108,
+            "seed_std": 0.08486925105702481
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.025794553376423817,
+            "seed_std": 0.008386654841959091
+          },
+          "mean_max_probability": {
+            "mean": 0.9362669388453165,
+            "seed_std": 0.004632170346733549
+          },
+          "latency_ms": {
+            "p50": 0.2188876666574894,
+            "p95": 0.2585881671014552
+          },
+          "frequency_band_nmse": 0.015330608002841473
+        },
+        "missing_frequency": {
+          "digit_accuracy": {
+            "mean": 0.39351852734883624,
+            "seed_std": 0.014433760171016417
+          },
+          "sequence_top1": {
+            "mean": 0.020987654725710552,
+            "seed_std": 0.002138334561343515
+          },
+          "sequence_top5": {
+            "mean": 0.1111111119389534,
+            "seed_std": 0.0037037059664726257
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.5749675158488875,
+            "seed_std": 0.015672154461715503
+          },
+          "mean_max_probability": {
+            "mean": 0.967530091603597,
+            "seed_std": 0.0108716749539848
+          },
+          "latency_ms": {
+            "p50": 0.21606383355295597,
+            "p95": 0.22822700017665434
+          },
+          "frequency_band_nmse": 0.5522246360778809
+        }
+      },
+      "stem": {
+        "clean": {
+          "digit_accuracy": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "mean_max_probability": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "latency_ms": {
+            "p50": 0.2989283329952741,
+            "p95": 0.32206636666766525
+          },
+          "frequency_band_nmse": 0.0006403671577572823
+        },
+        "corrupted": {
+          "digit_accuracy": {
+            "mean": 0.9543209671974182,
+            "seed_std": 0.004175226781243052
+          },
+          "sequence_top1": {
+            "mean": 0.8580246965090433,
+            "seed_std": 0.014968352529778144
+          },
+          "sequence_top5": {
+            "mean": 0.970370352268219,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.010518833706252432,
+            "seed_std": 0.001279667741218732
+          },
+          "mean_max_probability": {
+            "mean": 0.9641450643539429,
+            "seed_std": 0.003956088864385559
+          },
+          "latency_ms": {
+            "p50": 0.3013910002967653,
+            "p95": 0.3327514331128138
+          },
+          "frequency_band_nmse": 0.017286032438278198
+        },
+        "noisy": {
+          "digit_accuracy": {
+            "mean": 0.9914215604464213,
+            "seed_std": 0.007653191120211514
+          },
+          "sequence_top1": {
+            "mean": 0.9656862815221151,
+            "seed_std": 0.03061273107551113
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.010522426329165077,
+            "seed_std": 0.004923301400438499
+          },
+          "mean_max_probability": {
+            "mean": 0.9894216060638428,
+            "seed_std": 0.0016361406928495856
+          },
+          "latency_ms": {
+            "p50": 0.3004461674815199,
+            "p95": 0.32644694959647796
+          },
+          "frequency_band_nmse": 0.015878824517130852
+        },
+        "partial_erasure": {
+          "digit_accuracy": {
+            "mean": 0.9800994992256165,
+            "seed_std": 0.0056997292642197795
+          },
+          "sequence_top1": {
+            "mean": 0.9203980167706808,
+            "seed_std": 0.02279886502963527
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.012577643947831044,
+            "seed_std": 0.005318615999511724
+          },
+          "mean_max_probability": {
+            "mean": 0.9791642228762308,
+            "seed_std": 0.0049697369400029156
+          },
+          "latency_ms": {
+            "p50": 0.30129466783061315,
+            "p95": 0.34612803404646303
+          },
+          "frequency_band_nmse": 0.014988762326538563
+        },
+        "missing_frequency": {
+          "digit_accuracy": {
+            "mean": 0.13796296219031015,
+            "seed_std": 0.04811252386633372
+          },
+          "sequence_top1": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.8046117573976517,
+            "seed_std": 0.10721267974748173
+          },
+          "mean_max_probability": {
+            "mean": 0.9425747593243917,
+            "seed_std": 0.0591444871356594
+          },
+          "latency_ms": {
+            "p50": 0.2993589999581066,
+            "p95": 0.3296609656899818
+          },
+          "frequency_band_nmse": 0.5333064198493958
+        }
+      },
+      "block1": {
+        "clean": {
+          "digit_accuracy": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 3.7749608357747394e-07,
+            "seed_std": 2.25659543108951e-07
+          },
+          "mean_max_probability": {
+            "mean": 0.9999996225039164,
+            "seed_std": 2.2565954310895102e-07
+          },
+          "latency_ms": {
+            "p50": 0.42324033226274577,
+            "p95": 0.43912443355414627
+          },
+          "frequency_band_nmse": 0.00017123854195233434
+        },
+        "corrupted": {
+          "digit_accuracy": {
+            "mean": 0.9416666825612386,
+            "seed_std": 0.0033384656273516685
+          },
+          "sequence_top1": {
+            "mean": 0.8271604975064596,
+            "seed_std": 0.009320776118845348
+          },
+          "sequence_top5": {
+            "mean": 0.9555555582046509,
+            "seed_std": 0.0037037134170532227
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.018767309821366023,
+            "seed_std": 0.00434252474731062
+          },
+          "mean_max_probability": {
+            "mean": 0.9589744607607523,
+            "seed_std": 0.003966733088173127
+          },
+          "latency_ms": {
+            "p50": 0.425616333814105,
+            "p95": 0.45781606640957756
+          },
+          "frequency_band_nmse": 0.008806717582046986
+        },
+        "noisy": {
+          "digit_accuracy": {
+            "mean": 0.9950980345408121,
+            "seed_std": 0.002122613308065254
+          },
+          "sequence_top1": {
+            "mean": 0.9803921381632487,
+            "seed_std": 0.008490453232261014
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.0046491561612735195,
+            "seed_std": 0.001810371071562535
+          },
+          "mean_max_probability": {
+            "mean": 0.9957415064175924,
+            "seed_std": 0.00023367310806286302
+          },
+          "latency_ms": {
+            "p50": 0.42345066625178635,
+            "p95": 0.4476464003043172
+          },
+          "frequency_band_nmse": 0.008116496726870537
+        },
+        "partial_erasure": {
+          "digit_accuracy": {
+            "mean": 0.9825870593388876,
+            "seed_std": 0.0021543074579125016
+          },
+          "sequence_top1": {
+            "mean": 0.930348257223765,
+            "seed_std": 0.008617161006134596
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.012932642823822485,
+            "seed_std": 0.002960741879885305
+          },
+          "mean_max_probability": {
+            "mean": 0.9905225237210592,
+            "seed_std": 0.0015363661838617459
+          },
+          "latency_ms": {
+            "p50": 0.42507366500406835,
+            "p95": 0.4489257005237353
+          },
+          "frequency_band_nmse": 0.007955579087138176
+        },
+        "missing_frequency": {
+          "digit_accuracy": {
+            "mean": 0.1496913582086563,
+            "seed_std": 0.06361544970492387
+          },
+          "sequence_top1": {
+            "mean": 0.0024691357587774596,
+            "seed_std": 0.004276668584987691
+          },
+          "sequence_top5": {
+            "mean": 0.006172839552164078,
+            "seed_std": 0.0056575009610912155
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.5763491156200568,
+            "seed_std": 0.13179213529235684
+          },
+          "mean_max_probability": {
+            "mean": 0.7260404825210571,
+            "seed_std": 0.10858419807550115
+          },
+          "latency_ms": {
+            "p50": 0.42448250072387356,
+            "p95": 0.4495674167628749
+          },
+          "frequency_band_nmse": 0.7330829501152039
+        }
+      },
+      "block2": {
+        "clean": {
+          "digit_accuracy": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 1.3113021850585938e-05,
+            "seed_std": 1.1354332828322084e-05
+          },
+          "mean_max_probability": {
+            "mean": 0.9999868869781494,
+            "seed_std": 1.1354332828322084e-05
+          },
+          "latency_ms": {
+            "p50": 0.5470061666225471,
+            "p95": 0.6448476323688132
+          },
+          "frequency_band_nmse": 0.0002322952204849571
+        },
+        "corrupted": {
+          "digit_accuracy": {
+            "mean": 0.9296296437581381,
+            "seed_std": 0.006481481449945098
+          },
+          "sequence_top1": {
+            "mean": 0.7925925850868225,
+            "seed_std": 0.013353870775077744
+          },
+          "sequence_top5": {
+            "mean": 0.9370370308558146,
+            "seed_std": 0.009799082100572456
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.01929604002846948,
+            "seed_std": 0.009858960335328881
+          },
+          "mean_max_probability": {
+            "mean": 0.946451743443807,
+            "seed_std": 0.007864344005528212
+          },
+          "latency_ms": {
+            "p50": 0.5451895000684696,
+            "p95": 0.589566249679289
+          },
+          "frequency_band_nmse": 0.011896993033587933
+        },
+        "noisy": {
+          "digit_accuracy": {
+            "mean": 0.9901960690816244,
+            "seed_std": 0.002122613308065254
+          },
+          "sequence_top1": {
+            "mean": 0.9607843160629272,
+            "seed_std": 0.00849041881950331
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.008649381537300846,
+            "seed_std": 0.002190325355348102
+          },
+          "mean_max_probability": {
+            "mean": 0.991630494594574,
+            "seed_std": 0.0014741052526158942
+          },
+          "latency_ms": {
+            "p50": 0.5454615002236096,
+            "p95": 0.5834263004241317
+          },
+          "frequency_band_nmse": 0.012537283822894096
+        },
+        "partial_erasure": {
+          "digit_accuracy": {
+            "mean": 0.9776119391123453,
+            "seed_std": 0.0037313401699462885
+          },
+          "sequence_top1": {
+            "mean": 0.9104477763175964,
+            "seed_std": 0.014925360679626465
+          },
+          "sequence_top5": {
+            "mean": 0.9950248797734579,
+            "seed_std": 0.008617161006134596
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.012460958421191512,
+            "seed_std": 0.00392702119524035
+          },
+          "mean_max_probability": {
+            "mean": 0.9837340116500854,
+            "seed_std": 0.0036638111699811935
+          },
+          "latency_ms": {
+            "p50": 0.5482046653924044,
+            "p95": 0.6129787002767747
+          },
+          "frequency_band_nmse": 0.010312826372683048
+        },
+        "missing_frequency": {
+          "digit_accuracy": {
+            "mean": 0.10370370000600815,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 0.0012345678793887298,
+            "seed_std": 0.0021383342924938455
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.7525113839656115,
+            "seed_std": 0.03658590594039383
+          },
+          "mean_max_probability": {
+            "mean": 0.8562150796254476,
+            "seed_std": 0.03658588047471459
+          },
+          "latency_ms": {
+            "p50": 0.5457754996314179,
+            "p95": 0.6217102669324958
+          },
+          "frequency_band_nmse": 0.773902952671051
+        }
+      },
+      "final": {
+        "clean": {
+          "digit_accuracy": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.00012538830439249674,
+            "seed_std": 0.00014786102416586687
+          },
+          "mean_max_probability": {
+            "mean": 0.9998746116956075,
+            "seed_std": 0.0001478610241658669
+          },
+          "latency_ms": {
+            "p50": 0.6664323342799131,
+            "p95": 0.7463941841706401
+          },
+          "frequency_band_nmse": 0.0003683667746372521
+        },
+        "corrupted": {
+          "digit_accuracy": {
+            "mean": 0.9240740736325582,
+            "seed_std": 0.004036034962345225
+          },
+          "sequence_top1": {
+            "mean": 0.7827160557111105,
+            "seed_std": 0.011905738910364002
+          },
+          "sequence_top5": {
+            "mean": 0.9222222169240316,
+            "seed_std": 0.00979907083632101
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.017044427586370148,
+            "seed_std": 0.004099968152556807
+          },
+          "mean_max_probability": {
+            "mean": 0.9388940334320068,
+            "seed_std": 0.00208213215952964
+          },
+          "latency_ms": {
+            "p50": 0.6633848333876813,
+            "p95": 0.7090324327994798
+          },
+          "frequency_band_nmse": 0.017565984278917313
+        },
+        "noisy": {
+          "digit_accuracy": {
+            "mean": 0.9816176295280457,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 0.9264705777168274,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.013508628248625124,
+            "seed_std": 0.0028067884233617295
+          },
+          "mean_max_probability": {
+            "mean": 0.9925438761711121,
+            "seed_std": 0.0005148146678061625
+          },
+          "latency_ms": {
+            "p50": 0.6831059993904395,
+            "p95": 0.7862169830938607
+          },
+          "frequency_band_nmse": 0.018681246787309647
+        },
+        "partial_erasure": {
+          "digit_accuracy": {
+            "mean": 0.9788557092348734,
+            "seed_std": 0.008617161006134596
+          },
+          "sequence_top1": {
+            "mean": 0.9154228965441386,
+            "seed_std": 0.03446864402453838
+          },
+          "sequence_top5": {
+            "mean": 0.9950248797734579,
+            "seed_std": 0.008617161006134596
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.015971370790794026,
+            "seed_std": 0.0037296114017475687
+          },
+          "mean_max_probability": {
+            "mean": 0.9810228943824768,
+            "seed_std": 0.0023016459349101312
+          },
+          "latency_ms": {
+            "p50": 0.6656023324467242,
+            "p95": 0.7332323326409096
+          },
+          "frequency_band_nmse": 0.01698848232626915
+        },
+        "missing_frequency": {
+          "digit_accuracy": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.7001810570557913,
+            "seed_std": 0.07079639520084233
+          },
+          "mean_max_probability": {
+            "mean": 0.7001811067263285,
+            "seed_std": 0.07079635924230962
+          },
+          "latency_ms": {
+            "p50": 0.6620373333134921,
+            "p95": 0.70036208392897
+          },
+          "frequency_band_nmse": 0.8390262722969055
+        }
+      },
+      "final_mean": {
+        "clean": {
+          "digit_accuracy": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.0004163980484008789,
+            "seed_std": 0.00020244938492815814
+          },
+          "mean_max_probability": {
+            "mean": 0.9995836019515991,
+            "seed_std": 0.00020244938492815814
+          },
+          "latency_ms": {
+            "p50": 0.6651744994693823,
+            "p95": 0.7412256328583074
+          },
+          "frequency_band_nmse": 0.002793692285194993
+        },
+        "corrupted": {
+          "digit_accuracy": {
+            "mean": 0.9185185233751932,
+            "seed_std": 0.0027777850628432077
+          },
+          "sequence_top1": {
+            "mean": 0.7716049353281657,
+            "seed_std": 0.009320807698147573
+          },
+          "sequence_top5": {
+            "mean": 0.9209876457850138,
+            "seed_std": 0.011905738910364
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.011821263155828396,
+            "seed_std": 0.0024231574349930663
+          },
+          "mean_max_probability": {
+            "mean": 0.9247251550356547,
+            "seed_std": 0.0031234908719416253
+          },
+          "latency_ms": {
+            "p50": 0.6727908336567149,
+            "p95": 0.8288546179149611
+          },
+          "frequency_band_nmse": 0.047639429569244385
+        },
+        "noisy": {
+          "digit_accuracy": {
+            "mean": 0.9779411554336548,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 0.9215686122576395,
+            "seed_std": 0.008490453232261014
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.010020144778536633,
+            "seed_std": 0.004877155491281969
+          },
+          "mean_max_probability": {
+            "mean": 0.9792377948760986,
+            "seed_std": 0.002250509308655707
+          },
+          "latency_ms": {
+            "p50": 0.6618816660193261,
+            "p95": 0.7788060507058011
+          },
+          "frequency_band_nmse": 0.053207844495773315
+        },
+        "partial_erasure": {
+          "digit_accuracy": {
+            "mean": 0.9639303286870321,
+            "seed_std": 0.0021543074579125016
+          },
+          "sequence_top1": {
+            "mean": 0.8557213942209879,
+            "seed_std": 0.008617161006134596
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.015254306052762937,
+            "seed_std": 0.006945027683777983
+          },
+          "mean_max_probability": {
+            "mean": 0.9681204756100973,
+            "seed_std": 0.0029595471374231864
+          },
+          "latency_ms": {
+            "p50": 0.66077666633646,
+            "p95": 0.7352700330860289
+          },
+          "frequency_band_nmse": 0.03754764795303345
+        },
+        "missing_frequency": {
+          "digit_accuracy": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.5548836483309666,
+            "seed_std": 0.055679575657997554
+          },
+          "mean_max_probability": {
+            "mean": 0.5548836489518484,
+            "seed_std": 0.05567955823537478
+          },
+          "latency_ms": {
+            "p50": 0.6595658323931275,
+            "p95": 0.7036534014332574
+          },
+          "frequency_band_nmse": 0.911641001701355
+        }
+      },
+      "final_pca": {
+        "clean": {
+          "digit_accuracy": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 7.919470469156901e-05,
+            "seed_std": 3.5383595082032895e-05
+          },
+          "mean_max_probability": {
+            "mean": 0.9999208052953085,
+            "seed_std": 3.5383595082032895e-05
+          },
+          "latency_ms": {
+            "p50": 0.681527499788596,
+            "p95": 0.7197764837959161
+          },
+          "frequency_band_nmse": 0.0018392599886283278
+        },
+        "corrupted": {
+          "digit_accuracy": {
+            "mean": 0.9234567880630493,
+            "seed_std": 0.002330186134890796
+          },
+          "sequence_top1": {
+            "mean": 0.7790123422940572,
+            "seed_std": 0.007709870431131784
+          },
+          "sequence_top5": {
+            "mean": 0.9185185233751932,
+            "seed_std": 0.006414985402253014
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.022338894234659772,
+            "seed_std": 0.003985355182200301
+          },
+          "mean_max_probability": {
+            "mean": 0.9387624462445577,
+            "seed_std": 0.0016174932191310996
+          },
+          "latency_ms": {
+            "p50": 0.6814659991505323,
+            "p95": 0.707818516275438
+          },
+          "frequency_band_nmse": 0.036805178970098495
+        },
+        "noisy": {
+          "digit_accuracy": {
+            "mean": 0.9852941036224365,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 0.9411764740943909,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 0.9950980345408121,
+            "seed_std": 0.008490453232261014
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.014458820534249147,
+            "seed_std": 0.0026983531513606568
+          },
+          "mean_max_probability": {
+            "mean": 0.9915648698806763,
+            "seed_std": 0.001268979960225888
+          },
+          "latency_ms": {
+            "p50": 0.6835433335557658,
+            "p95": 0.746011450549607
+          },
+          "frequency_band_nmse": 0.044173210859298706
+        },
+        "partial_erasure": {
+          "digit_accuracy": {
+            "mean": 0.963930348555247,
+            "seed_std": 0.007767432597286361
+          },
+          "sequence_top1": {
+            "mean": 0.8557213743527731,
+            "seed_std": 0.031069649261884283
+          },
+          "sequence_top5": {
+            "mean": 0.9900497595469157,
+            "seed_std": 0.008617161006134596
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.015900951393026237,
+            "seed_std": 0.005228865219102561
+          },
+          "mean_max_probability": {
+            "mean": 0.9735370477040609,
+            "seed_std": 0.0022885082423556307
+          },
+          "latency_ms": {
+            "p50": 0.6823780010260331,
+            "p95": 0.7296779664708689
+          },
+          "frequency_band_nmse": 0.035575270652770996
+        },
+        "missing_frequency": {
+          "digit_accuracy": {
+            "mean": 0.07160493731498718,
+            "seed_std": 0.12402338950234239
+          },
+          "sequence_top1": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.4925311816235383,
+            "seed_std": 0.23825588770307934
+          },
+          "mean_max_probability": {
+            "mean": 0.5641360878944397,
+            "seed_std": 0.1225469216906487
+          },
+          "latency_ms": {
+            "p50": 0.6818800005324496,
+            "p95": 0.7511147334904914
+          },
+          "frequency_band_nmse": 0.9112227559089661
+        }
+      },
+      "multiscale": {
+        "clean": {
+          "digit_accuracy": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 1.5099843343098958e-06,
+            "seed_std": 1.2000138656728666e-06
+          },
+          "mean_max_probability": {
+            "mean": 0.9999984900156657,
+            "seed_std": 1.2000138656728664e-06
+          },
+          "latency_ms": {
+            "p50": 0.7117070005430529,
+            "p95": 0.7566030838764467
+          },
+          "frequency_band_nmse": 0.0006843353621661663
+        },
+        "corrupted": {
+          "digit_accuracy": {
+            "mean": 0.9364197651545206,
+            "seed_std": 0.002138339938336907
+          },
+          "sequence_top1": {
+            "mean": 0.8148148059844971,
+            "seed_std": 0.0037037134170532227
+          },
+          "sequence_top5": {
+            "mean": 0.9469135999679565,
+            "seed_std": 0.01402199857837845
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.017062613763603924,
+            "seed_std": 0.003015744434358192
+          },
+          "mean_max_probability": {
+            "mean": 0.9493366479873657,
+            "seed_std": 0.002100141785459549
+          },
+          "latency_ms": {
+            "p50": 0.7199006662024962,
+            "p95": 0.8772339491770254
+          },
+          "frequency_band_nmse": 0.015190367586910725
+        },
+        "noisy": {
+          "digit_accuracy": {
+            "mean": 0.9877450863520304,
+            "seed_std": 0.002122613308065254
+          },
+          "sequence_top1": {
+            "mean": 0.9509804050127665,
+            "seed_std": 0.008490453232261014
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.010996687148387233,
+            "seed_std": 0.0015607188865241074
+          },
+          "mean_max_probability": {
+            "mean": 0.9945082465807596,
+            "seed_std": 0.001395892934918527
+          },
+          "latency_ms": {
+            "p50": 0.7116986659336059,
+            "p95": 0.7486352504808261
+          },
+          "frequency_band_nmse": 0.013126343488693237
+        },
+        "partial_erasure": {
+          "digit_accuracy": {
+            "mean": 0.9788557291030884,
+            "seed_std": 0.0021542730451547957
+          },
+          "sequence_top1": {
+            "mean": 0.9154228965441386,
+            "seed_std": 0.008617161006134596
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.013893076044041663,
+            "seed_std": 0.0037805937093426927
+          },
+          "mean_max_probability": {
+            "mean": 0.9810121059417725,
+            "seed_std": 0.002474351350817066
+          },
+          "latency_ms": {
+            "p50": 0.7118503332700735,
+            "p95": 0.7585182338516461
+          },
+          "frequency_band_nmse": 0.015213287435472012
+        },
+        "missing_frequency": {
+          "digit_accuracy": {
+            "mean": 0.13209876666466394,
+            "seed_std": 0.05291027109816734
+          },
+          "sequence_top1": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 0.003703703793386618,
+            "seed_std": 0.0064150031463312066
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.6150832742666049,
+            "seed_std": 0.06703433738759892
+          },
+          "mean_max_probability": {
+            "mean": 0.746902863184611,
+            "seed_std": 0.041289549686998585
+          },
+          "latency_ms": {
+            "p50": 0.7117003333405592,
+            "p95": 0.7542921828038137
+          },
+          "frequency_band_nmse": 0.42721667885780334
+        }
+      },
+      "stem_pca": {
+        "clean": {
+          "digit_accuracy": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "mean_max_probability": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "latency_ms": {
+            "p50": 0.3091863339553432,
+            "p95": 0.3550207662556204
+          },
+          "frequency_band_nmse": 0.0008737358148209751
+        },
+        "corrupted": {
+          "digit_accuracy": {
+            "mean": 0.9194444616635641,
+            "seed_std": 0.006481481449945098
+          },
+          "sequence_top1": {
+            "mean": 0.7691357930501302,
+            "seed_std": 0.017503009984949948
+          },
+          "sequence_top5": {
+            "mean": 0.9333333373069763,
+            "seed_std": 0.0064150198150107205
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.022882568737259135,
+            "seed_std": 0.003702416238667578
+          },
+          "mean_max_probability": {
+            "mean": 0.9341054757436117,
+            "seed_std": 0.009751259263996342
+          },
+          "latency_ms": {
+            "p50": 0.30788866691485356,
+            "p95": 0.3312762333735009
+          },
+          "frequency_band_nmse": 0.018561890348792076
+        },
+        "noisy": {
+          "digit_accuracy": {
+            "mean": 0.9767156640688578,
+            "seed_std": 0.005615906942696793
+          },
+          "sequence_top1": {
+            "mean": 0.9117647012074789,
+            "seed_std": 0.014705866575251155
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.021665712343140815,
+            "seed_std": 0.010285401917907486
+          },
+          "mean_max_probability": {
+            "mean": 0.9581156770388285,
+            "seed_std": 0.012648778600030585
+          },
+          "latency_ms": {
+            "p50": 0.3124640000654229,
+            "p95": 0.39418006666285993
+          },
+          "frequency_band_nmse": 0.016348177567124367
+        },
+        "partial_erasure": {
+          "digit_accuracy": {
+            "mean": 0.961442788441976,
+            "seed_std": 0.004308580503067298
+          },
+          "sequence_top1": {
+            "mean": 0.8457711537679037,
+            "seed_std": 0.01723432201226919
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.014814849254131937,
+            "seed_std": 0.006154900217440997
+          },
+          "mean_max_probability": {
+            "mean": 0.9613407452901205,
+            "seed_std": 0.008665309553929381
+          },
+          "latency_ms": {
+            "p50": 0.3084516671757835,
+            "p95": 0.3419611008818417
+          },
+          "frequency_band_nmse": 0.016503017395734787
+        },
+        "missing_frequency": {
+          "digit_accuracy": {
+            "mean": 0.3064814805984497,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 0.007407407276332378,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 0.02839506169160207,
+            "seed_std": 0.017106674339950768
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.6546983557442824,
+            "seed_std": 0.06640056035787952
+          },
+          "mean_max_probability": {
+            "mean": 0.961179792881012,
+            "seed_std": 0.0664006356343848
+          },
+          "latency_ms": {
+            "p50": 0.30736099991675775,
+            "p95": 0.33799874975860195
+          },
+          "frequency_band_nmse": 0.57550048828125
+        }
+      },
+      "block2_pca": {
+        "clean": {
+          "digit_accuracy": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 2.1457672119140625e-05,
+            "seed_std": 2.5369742231765264e-05
+          },
+          "mean_max_probability": {
+            "mean": 0.9999785423278809,
+            "seed_std": 2.5369742231765264e-05
+          },
+          "latency_ms": {
+            "p50": 0.5469361664533304,
+            "p95": 0.5813667162025619
+          },
+          "frequency_band_nmse": 0.000842444715090096
+        },
+        "corrupted": {
+          "digit_accuracy": {
+            "mean": 0.9330246845881144,
+            "seed_std": 0.002976437045401669
+          },
+          "sequence_top1": {
+            "mean": 0.800000011920929,
+            "seed_std": 0.016972488555474438
+          },
+          "sequence_top5": {
+            "mean": 0.9469135602315267,
+            "seed_std": 0.002138339938336907
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.016777565094040863,
+            "seed_std": 0.0020799461966675287
+          },
+          "mean_max_probability": {
+            "mean": 0.9444820284843445,
+            "seed_std": 0.00676679514785843
+          },
+          "latency_ms": {
+            "p50": 0.5492388336278964,
+            "p95": 0.6128313491596297
+          },
+          "frequency_band_nmse": 0.02298097312450409
+        },
+        "noisy": {
+          "digit_accuracy": {
+            "mean": 0.9852941036224365,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 0.9411764740943909,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.012239967443747446,
+            "seed_std": 0.0008909534493955984
+          },
+          "mean_max_probability": {
+            "mean": 0.989919106165568,
+            "seed_std": 0.0025641258368570272
+          },
+          "latency_ms": {
+            "p50": 0.5517705000481025,
+            "p95": 0.5963824998010144
+          },
+          "frequency_band_nmse": 0.023511311039328575
+        },
+        "partial_erasure": {
+          "digit_accuracy": {
+            "mean": 0.9676616986592611,
+            "seed_std": 0.004308614915825003
+          },
+          "sequence_top1": {
+            "mean": 0.8706467549006144,
+            "seed_std": 0.01723432201226919
+          },
+          "sequence_top5": {
+            "mean": 1.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.019651914449544467,
+            "seed_std": 0.004207425536683078
+          },
+          "mean_max_probability": {
+            "mean": 0.9823025465011597,
+            "seed_std": 0.005019099818720929
+          },
+          "latency_ms": {
+            "p50": 0.5496479995296492,
+            "p95": 0.6040612322976813
+          },
+          "frequency_band_nmse": 0.020992591977119446
+        },
+        "missing_frequency": {
+          "digit_accuracy": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "sequence_top1": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "sequence_top5": {
+            "mean": 0.0,
+            "seed_std": 0.0
+          },
+          "digit_ece_10_bins": {
+            "mean": 0.7233536193768183,
+            "seed_std": 0.0673712888596127
+          },
+          "mean_max_probability": {
+            "mean": 0.7233536044756571,
+            "seed_std": 0.06737131880241282
+          },
+          "latency_ms": {
+            "p50": 0.5465118319989415,
+            "p95": 0.6115094168611298
+          },
+          "frequency_band_nmse": 1.0185736417770386
+        }
+      }
+    },
+    "ncm": {
+      "final": {
+        "clean": {
+          "raw": {
+            "digit_accuracy": 1.0,
+            "sequence_top1": 1.0,
+            "sequence_top5": 1.0,
+            "digit_ece_10_bins": 0.0026306509971618652,
+            "code_accuracy": [
+              0.9114197492599487,
+              1.0,
+              0.9833333293596903
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "sequence_top1": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "sequence_top5": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.039857751379410424,
+              "seed_std": 0.009833342813922522
+            },
+            "wrong_to_correct": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "correct_to_wrong": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "latency_ms": {
+              "p50": 1.1084834998958588,
+              "p95": 1.5133632162663464
+            }
+          }
+        },
+        "corrupted": {
+          "raw": {
+            "digit_accuracy": 0.8895061612129211,
+            "sequence_top1": 0.719753086566925,
+            "sequence_top5": 0.8395061691602071,
+            "digit_ece_10_bins": 0.029435018382476603,
+            "code_accuracy": [
+              0.4037036995093028,
+              0.6515432198842367,
+              0.5139660437901815
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.8765432238578796,
+              "seed_std": 0.0060244515488309105
+            },
+            "sequence_top1": {
+              "mean": 0.6938271604938272,
+              "seed_std": 0.007709874072096746
+            },
+            "sequence_top5": {
+              "mean": 0.782716049382716,
+              "seed_std": 0.015419748144193599
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.04354258122233053,
+              "seed_std": 0.020474197888219022
+            },
+            "wrong_to_correct": {
+              "mean": 85.0,
+              "seed_std": 14.798648586948742
+            },
+            "correct_to_wrong": {
+              "mean": 11.333333333333334,
+              "seed_std": 9.451631252505218
+            },
+            "latency_ms": {
+              "p50": 1.3923996666562743,
+              "p95": 2.0300087164893434
+            }
+          }
+        },
+        "noisy": {
+          "raw": {
+            "digit_accuracy": 0.9779411554336548,
+            "sequence_top1": 0.9117647012074789,
+            "sequence_top5": 0.9754901727040609,
+            "digit_ece_10_bins": 0.019571791732839,
+            "code_accuracy": [
+              0.3063725431760152,
+              0.6200980544090271,
+              0.39767157038052875
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.9742647012074789,
+              "seed_std": 0.009727002362674592
+            },
+            "sequence_top1": {
+              "mean": 0.9019607843137255,
+              "seed_std": 0.04245222567570782
+            },
+            "sequence_top5": {
+              "mean": 0.9803921568627452,
+              "seed_std": 0.022463606347822726
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.04390018526464701,
+              "seed_std": 0.013769428927651945
+            },
+            "wrong_to_correct": {
+              "mean": 13.0,
+              "seed_std": 3.605551275463989
+            },
+            "correct_to_wrong": {
+              "mean": 2.0,
+              "seed_std": 1.0
+            },
+            "latency_ms": {
+              "p50": 1.4330871666364449,
+              "p95": 1.9786285158867638
+            }
+          }
+        },
+        "partial_erasure": {
+          "raw": {
+            "digit_accuracy": 0.9564676682154337,
+            "sequence_top1": 0.8258706529935201,
+            "sequence_top5": 0.9552238782246908,
+            "digit_ece_10_bins": 0.021600136601288494,
+            "code_accuracy": [
+              0.4427860577901204,
+              0.7133084535598755,
+              0.5945273637771606
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.9365671674410502,
+              "seed_std": 0.006462853548222093
+            },
+            "sequence_top1": {
+              "mean": 0.7462686567164178,
+              "seed_std": 0.025851504590580266
+            },
+            "sequence_top5": {
+              "mean": 0.8457711442786069,
+              "seed_std": 0.022798884054506623
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.02481765101644366,
+              "seed_std": 0.0028979275405977972
+            },
+            "wrong_to_correct": {
+              "mean": 3.3333333333333335,
+              "seed_std": 2.081665999466133
+            },
+            "correct_to_wrong": {
+              "mean": 1.3333333333333333,
+              "seed_std": 0.5773502691896257
+            },
+            "latency_ms": {
+              "p50": 1.0965413336331646,
+              "p95": 1.6890886005664167
+            }
+          }
+        },
+        "missing_frequency": {
+          "raw": {
+            "digit_accuracy": 0.06820987661679585,
+            "sequence_top1": 0.0,
+            "sequence_top5": 0.0,
+            "digit_ece_10_bins": 0.5503899732915064,
+            "code_accuracy": [
+              0.19969135522842407,
+              0.16805555919806162,
+              0.16149691243966421
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.1691358039776484,
+              "seed_std": 0.06266496315090826
+            },
+            "sequence_top1": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "sequence_top5": {
+              "mean": 0.003703703703703704,
+              "seed_std": 0.003703703703703704
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.5381824746727943,
+              "seed_std": 0.015712997151369163
+            },
+            "wrong_to_correct": {
+              "mean": 34.0,
+              "seed_std": 58.88972745734183
+            },
+            "correct_to_wrong": {
+              "mean": 192.33333333333334,
+              "seed_std": 57.63968540279634
+            },
+            "latency_ms": {
+              "p50": 1.8506518335925648,
+              "p95": 2.0067934829057776
+            }
+          }
+        }
+      },
+      "stem": {
+        "clean": {
+          "raw": {
+            "digit_accuracy": 1.0,
+            "sequence_top1": 1.0,
+            "sequence_top5": 1.0,
+            "digit_ece_10_bins": 0.0024802486101786294,
+            "code_accuracy": [
+              0.8280864357948303,
+              1.0,
+              0.9822530945142111
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "sequence_top1": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "sequence_top5": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.03995194906989733,
+              "seed_std": 0.009670187628043548
+            },
+            "wrong_to_correct": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "correct_to_wrong": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "latency_ms": {
+              "p50": 1.1198533332693235,
+              "p95": 1.4279273996483728
+            }
+          }
+        },
+        "corrupted": {
+          "raw": {
+            "digit_accuracy": 0.8830246925354004,
+            "sequence_top1": 0.719753086566925,
+            "sequence_top5": 0.8407407402992249,
+            "digit_ece_10_bins": 0.022927132007074153,
+            "code_accuracy": [
+              0.307407408952713,
+              0.6225308577219645,
+              0.5057870348294576
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.8762345711390177,
+              "seed_std": 0.0041752289843725796
+            },
+            "sequence_top1": {
+              "mean": 0.7061728395061729,
+              "seed_std": 0.007709874072096791
+            },
+            "sequence_top5": {
+              "mean": 0.7901234567901234,
+              "seed_std": 0.007709874072096808
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.04159491851047884,
+              "seed_std": 0.029633728232950626
+            },
+            "wrong_to_correct": {
+              "mean": 85.33333333333333,
+              "seed_std": 15.275252316519467
+            },
+            "correct_to_wrong": {
+              "mean": 12.0,
+              "seed_std": 14.730919862656235
+            },
+            "latency_ms": {
+              "p50": 1.378824166143507,
+              "p95": 2.030706566377679
+            }
+          }
+        },
+        "noisy": {
+          "raw": {
+            "digit_accuracy": 0.9767156640688578,
+            "sequence_top1": 0.906862735748291,
+            "sequence_top5": 0.9754901925722758,
+            "digit_ece_10_bins": 0.022809594093511503,
+            "code_accuracy": [
+              0.13970588395992914,
+              0.6090686321258545,
+              0.35110293825467426
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.9779411554336548,
+              "seed_std": 0.006367839924195762
+            },
+            "sequence_top1": {
+              "mean": 0.9117647058823529,
+              "seed_std": 0.025471335405424705
+            },
+            "sequence_top5": {
+              "mean": 0.9901960784313726,
+              "seed_std": 0.008490445135141526
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.04421413356127838,
+              "seed_std": 0.01847700584503126
+            },
+            "wrong_to_correct": {
+              "mean": 14.0,
+              "seed_std": 4.0
+            },
+            "correct_to_wrong": {
+              "mean": 2.0,
+              "seed_std": 2.6457513110645907
+            },
+            "latency_ms": {
+              "p50": 1.4556856670727332,
+              "p95": 2.1764173678093357
+            }
+          }
+        },
+        "partial_erasure": {
+          "raw": {
+            "digit_accuracy": 0.9552238782246908,
+            "sequence_top1": 0.8208955128987631,
+            "sequence_top5": 0.9701492587725321,
+            "digit_ece_10_bins": 0.021727554538908105,
+            "code_accuracy": [
+              0.35323383410771686,
+              0.6927860776583353,
+              0.5935945312182108
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.9378109574317932,
+              "seed_std": 0.0021542730451547957
+            },
+            "sequence_top1": {
+              "mean": 0.7512437810945274,
+              "seed_std": 0.008617168196860045
+            },
+            "sequence_top5": {
+              "mean": 0.8457711442786069,
+              "seed_std": 0.03446867278744031
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.025995926089914672,
+              "seed_std": 0.002781646244298614
+            },
+            "wrong_to_correct": {
+              "mean": 3.0,
+              "seed_std": 1.0
+            },
+            "correct_to_wrong": {
+              "mean": 0.6666666666666666,
+              "seed_std": 1.1547005383792517
+            },
+            "latency_ms": {
+              "p50": 1.094075999086878,
+              "p95": 1.6401297672321864
+            }
+          }
+        },
+        "missing_frequency": {
+          "raw": {
+            "digit_accuracy": 0.10524691144625346,
+            "sequence_top1": 0.0,
+            "sequence_top5": 0.0012345678793887298,
+            "digit_ece_10_bins": 0.6910024806857109,
+            "code_accuracy": [
+              0.0,
+              0.11913579950730006,
+              0.21442901094754538
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.21049382785956064,
+              "seed_std": 0.10948005152086825
+            },
+            "sequence_top1": {
+              "mean": 0.003703703703703704,
+              "seed_std": 0.003703703703703704
+            },
+            "sequence_top5": {
+              "mean": 0.013580246913580249,
+              "seed_std": 0.017503020837972623
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.5887400954961777,
+              "seed_std": 0.13927746807974667
+            },
+            "wrong_to_correct": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "correct_to_wrong": {
+              "mean": 113.66666666666667,
+              "seed_std": 118.2384596200971
+            },
+            "latency_ms": {
+              "p50": 1.8613455000983474,
+              "p95": 2.0655118498325464
+            }
+          }
+        }
+      },
+      "block2": {
+        "clean": {
+          "raw": {
+            "digit_accuracy": 1.0,
+            "sequence_top1": 1.0,
+            "sequence_top5": 1.0,
+            "digit_ece_10_bins": 0.002489447593688965,
+            "code_accuracy": [
+              0.7027777830759684,
+              1.0,
+              0.9833333293596903
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "sequence_top1": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "sequence_top5": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.03996883270641168,
+              "seed_std": 0.009640944311784177
+            },
+            "wrong_to_correct": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "correct_to_wrong": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "latency_ms": {
+              "p50": 1.1184376665672364,
+              "p95": 1.5214231162948029
+            }
+          }
+        },
+        "corrupted": {
+          "raw": {
+            "digit_accuracy": 0.8913580179214478,
+            "sequence_top1": 0.7358024716377258,
+            "sequence_top5": 0.8567901253700256,
+            "digit_ece_10_bins": 0.018893277151316095,
+            "code_accuracy": [
+              0.30617283781369525,
+              0.6654320955276489,
+              0.534182091554006
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.8774691224098206,
+              "seed_std": 0.0052650392668577755
+            },
+            "sequence_top1": {
+              "mean": 0.6987654320987654,
+              "seed_std": 0.007709874072096791
+            },
+            "sequence_top5": {
+              "mean": 0.7888888888888889,
+              "seed_std": 0.014814814814814836
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.045296108762462005,
+              "seed_std": 0.015278861072282877
+            },
+            "wrong_to_correct": {
+              "mean": 86.33333333333333,
+              "seed_std": 11.50362261782493
+            },
+            "correct_to_wrong": {
+              "mean": 11.666666666666666,
+              "seed_std": 11.547005383792516
+            },
+            "latency_ms": {
+              "p50": 1.3778569985637052,
+              "p95": 2.008191765344236
+            }
+          }
+        },
+        "noisy": {
+          "raw": {
+            "digit_accuracy": 0.9828431208928426,
+            "sequence_top1": 0.9313725431760153,
+            "sequence_top5": 0.9803921381632487,
+            "digit_ece_10_bins": 0.015020111420502266,
+            "code_accuracy": [
+              0.21446078022321066,
+              0.6139705777168274,
+              0.3952205876509349
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.9742646813392639,
+              "seed_std": 0.003676474094390869
+            },
+            "sequence_top1": {
+              "mean": 0.8970588235294117,
+              "seed_std": 0.01470588235294118
+            },
+            "sequence_top5": {
+              "mean": 0.9901960784313726,
+              "seed_std": 0.008490445135141526
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.041516731579880194,
+              "seed_std": 0.0234778464156686
+            },
+            "wrong_to_correct": {
+              "mean": 13.666666666666666,
+              "seed_std": 3.511884584284246
+            },
+            "correct_to_wrong": {
+              "mean": 2.6666666666666665,
+              "seed_std": 3.055050463303893
+            },
+            "latency_ms": {
+              "p50": 1.4527728332420036,
+              "p95": 2.0183586494264696
+            }
+          }
+        },
+        "partial_erasure": {
+          "raw": {
+            "digit_accuracy": 0.9527363181114197,
+            "sequence_top1": 0.8109452724456787,
+            "sequence_top5": 0.9751243988672892,
+            "digit_ece_10_bins": 0.026400998579750496,
+            "code_accuracy": [
+              0.3457711488008499,
+              0.7002487381299337,
+              0.6138059695561727
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.9353233973185221,
+              "seed_std": 0.005699703250620118
+            },
+            "sequence_top1": {
+              "mean": 0.7412935323383084,
+              "seed_std": 0.022798884054506686
+            },
+            "sequence_top5": {
+              "mean": 0.8457711442786069,
+              "seed_std": 0.03446867278744031
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.022281846756717034,
+              "seed_std": 0.0014013065732881725
+            },
+            "wrong_to_correct": {
+              "mean": 2.3333333333333335,
+              "seed_std": 1.1547005383792515
+            },
+            "correct_to_wrong": {
+              "mean": 0.6666666666666666,
+              "seed_std": 0.5773502691896258
+            },
+            "latency_ms": {
+              "p50": 1.1045093342545442,
+              "p95": 1.7012281005008845
+            }
+          }
+        },
+        "missing_frequency": {
+          "raw": {
+            "digit_accuracy": 0.06481481591860454,
+            "sequence_top1": 0.0,
+            "sequence_top5": 0.0,
+            "digit_ece_10_bins": 0.5411737586061159,
+            "code_accuracy": [
+              0.42993826667467755,
+              0.3043209860722224,
+              0.22824073831240335
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.170061727364858,
+              "seed_std": 0.06362891942611631
+            },
+            "sequence_top1": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "sequence_top5": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.4899052605032921,
+              "seed_std": 0.12134755930231321
+            },
+            "wrong_to_correct": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "correct_to_wrong": {
+              "mean": 157.33333333333334,
+              "seed_std": 68.71923554095558
+            },
+            "latency_ms": {
+              "p50": 1.8984463337498407,
+              "p95": 2.335499100687836
+            }
+          }
+        }
+      },
+      "multiscale": {
+        "clean": {
+          "raw": {
+            "digit_accuracy": 1.0,
+            "sequence_top1": 1.0,
+            "sequence_top5": 1.0,
+            "digit_ece_10_bins": 0.0017363627751668294,
+            "code_accuracy": [
+              0.8317901293436686,
+              1.0,
+              0.9833333293596903
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "sequence_top1": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "sequence_top5": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.039874752362569175,
+              "seed_std": 0.009803896247312947
+            },
+            "wrong_to_correct": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "correct_to_wrong": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "latency_ms": {
+              "p50": 1.1280858319272131,
+              "p95": 1.6005297847489899
+            }
+          }
+        },
+        "corrupted": {
+          "raw": {
+            "digit_accuracy": 0.8898148139317831,
+            "sequence_top1": 0.7382716139157613,
+            "sequence_top5": 0.8481481472651163,
+            "digit_ece_10_bins": 0.023160956595044507,
+            "code_accuracy": [
+              0.3888888955116272,
+              0.6504629453023275,
+              0.5397376418113708
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.8799382646878561,
+              "seed_std": 0.012502875545681528
+            },
+            "sequence_top1": {
+              "mean": 0.7061728395061729,
+              "seed_std": 0.028287504289850884
+            },
+            "sequence_top5": {
+              "mean": 0.7901234567901234,
+              "seed_std": 0.022324865827191488
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.0478378869787169,
+              "seed_std": 0.01879019260208194
+            },
+            "wrong_to_correct": {
+              "mean": 85.33333333333333,
+              "seed_std": 19.295940851208407
+            },
+            "correct_to_wrong": {
+              "mean": 8.0,
+              "seed_std": 7.211102550927978
+            },
+            "latency_ms": {
+              "p50": 1.388868166031898,
+              "p95": 2.078754833928542
+            }
+          }
+        },
+        "noisy": {
+          "raw": {
+            "digit_accuracy": 0.9877450863520304,
+            "sequence_top1": 0.9558823307355245,
+            "sequence_top5": 0.9950980345408121,
+            "digit_ece_10_bins": 0.014551481639500707,
+            "code_accuracy": [
+              0.2500000099341075,
+              0.6268382469813029,
+              0.4258578419685364
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.9791666666666666,
+              "seed_std": 0.016578111261738956
+            },
+            "sequence_top1": {
+              "mean": 0.9215686274509803,
+              "seed_std": 0.059433115945990905
+            },
+            "sequence_top5": {
+              "mean": 0.9901960784313726,
+              "seed_std": 0.008490445135141526
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.04173812308969597,
+              "seed_std": 0.02508596472765416
+            },
+            "wrong_to_correct": {
+              "mean": 13.333333333333334,
+              "seed_std": 4.509249752822894
+            },
+            "correct_to_wrong": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "latency_ms": {
+              "p50": 1.4624513326756035,
+              "p95": 2.0413325673265112
+            }
+          }
+        },
+        "partial_erasure": {
+          "raw": {
+            "digit_accuracy": 0.9626865784327189,
+            "sequence_top1": 0.8507462739944458,
+            "sequence_top5": 0.9800995190938314,
+            "digit_ece_10_bins": 0.018387228420275886,
+            "code_accuracy": [
+              0.4552238682905833,
+              0.7120646834373474,
+              0.6029228766759237
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.9390547275543213,
+              "seed_std": 0.0056997292642197795
+            },
+            "sequence_top1": {
+              "mean": 0.7562189054726368,
+              "seed_std": 0.022798884054506672
+            },
+            "sequence_top5": {
+              "mean": 0.8457711442786069,
+              "seed_std": 0.022798884054506623
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.022612913434083264,
+              "seed_std": 0.002565231972247595
+            },
+            "wrong_to_correct": {
+              "mean": 3.6666666666666665,
+              "seed_std": 1.5275252316519465
+            },
+            "correct_to_wrong": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "latency_ms": {
+              "p50": 1.0988016668610119,
+              "p95": 1.6749930671115483
+            }
+          }
+        },
+        "missing_frequency": {
+          "raw": {
+            "digit_accuracy": 0.09259259204069774,
+            "sequence_top1": 0.0,
+            "sequence_top5": 0.0,
+            "digit_ece_10_bins": 0.5972843044049417,
+            "code_accuracy": [
+              0.3429012397925059,
+              0.19382716218630472,
+              0.2947530845801036
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.170061727364858,
+              "seed_std": 0.06362891942611631
+            },
+            "sequence_top1": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "sequence_top5": {
+              "mean": 0.0012345679012345679,
+              "seed_std": 0.0021383343303319475
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.5815493489305178,
+              "seed_std": 0.19657778565949344
+            },
+            "wrong_to_correct": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "correct_to_wrong": {
+              "mean": 157.33333333333334,
+              "seed_std": 68.71923554095558
+            },
+            "latency_ms": {
+              "p50": 1.8810613322178444,
+              "p95": 2.1034389829461966
+            }
+          }
+        }
+      },
+      "final31": {
+        "clean": {
+          "raw": {
+            "digit_accuracy": 1.0,
+            "sequence_top1": 1.0,
+            "sequence_top5": 1.0,
+            "digit_ece_10_bins": 0.0016650756200154622,
+            "code_accuracy": [
+              0.9395061731338501,
+              1.0,
+              0.9833333293596903
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "sequence_top1": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "sequence_top5": {
+              "mean": 1.0,
+              "seed_std": 0.0
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.039911603555083275,
+              "seed_std": 0.009740068109559023
+            },
+            "wrong_to_correct": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "correct_to_wrong": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "latency_ms": {
+              "p50": 1.1101714996281469,
+              "p95": 1.4384947338839993
+            }
+          }
+        },
+        "corrupted": {
+          "raw": {
+            "digit_accuracy": 0.875308632850647,
+            "sequence_top1": 0.7037037014961243,
+            "sequence_top5": 0.8259259263674418,
+            "digit_ece_10_bins": 0.03129627486729684,
+            "code_accuracy": [
+              0.407716045777003,
+              0.6663580338160197,
+              0.5252315004666647
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.8725308577219645,
+              "seed_std": 0.004375760379183604
+            },
+            "sequence_top1": {
+              "mean": 0.6950617283950619,
+              "seed_std": 0.009320783253420662
+            },
+            "sequence_top5": {
+              "mean": 0.7716049382716049,
+              "seed_std": 0.005657500857970157
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.04672253614990041,
+              "seed_std": 0.0119709904891698
+            },
+            "wrong_to_correct": {
+              "mean": 82.66666666666667,
+              "seed_std": 12.662279942148386
+            },
+            "correct_to_wrong": {
+              "mean": 13.333333333333334,
+              "seed_std": 11.150485789118488
+            },
+            "latency_ms": {
+              "p50": 1.4152283335230702,
+              "p95": 2.1190080833548564
+            }
+          }
+        },
+        "noisy": {
+          "raw": {
+            "digit_accuracy": 0.9779411554336548,
+            "sequence_top1": 0.9166666666666666,
+            "sequence_top5": 0.9607843160629272,
+            "digit_ece_10_bins": 0.013501094072125852,
+            "code_accuracy": [
+              0.3002450962861379,
+              0.6280637184778849,
+              0.4031862715880076
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.9742647012074789,
+              "seed_std": 0.00972701362692628
+            },
+            "sequence_top1": {
+              "mean": 0.8970588235294118,
+              "seed_std": 0.03890810751565573
+            },
+            "sequence_top5": {
+              "mean": 0.9803921568627452,
+              "seed_std": 0.022463606347822726
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.04388481673474113,
+              "seed_std": 0.024633511551012132
+            },
+            "wrong_to_correct": {
+              "mean": 13.333333333333334,
+              "seed_std": 3.7859388972001824
+            },
+            "correct_to_wrong": {
+              "mean": 2.3333333333333335,
+              "seed_std": 3.2145502536643185
+            },
+            "latency_ms": {
+              "p50": 1.4711729994208629,
+              "p95": 2.1611959834748027
+            }
+          }
+        },
+        "partial_erasure": {
+          "raw": {
+            "digit_accuracy": 0.9440298676490784,
+            "sequence_top1": 0.7761193911234537,
+            "sequence_top5": 0.9552238782246908,
+            "digit_ece_10_bins": 0.027310819534856517,
+            "code_accuracy": [
+              0.4564676682154338,
+              0.71517413854599,
+              0.5963930288950602
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.9340796073277792,
+              "seed_std": 0.0021543074579125016
+            },
+            "sequence_top1": {
+              "mean": 0.7363184079601991,
+              "seed_std": 0.008617168196860111
+            },
+            "sequence_top5": {
+              "mean": 0.8407960199004975,
+              "seed_std": 0.03106964178307659
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.025875969712312024,
+              "seed_std": 0.0018230573513469174
+            },
+            "wrong_to_correct": {
+              "mean": 2.6666666666666665,
+              "seed_std": 1.1547005383792515
+            },
+            "correct_to_wrong": {
+              "mean": 1.3333333333333333,
+              "seed_std": 1.5275252316519465
+            },
+            "latency_ms": {
+              "p50": 1.107328332485243,
+              "p95": 1.740661933581577
+            }
+          }
+        },
+        "missing_frequency": {
+          "raw": {
+            "digit_accuracy": 0.06481481591860454,
+            "sequence_top1": 0.0,
+            "sequence_top5": 0.0,
+            "digit_ece_10_bins": 0.5580320429677764,
+            "code_accuracy": [
+              0.3361110985279083,
+              0.25540123383204144,
+              0.19814814751346907
+            ]
+          },
+          "protected": {
+            "digit_accuracy": {
+              "mean": 0.170061727364858,
+              "seed_std": 0.06362891942611631
+            },
+            "sequence_top1": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "sequence_top5": {
+              "mean": 0.0012345679012345679,
+              "seed_std": 0.0021383343303319475
+            },
+            "digit_ece_10_bins": {
+              "mean": 0.5021110465750098,
+              "seed_std": 0.14192996975175737
+            },
+            "wrong_to_correct": {
+              "mean": 0.0,
+              "seed_std": 0.0
+            },
+            "correct_to_wrong": {
+              "mean": 157.33333333333334,
+              "seed_std": 68.71923554095558
+            },
+            "latency_ms": {
+              "p50": 1.899782332960361,
+              "p95": 2.141645032740295
+            }
+          }
+        }
+      }
+    },
+    "protected_continuous": {
+      "final_pca": {
+        "clean": {
+          "digit_accuracy": 1.0,
+          "sequence_top1": 1.0,
+          "sequence_top5": 1.0,
+          "digit_ece_10_bins": 0.03980253326396147
+        },
+        "corrupted": {
+          "digit_accuracy": 0.8987654248873392,
+          "sequence_top1": 0.7246913580246913,
+          "sequence_top5": 0.8185185185185185,
+          "digit_ece_10_bins": 0.04615968017606065
+        },
+        "noisy": {
+          "digit_accuracy": 0.9779411753018697,
+          "sequence_top1": 0.9166666666666666,
+          "sequence_top5": 0.9901960784313726,
+          "digit_ece_10_bins": 0.041787620983086526
+        },
+        "partial_erasure": {
+          "digit_accuracy": 0.9378109574317932,
+          "sequence_top1": 0.7512437810945274,
+          "sequence_top5": 0.8457711442786069,
+          "digit_ece_10_bins": 0.022168066546631355
+        },
+        "missing_frequency": {
+          "digit_accuracy": 0.17685185124476752,
+          "sequence_top1": 0.0024691358024691358,
+          "sequence_top5": 0.007407407407407407,
+          "digit_ece_10_bins": 0.4882073576251666
+        }
+      },
+      "stem_pca": {
+        "clean": {
+          "digit_accuracy": 1.0,
+          "sequence_top1": 1.0,
+          "sequence_top5": 1.0,
+          "digit_ece_10_bins": 0.0398015771061182
+        },
+        "corrupted": {
+          "digit_accuracy": 0.8978395064671835,
+          "sequence_top1": 0.7222222222222222,
+          "sequence_top5": 0.8222222222222223,
+          "digit_ece_10_bins": 0.039710068105099104
+        },
+        "noisy": {
+          "digit_accuracy": 0.9816176295280457,
+          "sequence_top1": 0.926470588235294,
+          "sequence_top5": 1.0,
+          "digit_ece_10_bins": 0.05415223319626724
+        },
+        "partial_erasure": {
+          "digit_accuracy": 0.9378109574317932,
+          "sequence_top1": 0.7512437810945274,
+          "sequence_top5": 0.8507462686567164,
+          "digit_ece_10_bins": 0.024692170904017985
+        },
+        "missing_frequency": {
+          "digit_accuracy": 0.30432098110516864,
+          "sequence_top1": 0.003703703703703704,
+          "sequence_top5": 0.019753086419753086,
+          "digit_ece_10_bins": 0.5394313546518484
+        }
+      },
+      "block2_pca": {
+        "clean": {
+          "digit_accuracy": 1.0,
+          "sequence_top1": 1.0,
+          "sequence_top5": 1.0,
+          "digit_ece_10_bins": 0.039801654716332756
+        },
+        "corrupted": {
+          "digit_accuracy": 0.9043209950129191,
+          "sequence_top1": 0.7296296296296297,
+          "sequence_top5": 0.8296296296296296,
+          "digit_ece_10_bins": 0.04471815505530685
+        },
+        "noisy": {
+          "digit_accuracy": 0.9779411753018697,
+          "sequence_top1": 0.9166666666666666,
+          "sequence_top5": 1.0,
+          "digit_ece_10_bins": 0.04189969465369359
+        },
+        "partial_erasure": {
+          "digit_accuracy": 0.9378109574317932,
+          "sequence_top1": 0.7512437810945274,
+          "sequence_top5": 0.8457711442786069,
+          "digit_ece_10_bins": 0.02523453661221235
+        },
+        "missing_frequency": {
+          "digit_accuracy": 0.13765432188908258,
+          "sequence_top1": 0.0,
+          "sequence_top5": 0.0,
+          "digit_ece_10_bins": 0.5896266928563515
+        }
+      },
+      "multiscale": {
+        "clean": {
+          "digit_accuracy": 1.0,
+          "sequence_top1": 1.0,
+          "sequence_top5": 1.0,
+          "digit_ece_10_bins": 0.0398015771061182
+        },
+        "corrupted": {
+          "digit_accuracy": 0.9040123422940572,
+          "sequence_top1": 0.7358024691358024,
+          "sequence_top5": 0.8283950617283949,
+          "digit_ece_10_bins": 0.04292798167443834
+        },
+        "noisy": {
+          "digit_accuracy": 0.9779411753018697,
+          "sequence_top1": 0.9166666666666666,
+          "sequence_top5": 1.0,
+          "digit_ece_10_bins": 0.0387987763970159
+        },
+        "partial_erasure": {
+          "digit_accuracy": 0.9402985175450643,
+          "sequence_top1": 0.7611940298507464,
+          "sequence_top5": 0.8457711442786069,
+          "digit_ece_10_bins": 0.02153034651807199
+        },
+        "missing_frequency": {
+          "digit_accuracy": 0.20555555323759714,
+          "sequence_top1": 0.0,
+          "sequence_top5": 0.007407407407407407,
+          "digit_ece_10_bins": 0.5269637840489546
+        }
+      }
+    }
+  },
+  "paired": {
+    "probe_stem_minus_final": {
+      "mean_delta": 0.03024691358024691,
+      "cluster_bootstrap_95_ci": [
+        0.019680196801968017,
+        0.04151177199504337
+      ]
+    },
+    "probe_stem_pca_minus_stem": {
+      "mean_delta": -0.03487654320987654,
+      "cluster_bootstrap_95_ci": [
+        -0.04925966083803754,
+        -0.02168525402726146
+      ]
+    },
+    "probe_final_pca_minus_final": {
+      "mean_delta": -0.0006172839506172857,
+      "cluster_bootstrap_95_ci": [
+        -0.007716049382716048,
+        0.006529850746268652
+      ]
+    },
+    "ncm_stem_minus_final": {
+      "mean_delta": 0.012345679012345678,
+      "cluster_bootstrap_95_ci": [
+        -0.007380757140904742,
+        0.03209876543209876
+      ]
+    },
+    "ncm_block2_minus_final": {
+      "mean_delta": 0.0049382716049382715,
+      "cluster_bootstrap_95_ci": [
+        -0.009877461104226905,
+        0.01975308641975309
+      ]
+    },
+    "ncm_multiscale_minus_final": {
+      "mean_delta": 0.012345679012345678,
+      "cluster_bootstrap_95_ci": [
+        -0.0024875621890547255,
+        0.029632383312680696
+      ]
+    },
+    "ncm_final31_minus_final": {
+      "mean_delta": 0.0012345679012345677,
+      "cluster_bootstrap_95_ci": [
+        -0.013681592039800993,
+        0.017094017094017092
+      ]
+    },
+    "ncm_final_minus_continuous": {
+      "mean_delta": -0.030864197530864192,
+      "cluster_bootstrap_95_ci": [
+        -0.048327137546468404,
+        -0.013681592039800995
+      ]
+    },
+    "ncm_stem_minus_continuous": {
+      "mean_delta": -0.01604938271604938,
+      "cluster_bootstrap_95_ci": [
+        -0.03444034440344403,
+        0.001239157372986369
+      ]
+    },
+    "ncm_block2_minus_continuous": {
+      "mean_delta": -0.030864197530864192,
+      "cluster_bootstrap_95_ci": [
+        -0.048156565656565654,
+        -0.01358024691358025
+      ]
+    },
+    "ncm_multiscale_minus_continuous": {
+      "mean_delta": -0.02962962962962963,
+      "cluster_bootstrap_95_ci": [
+        -0.047263681592039794,
+        -0.011278195488721804
+      ]
+    }
+  },
+  "interference_probe_accuracy": {
+    "mel": 0.61318407960199,
+    "stem": 0.845771144278607,
+    "block1": 0.787313432835821,
+    "block2": 0.7487562189054726,
+    "final": 0.7338308457711443,
+    "final_mean": 0.7300995024875622,
+    "final_pca": 0.7425373134328358,
+    "multiscale": 0.7773631840796019,
+    "stem_pca": 0.7375621890547265,
+    "block2_pca": 0.777363184079602
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "ppf/decoder_audit.py": "8a39858f99bdcd301a65bd7ccb9fb79fb31d8c304b919dbca53b3c8c13e0c034",
+  "experiments/decoder_sensitivity.py": "edb8a85657cd0dc1cda2ed63fc0efc73d03fa5b8e53cfaf616a6f555c3975fd2",
+  "experiments/decoder_detail.py": "b2609fe574793da3f36153d112923713303f31cd2e46c3a6785bd300202f0e1e",
+  "checks": [
+    "all 3 seeds and 5 conditions complete",
+    "baseline replay equals preserved metrics (tolerance 1e-6)",
+    "candidate policy files identical",
+    "preserved source/checkpoint manifest unchanged"
+  ]
+}

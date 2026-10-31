@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "predictions": {
+    "original_joint": "7283",
+    "original_aligned": "7283",
+    "recognition": "7283"
+  },
+  "bundled": true
+}

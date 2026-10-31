@@ -1,0 +1,15 @@
+{
+  "seeds": [317, 419, 523],
+  "epochs": 16,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "lossless_memory_tokens": 128,
+  "lossless_adapter": "four exact current-adapter anchors plus reversible normalized native stem/final tokens; fixed time/type offsets",
+  "probe": "same 512->64 coarse-only linear head; fixed linear summaries and padding document active input dimensions",
+  "main_variants": ["original_joint", "lossless_joint", "original_aligned", "lossless_aligned"],
+  "extra_diagnostic": "level1-only supervised Transformer using current adapter",
+  "aligned_loss": "mean code CE on generated prefixes + mean digit CE on observed canonical prefixes; independent gradient paths",
+  "budget": "same training examples, batches and optimizer updates; higher-memory adapters have higher compute",
+  "selection": "fixed final epoch; existing validation fitting half for temperature only",
+  "threads": 1
+}
