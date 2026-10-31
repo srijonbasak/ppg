@@ -40,7 +40,9 @@ def main():
  view.setUrl(QUrl(f'http://127.0.0.1:{server.server_port}/'))
  shortcut=QShortcut(QKeySequence('F11'),window);shortcut.activated.connect(lambda:window.showNormal() if window.isFullScreen() else window.showFullScreen())
  app.aboutToQuit.connect(server.shutdown)
- window.show() if '--smoke-ui' in sys.argv else window.showMaximized()
+ if '--smoke-ui' in sys.argv:
+  view.setFixedSize(1280,720);window.resize(1280,720);window.show()
+ else:window.showMaximized()
  if '--smoke-ui' in sys.argv:
   def inspect_ui():
    view.page().runJavaScript("JSON.stringify({title:document.title,height:innerHeight,scroll:document.documentElement.scrollHeight,keyCount:document.querySelectorAll('.key').length,diagramBottom:Math.round(document.querySelector('.flow-panel').getBoundingClientRect().bottom),resultBottom:Math.round(document.querySelector('#resultNode').getBoundingClientRect().bottom)})",lambda v:print(v,flush=True))

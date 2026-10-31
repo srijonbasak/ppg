@@ -1,0 +1,35 @@
+POSSIBILITY LAB — OFFLINE DESKTOP DEMO
+
+The app includes Python, its embedded browser, the numerical runtime, trained
+models and presentation UI. It needs no model download, Python installation,
+command-line server, separate browser or internet connection after installation.
+
+LINUX (x86-64)
+Preferred on this computer: double-click PossibilityLab-Linux-amd64.deb and use
+Install. Launch “Possibility Lab” from the applications menu.
+This build is tested on Ubuntu 26.04. Older Linux releases are not qualified;
+the .deb requires glibc 2.43. It is not an ARM build.
+
+Alternatively, mark PossibilityLab-Linux-x64.run executable and run it. This
+installs for your user in ~/.local/share/PossibilityLab and creates an app-menu
+entry. No administrator access is required for the .run option.
+
+WINDOWS (x86-64)
+Use PossibilityLab-Windows-x64-Setup.exe when its build verification is complete.
+Install and launch from the Start menu or desktop shortcut. All application
+libraries are included, including the required Microsoft runtime files.
+The build is targeted at Windows 10/11. Native Windows testing remains separate
+from compatibility-layer testing performed on the Linux build machine.
+
+USING THE APP
+Press four keypad digits. Each sound is recognized automatically. Add noise to
+make the task harder. Unclear evidence keeps three complete sequence guesses
+visible. The next key after completion begins a fresh sequence. Replay repeats
+the last sound. Press F11 for fullscreen.
+
+The diagram uses real model predictions. Its animation explains the process;
+it is not a processor timeline. Pattern groups advance from simple to detailed,
+with parallel generation within each group. Ranking scores are not guarantees.
+
+This is a research demonstrator, not evidence that NCM outperforms the baseline.
+Check verification.json for the actual checks performed on each release.

@@ -24,3 +24,16 @@ htmlcov/
 /packaging/work-windows/
 /packaging/*-build.log
 /packaging/windows-runtime.log
+.package-env/
+packaging/downloads/
+packaging/windows-python/
+packaging/wine-prefix/
+packaging/nsis/
+packaging/work-*/
+packaging/dist-*/
+packaging/deb-stage/
+packaging/install-test-*/
+packaging/offline-check/
+releases/*.deb
+releases/*.run
+releases/*.exe
