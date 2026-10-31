@@ -1,6 +1,9 @@
 """Bundled offline desktop entry point. --self-test needs no display."""
 import json,os,sys,threading,traceback
 from pathlib import Path
+if sys.platform=='win32':
+ os.environ.setdefault('KMP_AFFINITY','disabled')
+ os.environ.setdefault('OMP_NUM_THREADS','1')
 
 def self_test():
  import torch

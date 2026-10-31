@@ -19,5 +19,5 @@ if sys.platform=='win32':
   if dll.exists():binaries.append((str(dll),'.'))
 a=Analysis([str(root/'packaging/desktop_entry.py')],pathex=[str(root)],binaries=binaries,datas=resources,hiddenimports=[],hookspath=[],excludes=['tkinter','matplotlib','scipy','pandas','IPython','pytest','tensorboard'],noarchive=False)
 pyz=PYZ(a.pure)
-exe=EXE(pyz,a.scripts,[],exclude_binaries=True,name='PossibilityLab',debug=False,bootloader_ignore_signals=False,strip=False,upx=False,console=sys.platform!='win32',disable_windowed_traceback=False)
+exe=EXE(pyz,a.scripts,[],exclude_binaries=True,name='PossibilityLab',icon=str(root/'packaging/PossibilityLab.ico') if sys.platform=='win32' else None,debug=False,bootloader_ignore_signals=False,strip=False,upx=False,console=sys.platform!='win32',disable_windowed_traceback=False)
 coll=COLLECT(exe,a.binaries,a.datas,strip=False,upx=False,name='PossibilityLab')

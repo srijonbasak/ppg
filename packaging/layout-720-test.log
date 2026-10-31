@@ -1,1 +1,15 @@
 GBM is not supported with the current configuration. Fallback to Vulkan rendering in Chromium.
+qt.qpa.wayland.textinput: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x33685a40 but 0x0 is focused
+qt.qpa.wayland.textinput: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x33685a40 but 0x0 is focused
+qt.qpa.wayland.textinput: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x33685a40 but 0x0 is focused
+127.0.0.1 - - [01/Nov/2026 01:43:29] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 01:43:29] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 01:43:29] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 01:43:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 01:43:29] "GET /icon.svg HTTP/1.1" 200 -
+qt.qpa.wayland.textinput: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x33685a40 but 0x0 is focused
+qt.qpa.wayland.textinput: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x33685a40 but 0x0 is focused
+qt.qpa.wayland.textinput: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x33685a40 but 0x0 is focused
+{"title":"Parallel Possibility Engine","height":720,"scroll":720,"keyCount":10,"diagramBottom":688,"resultBottom":657}
+127.0.0.1 - - [01/Nov/2026 01:43:34] "POST /api/run HTTP/1.1" 200 -
+qt.qpa.wayland.textinput: virtual void QtWaylandClient::QWaylandTextInputv3::disableSurface(wl_surface*) Trying to disable 0x33685a40 but 0x0 is focused

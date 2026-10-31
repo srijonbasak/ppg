@@ -2,7 +2,7 @@ from pathlib import Path
 import shutil,subprocess
 root=Path(__file__).resolve().parents[1];stage=root/'packaging/deb-stage'
 (stage/'DEBIAN').mkdir(parents=True,exist_ok=True);(stage/'opt').mkdir(exist_ok=True)
-subprocess.run(['cp','-a','--reflink=auto',str(root/'packaging/dist-linux/PossibilityLab'),str(stage/'opt/possibility-lab')],check=True)
+subprocess.run(['cp','-a','--reflink=auto',str(root/'packaging/dist-linux/PossibilityLab')+'/.',str(stage/'opt/possibility-lab')],check=True)
 size=sum(p.stat().st_size for p in (stage/'opt').rglob('*') if p.is_file())//1024
 (stage/'DEBIAN/control').write_text(f'''Package: possibility-lab
 Version: 1.0.0

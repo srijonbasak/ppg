@@ -1,0 +1,6 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.6.0+cpu
+numpy==1.26.4
+PySide6==6.8.3
+pyinstaller==6.22.3
+pyinstaller-hooks-contrib==2026.9

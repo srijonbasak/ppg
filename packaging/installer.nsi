@@ -1,6 +1,8 @@
 Unicode True
 !include "MUI2.nsh"
 Name "Possibility Lab"
+Icon "PossibilityLab.ico"
+UninstallIcon "PossibilityLab.ico"
 OutFile "..\releases\PossibilityLab-Windows-x64-Setup.exe"
 InstallDir "$LOCALAPPDATA\Programs\PossibilityLab"
 RequestExecutionLevel user
@@ -33,6 +35,10 @@ Section "Uninstall"
  Delete "$DESKTOP\Possibility Lab.lnk"
  Delete "$SMPROGRAMS\Possibility Lab\Possibility Lab.lnk"
  RMDir "$SMPROGRAMS\Possibility Lab"
- RMDir /r "$INSTDIR"
+ Delete "$INSTDIR\PossibilityLab.exe"
+ Delete "$INSTDIR\Uninstall.exe"
+ RMDir /r "$INSTDIR\_internal"
+ RMDir /r "$INSTDIR\THIRD-PARTY-NOTICES"
+ RMDir "$INSTDIR"
  DeleteRegKey HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\PossibilityLab"
 SectionEnd
