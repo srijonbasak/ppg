@@ -4,7 +4,7 @@ root=Path(__file__).resolve().parents[1]
 for platform in ['linux','windows']:
  dest=root/f'packaging/dist-{platform}/PossibilityLab/THIRD-PARTY-NOTICES';dest.mkdir(exist_ok=True)
  for name in ['LGPL-3','GPL-3']:
-  src=Path('/usr/share/common-licenses')/name
+  src=root/'packaging/licenses'/(name+'.txt')
   if src.exists():shutil.copy2(src,dest/(name+'.txt'))
  (dest/'README.txt').write_text('''This distribution includes Python, NumPy, PyTorch and Qt for Python (PySide6).
 Qt/PySide6 is used under the GNU Lesser General Public License, version 3.

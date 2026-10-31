@@ -34,6 +34,8 @@ checks under Wine are recorded separately from native Windows verification.
 
 ```text
 python -m PyInstaller --noconfirm --distpath packaging/dist-windows --workpath packaging/work-windows packaging/PossibilityLab.spec
+python packaging/prepare_windows_bundle.py
+makensis packaging/launcher.nsi
 packaging/dist-windows/PossibilityLab/PossibilityLab.exe --self-test
 makensis packaging/installer.nsi
 ```
@@ -50,3 +52,7 @@ records layout/loaded-key count and captures a screenshot before exiting.
 Neither these checks nor packaging establishes new recognition accuracy claims.
 The two OS builds use different runtime versions for compatibility; both need
 actual prediction and UI checks. Model weights are unchanged.
+
+The Windows launcher enables software browser graphics automatically before
+starting Engine.exe. This avoids GPU-driver requirements for the simple UI.
+The model runtime is CPU-only on both platforms.

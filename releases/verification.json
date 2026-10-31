@@ -1,0 +1,79 @@
+{
+  "build_date": "2026-11-01",
+  "artifacts": {
+    "PossibilityLab-Linux-amd64.deb": {
+      "bytes": 427499808,
+      "sha256": "56d3692d0b0d7bef24976653041551ad9e0b4288a7791322211b354b67681d2f"
+    },
+    "PossibilityLab-Linux-x64.run": {
+      "bytes": 495740420,
+      "sha256": "981371a3356d1ec99a4a335f1ad08ed7a39011729508415d52f9b50c32c945cb"
+    },
+    "PossibilityLab-Windows-x64-Setup.exe": {
+      "bytes": 215237378,
+      "sha256": "0dd47a67125f5ed0e34eae03890e2765380779b87ac50921f5677cd0900c6fd9"
+    }
+  },
+  "linux": {
+    "tested_os": "Ubuntu 26.04 x86-64; glibc 2.43",
+    "standalone_model_test": {
+      "ok": true,
+      "predictions": {
+        "original_joint": "7283",
+        "original_aligned": "7283",
+        "recognition": "7283"
+      },
+      "bundled": true
+    },
+    "installer_extraction_test_passed": true,
+    "layout": {
+      "title": "Parallel Possibility Engine",
+      "height": 720,
+      "scroll": 720,
+      "keyCount": 10,
+      "diagramBottom": 688,
+      "resultBottom": 657
+    },
+    "runtime": {
+      "python": "3.14.4",
+      "torch": "2.15.0+cpu",
+      "numpy": "2.5.4",
+      "PySide6": "6.12.0"
+    }
+  },
+  "windows": {
+    "installer_exit": 0,
+    "installed_launch_exit": 0,
+    "models": {
+      "ok": true,
+      "predictions": {
+        "original_joint": "7283",
+        "original_aligned": "7283",
+        "recognition": "7283"
+      },
+      "bundled": true
+    },
+    "executable_hashes_match": true,
+    "environment": "Wine 10.0 clean prefix; no Windows Python installed",
+    "native_windows_tested": false,
+    "installed_layout": {
+      "title": "Parallel Possibility Engine",
+      "height": 720,
+      "scroll": 720,
+      "keyCount": 10,
+      "diagramBottom": 689,
+      "resultBottom": 658
+    },
+    "runtime": {
+      "python": "3.12.10",
+      "torch": "2.6.0+cpu",
+      "numpy": "1.26.4",
+      "PySide6": "6.8.3"
+    },
+    "software_graphics_enabled_automatically": true
+  },
+  "python_tests_passed": 49,
+  "sequence_ranking_exhaustive_masks_passed": 16,
+  "checkpoint_and_ui_hash_verification_passed": true,
+  "unsigned_development_build": true
+}

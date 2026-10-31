@@ -124,3 +124,7 @@ pass proves wiring and tensor compatibility; it does not prove model quality.
 
 Run `.venv/bin/python -m ppf.lab_server --port 8765`, then open http://127.0.0.1:8765.
 This app uses the latest preserved CNN and NCM research checkpoints, with controllable synthetic audio, waveform/playback, generated hierarchy inspection, fixed-gate rankings, and measured study results. See [app setup and packaging notes](ui/lab/README.md). The original synthesis/recording UI remains available through the legacy server.
+
+## Standalone offline installers
+
+The `releases/` folder contains a Windows setup executable and Linux installers, including Python, an embedded browser and all trained checkpoints. No separate model download is required. See `releases/INSTALL.txt` for installation and `releases/verification.json` for checks and platform limitations. The UI fits a 1280×720 presentation window and supports F11 fullscreen.

@@ -1,0 +1,20 @@
+MakeNSIS v3.11 - Copyright 1999-2025 Contributors
+See the file COPYING for license details.
+Credits can be found in the Users Manual.
+
+Processing config: Z:\home\srijon\Documents\codex\2026-10-31\referenced-chatgpt-conversation-this-is-an\packaging\nsis\nsis-3.11\nsisconf.nsh
+Processing script file: "packaging/launcher.nsi" (ACP)
+
+Processed 1 file, writing output (x86-unicode):
+
+Output: "Z:\home\srijon\Documents\codex\2026-10-31\referenced-chatgpt-conversation-this-is-an\packaging\dist-windows\PossibilityLab\PossibilityLab.exe"
+Install: 0 pages (0 bytes), 1 section (1 required) (2072 bytes), 63 instructions (1764 bytes), 44 strings (1506 bytes), 1 language table (162 bytes).
+
+Using zlib compression.
+
+EXE header size:              307712 / 39936 bytes
+Install code:                   1163 / 5832 bytes
+Install data:                   7096 / 12292 bytes
+CRC (0x004A477B):                  4 / 4 bytes
+
+Total size:                   315975 / 58064 bytes (544.1%)

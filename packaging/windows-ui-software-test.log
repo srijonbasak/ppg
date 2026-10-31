@@ -1,0 +1,9 @@
+[32:36:1101/021527.334:ERROR:network_change_notifier_win.cc(267)] WSALookupServiceBegin failed with: 0
+[32:360:1101/021527.801:ERROR:gpu_channel_manager.cc(959)] Failed to create GLES3 context, fallback to GLES2.
+[32:360:1101/021527.801:ERROR:gpu_channel_manager.cc(970)] ContextResult::kFatalFailure: Failed to create shared context for virtualization.
+127.0.0.1 - - [01/Nov/2026 02:15:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 02:15:28] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 02:15:28] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 02:15:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 02:15:28] "GET /icon.svg HTTP/1.1" 200 -
+{"title":"Parallel Possibility Engine","height":720,"scroll":720,"keyCount":10,"diagramBottom":689,"resultBottom":658}

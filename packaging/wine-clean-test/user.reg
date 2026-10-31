@@ -227,6 +227,38 @@ WINE REGISTRY Version 2
 [Software\\Microsoft\\Protected Storage System Provider] 1793476959
 #time=1dd6972c83bb478
 
+[Software\\Microsoft\\SystemCertificates\\CA\\Certificates] 1793477389
+#time=1dd6973c88c8d52
+
+[Software\\Microsoft\\SystemCertificates\\CA\\CRLs] 1793477389
+#time=1dd6973c88c8e60
+
+[Software\\Microsoft\\SystemCertificates\\CA\\CTLs] 1793477389
+#time=1dd6973c88c8f5a
+
+[Software\\Microsoft\\SystemCertificates\\My\\Certificates] 1793477389
+#time=1dd6973c88c969e
+
+[Software\\Microsoft\\SystemCertificates\\My\\CRLs] 1793477389
+#time=1dd6973c88c97c0
+
+[Software\\Microsoft\\SystemCertificates\\My\\CTLs] 1793477389
+#time=1dd6973c88c9914
+
+[Software\\Microsoft\\SystemCertificates\\Trust\\Certificates] 1793477389
+#time=1dd6973c88ca008
+
+[Software\\Microsoft\\SystemCertificates\\Trust\\CRLs] 1793477389
+#time=1dd6973c88ca102
+
+[Software\\Microsoft\\SystemCertificates\\Trust\\CTLs] 1793477389
+#time=1dd6973c88ca206
+
+[Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Accent] 1793477388
+#time=1dd6973c8005ff8
+"AccentPalette"=hex:a6,d8,ff,00,76,b9,ed,00,42,9c,e3,00,00,78,d7,00,00,5a,9e,\
+  00,00,42,75,00,00,26,42,00
+
 [Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced] 1793476959
 #time=1dd6972c83a7c0c
 
@@ -597,6 +629,14 @@ WINE REGISTRY Version 2
 "WindowFrame"="0 0 0"
 "WindowText"="0 0 0"
 
+[Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\PossibilityLab] 1793478197
+#time=1dd6975aa120d78
+"DisplayName"="Possibility Lab"
+"DisplayVersion"="1.0.0"
+"NoModify"=dword:00000001
+"NoRepair"=dword:00000001
+"UninstallString"="\"Z:\\home\\srijon\\Documents\\codex\\2026-10-31\\referenced-chatgpt-conversation-this-is-an\\packaging\\installed-windows\\Uninstall.exe\""
+
 [Software\\Microsoft\\Windows\\Shell\\Associations\\UrlAssociations\\ftp\\UserChoice] 1793476959
 #time=1dd6972c83bd548
 "ProgId"="ftp"
@@ -623,16 +663,36 @@ WINE REGISTRY Version 2
 [Software\\Wine\\DllOverrides] 1793476957
 #time=1dd6972c6ad284e
 
+[Software\\Wine\\Drivers\\winepulse.drv\\devices\\0,alsa_output.pci-0000_01_00.1.hdmi-stereo] 1793477389
+#time=1dd6973c84d95e8
+"guid"=hex:a5,2a,2f,d3,6e,7e,53,48,a2,0c,51,58,87,41,c4,85
+
+[Software\\Wine\\Drivers\\winepulse.drv\\devices\\0,alsa_output.pci-0000_10_00.6.analog-stereo] 1793477389
+#time=1dd6973c84d7a90
+"guid"=hex:58,cb,54,bb,25,be,6d,47,b1,53,f3,30,75,2f,27,3d
+
+[Software\\Wine\\Drivers\\winepulse.drv\\devices\\1,alsa_input.pci-0000_10_00.6.analog-stereo] 1793477389
+#time=1dd6973c84dd918
+"guid"=hex:e1,b1,d3,f0,b3,bf,41,4a,87,88,f2,c4,74,ff,ef,d3
+
+[Software\\Wine\\Drivers\\winepulse.drv\\devices\\1,alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor] 1793477389
+#time=1dd6973c84df268
+"guid"=hex:9c,b8,bf,3d,fa,51,1c,49,a7,bc,47,70,2b,01,84,e8
+
+[Software\\Wine\\Drivers\\winepulse.drv\\devices\\1,alsa_output.pci-0000_10_00.6.analog-stereo.monitor] 1793477389
+#time=1dd6973c84dc09a
+"guid"=hex:08,2d,e3,d1,55,d1,52,4a,9e,b2,88,9c,bc,5d,11,17
+
 [Software\\Wine\\FileOpenAssociations] 1793476962
 #time=1dd6972c9e0248a
 
-[Software\\Wine\\Fonts] 1793477300
-#time=1dd69739339e9b0
+[Software\\Wine\\Fonts] 1793478326
+#time=1dd6975f6f2b0ac
 "Codepages"="1252,437"
 "LogPixels"=dword:00000060
 
-[Software\\Wine\\Fonts\\External Fonts] 1793477300
-#time=1dd6973933b43e6
+[Software\\Wine\\Fonts\\External Fonts] 1793478326
+#time=1dd6975f6f3e68e
 "@Droid Sans Fallback (TrueType)"="Z:\\usr\\share\\fonts\\truetype\\droid\\DroidSansFallbackFull.ttf"
 "@Noto Sans CJK HK (TrueType)"="Z:\\usr\\share\\fonts\\opentype\\noto\\NotoSansCJK-Regular.ttc"
 "@Noto Sans CJK HK Bold (TrueType)"="Z:\\usr\\share\\fonts\\opentype\\noto\\NotoSansCJK-Bold.ttc"
@@ -1060,8 +1120,10 @@ WINE REGISTRY Version 2
 "Wingdings (TrueType)"="Z:\\usr\\share\\wine\\fonts\\wingding.ttf"
 "Z003-MediumItalic (TrueType)"="Z:\\usr\\share\\fonts\\opentype\\urw-base35\\Z003-MediumItalic.otf"
 
-[Software\\Wine\\MenuFiles] 1793476962
-#time=1dd6972c9e2a5a2
+[Software\\Wine\\MenuFiles] 1793478197
+#time=1dd6975aa1b06bc
+"\\\\?\\Z:\\home\\srijon\\.config\\menus\\applications-merged\\wine-Programs-Possibility Lab-Possibility Lab.menu"="C:\\users\\srijon\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Possibility Lab\\Possibility Lab.lnk"
+"\\\\?\\Z:\\home\\srijon\\.local\\share\\applications\\wine\\Programs\\Possibility Lab\\Possibility Lab.desktop"="C:\\users\\srijon\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Possibility Lab\\Possibility Lab.lnk"
 
 [Volatile Environment] 1793476962
 #time=1dd6972c9ce6e70

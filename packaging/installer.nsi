@@ -4,6 +4,10 @@ Name "Possibility Lab"
 Icon "PossibilityLab.ico"
 UninstallIcon "PossibilityLab.ico"
 OutFile "..\releases\PossibilityLab-Windows-x64-Setup.exe"
+VIProductVersion "1.0.0.0"
+VIAddVersionKey "ProductName" "Possibility Lab"
+VIAddVersionKey "FileDescription" "Offline Parallel Possibility Engine Installer"
+VIAddVersionKey "FileVersion" "1.0.0"
 InstallDir "$LOCALAPPDATA\Programs\PossibilityLab"
 RequestExecutionLevel user
 SetCompressor /SOLID lzma
@@ -26,7 +30,7 @@ Section "Install"
  CreateShortcut "$DESKTOP\Possibility Lab.lnk" "$INSTDIR\PossibilityLab.exe"
  WriteUninstaller "$INSTDIR\Uninstall.exe"
  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\PossibilityLab" "DisplayName" "Possibility Lab"
- WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\PossibilityLab" "UninstallString" '$"$INSTDIR\Uninstall.exe$"'
+ WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\PossibilityLab" "UninstallString" '$\"$INSTDIR\Uninstall.exe$\"'
  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\PossibilityLab" "DisplayVersion" "1.0.0"
  WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\PossibilityLab" "NoModify" 1
  WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\PossibilityLab" "NoRepair" 1
@@ -36,6 +40,7 @@ Section "Uninstall"
  Delete "$SMPROGRAMS\Possibility Lab\Possibility Lab.lnk"
  RMDir "$SMPROGRAMS\Possibility Lab"
  Delete "$INSTDIR\PossibilityLab.exe"
+ Delete "$INSTDIR\Engine.exe"
  Delete "$INSTDIR\Uninstall.exe"
  RMDir /r "$INSTDIR\_internal"
  RMDir /r "$INSTDIR\THIRD-PARTY-NOTICES"

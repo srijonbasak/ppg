@@ -15,10 +15,10 @@ installs for your user in ~/.local/share/PossibilityLab and creates an app-menu
 entry. No administrator access is required for the .run option.
 
 WINDOWS (x86-64)
-Use PossibilityLab-Windows-x64-Setup.exe when its build verification is complete.
+Double-click PossibilityLab-Windows-x64-Setup.exe to install.
 Install and launch from the Start menu or desktop shortcut. All application
 libraries are included, including the required Microsoft runtime files.
-The build is targeted at Windows 10/11. Native Windows testing remains separate
+The build is targeted at Windows 10/11. Software graphics is enabled automatically. Native Windows testing remains separate
 from compatibility-layer testing performed on the Linux build machine.
 
 USING THE APP

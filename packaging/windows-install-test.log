@@ -1,0 +1,1 @@
+{"installer_exit": 0, "installed_launch_exit": 0, "models": {"ok": true, "predictions": {"original_joint": "7283", "original_aligned": "7283", "recognition": "7283"}, "bundled": true}, "executable_hashes_match": true, "environment": "Wine 10.0 clean prefix; no Windows Python installed", "native_windows_tested": false}

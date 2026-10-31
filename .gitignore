@@ -37,3 +37,7 @@ packaging/offline-check/
 releases/*.deb
 releases/*.run
 releases/*.exe
+/representation_results/audio_data.pt
+packaging/wine-*/
+packaging/installed-windows/
+packaging/offline-windows/

@@ -1,0 +1,28 @@
+MakeNSIS v3.11 - Copyright 1999-2025 Contributors
+See the file COPYING for license details.
+Credits can be found in the Users Manual.
+
+Processing config: Z:\home\srijon\Documents\codex\2026-10-31\referenced-chatgpt-conversation-this-is-an\packaging\nsis\nsis-3.11\nsisconf.nsh
+Processing script file: "packaging/installer.nsi" (ACP)
+
+Processed 1 file, writing output (x86-unicode):
+warning 9100: Generating version information for language "1033-English" without standard key "LegalCopyright"
+
+Output: "Z:\home\srijon\Documents\codex\2026-10-31\referenced-chatgpt-conversation-this-is-an\releases\PossibilityLab-Windows-x64-Setup.exe"
+Install: 4 pages (256 bytes), 1 section (2072 bytes), 5715 instructions (160020 bytes), 3745 strings (178178 bytes), 1 language table (298 bytes).
+Uninstall: 2 pages (192 bytes), 1 section (2072 bytes), 58 instructions (1624 bytes), 104 strings (2902 bytes), 1 language table (250 bytes).
+Datablock optimizer saved 6227 KiB (~0.7%).
+
+Using lzma (compress whole) compression.
+
+EXE header size:               52224 / 38912 bytes
+Install code:                          (341288 bytes)
+Install data:                          (810615910 bytes)
+Uninstall code+data:                   (21404 bytes)
+Compressed data:           215185150 / 810978602 bytes
+CRC (0x582A55AB):                  4 / 4 bytes
+
+Total size:                215237378 / 811017518 bytes (26.5%)
+
+1 warning:
+  9100: Generating version information for language "1033-English" without standard key "LegalCopyright"
